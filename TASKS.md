@@ -37,7 +37,7 @@
 
 ---
 
-## 📄 PHASE 1 : Pages de Lancement ✅ TERMINÉ (13 pages)
+## 📄 PHASE 1 : Pages de Lancement ✅ TERMINÉ (18 pages)
 
 ### Pages Créées
 
@@ -55,69 +55,75 @@
 - [x] `src/pages/quartiers/index.astro` (pilier)
 - [x] `src/pages/quartiers/velpeau.astro` (~2500 mots)
 - [x] `src/pages/quartiers/a-eviter.astro` (~1800 mots)
+- [x] `src/pages/quartiers/prebendes.astro` (~2000 mots) - NOUVEAU
+- [x] `src/pages/quartiers/tours-centre.astro` (~2500 mots) - NOUVEAU
 - [x] Schema Place + FAQ
 
 #### 4. Bien-être ✅
 - [x] `src/pages/bien-etre/index.astro` (pilier)
-- [x] `src/pages/bien-etre/hypnotherapeute-tours.astro` (~2000 mots)
-- [x] `src/pages/bien-etre/pilates-tours.astro` (~1500 mots)
+- [x] `src/pages/bien-etre/hypnotherapeute-tours.astro` (~2000 mots) - Données réelles
+- [x] `src/pages/bien-etre/pilates-tours.astro` (~1500 mots) - Données réelles
+- [x] `src/pages/bien-etre/chiropracteur-tours.astro` (~2000 mots) - NOUVEAU
 - [x] Schema ItemList + FAQ
 
 #### 5. Manger ✅
 - [x] `src/pages/manger/index.astro` (pilier)
-- [x] `src/pages/manger/restaurant-vegetarien-tours.astro` (~1800 mots)
+- [x] `src/pages/manger/restaurant-vegetarien-tours.astro` (~2500 mots) - Données réelles
 - [x] Schema ItemList + FAQ
 
-#### 6. Pages statiques ✅
+#### 6. Hébergement ✅ NOUVEAU
+- [x] `src/pages/hebergement/index.astro` (pilier)
+- [x] `src/pages/hebergement/love-room-tours.astro` (~2000 mots)
+- [x] Schema ItemList + FAQ
+
+#### 7. Pages statiques ✅
 - [x] `src/pages/a-propos.astro`
 - [x] `src/pages/contact.astro`
 
-### Pages Bonus Phase 1 (à faire plus tard)
-- [ ] `/quartiers/prebendes/`
-- [ ] `/quartiers/tours-centre/`
-- [ ] `/bien-etre/chiropracteur-tours/`
-- [ ] `/hebergement/love-room-tours/`
+### Assets ✅
+- [x] Image OG par défaut (`public/images/og-default.svg`)
 
 ---
 
-## 🔧 PHASE 2 : Optimisations (Après lancement)
+## 🔧 PHASE 2 : Optimisations (En cours)
 
-### SEO Technique
-- [ ] Générer et soumettre sitemap.xml
+### Déploiement ✅
+- [x] Déployer sur Vercel
+- [x] Push GitHub
+
+### SEO Technique (En attente domaine)
+- [ ] Configurer domaine personnalisé sur Vercel
 - [ ] Configurer Google Search Console
 - [ ] Configurer Google Analytics 4
+- [ ] Soumettre sitemap.xml
 - [ ] Tester toutes les pages sur PageSpeed Insights
 - [ ] Valider tous les schemas sur Rich Results Test
-- [ ] Vérifier toutes les meta descriptions (150-160 car)
-- [ ] Vérifier tous les titles (50-60 car)
 
 ### Performance
-- [ ] Optimiser toutes les images (WebP, compression)
-- [ ] Vérifier lazy loading
-- [ ] Minifier CSS/JS
+- [x] Compression HTML/CSS/JS active (astro-compress)
+- [x] Lazy loading images
+- [ ] Convertir OG image en PNG
 - [ ] Tester Core Web Vitals
+- [ ] Ajouter vraies photos locales
 
-### Contenu
-- [ ] Relire tous les contenus pour authenticité
-- [ ] Ajouter photos locales réelles
-- [ ] Vérifier tous les liens internes
-- [ ] Ajouter liens externes pertinents
+### Design
+- [ ] Améliorer l'esthétique globale
+- [ ] Revoir typographie et espacements
+- [ ] Améliorer les cartes et composants
+- [ ] Ajouter animations subtiles
 
 ---
 
 ## 📝 PHASE 3 : Expansion Contenu (Mois 1-2)
 
-### Quartiers (5 pages)
+### Quartiers (3 pages restantes)
 - [ ] `/quartiers/grammont/`
 - [ ] `/quartiers/tours-nord/`
 - [ ] `/quartiers/deux-lions/`
-- [ ] `/quartiers/sanitas/`
-- [ ] `/quartiers/cathedrale/`
 
-### Bien-être (5 pages)
+### Bien-être (4 pages)
 - [ ] `/bien-etre/spa-tours/`
 - [ ] `/bien-etre/reflexologie-tours/`
-- [ ] `/bien-etre/chiropracteur-tours/`
 - [ ] `/bien-etre/massage-tours/`
 - [ ] `/bien-etre/institut-beaute-tours/`
 
@@ -127,10 +133,9 @@
 - [ ] `/manger/terrasse-tours/`
 - [ ] `/manger/restaurant-pas-cher-tours/`
 
-### Autres
-- [ ] `/services/index.astro` (pilier)
-- [ ] `/hebergement/index.astro` (pilier)
-- [ ] `/pratique/index.astro` (pilier)
+### Autres piliers
+- [ ] `/services/index.astro`
+- [ ] `/pratique/index.astro`
 
 ---
 
@@ -142,7 +147,11 @@
 | Créer PROJECT_CONTEXT.md | Jan 2025 | Mémoire du projet |
 | Créer TASKS.md | Jan 2025 | Ce fichier |
 | **PHASE 0 complète** | 27 Jan 2025 | Setup Astro, Tailwind, composants, layouts |
-| **PHASE 1 complète** | 27 Jan 2025 | 13 pages créées et buildées |
+| **PHASE 1 complète** | 27 Jan 2025 | 13 pages initiales |
+| **Pages bonus** | 27 Jan 2025 | +5 pages (chiropracteur, hebergement, prebendes, tours-centre) |
+| **Données réelles** | 27 Jan 2025 | Hypnothérapeutes, pilates, restaurants, chiropracteurs, love rooms |
+| **Déploiement Vercel** | 27 Jan 2025 | Site en ligne |
+| **Image OG** | 27 Jan 2025 | SVG créé |
 
 ---
 
@@ -150,37 +159,27 @@
 
 | Tâche | Raison du blocage | Action requise |
 |-------|-------------------|----------------|
-| Configurer domaine | Domaine pas encore acheté | Acheter vivre-a-tours.fr |
-| Analytics | Pas de compte Google configuré | Créer compte GA4 |
-| Recherche praticiens | Besoin données réelles | Rechercher hypnothérapeutes, studios pilates, restaurants |
+| Google Analytics 4 | Domaine pas encore configuré | Configurer domaine sur Vercel |
+| Search Console | Domaine pas encore configuré | Configurer domaine sur Vercel |
 
 ---
 
 ## 📋 NOTES DE SESSION
 
-### Session du 27 Janvier 2025
+### Session du 27 Janvier 2025 (Suite)
 
 **Tâches réalisées :**
-- PHASE 0 complète : Setup Astro + Tailwind v4 + sitemap + astro-compress
-- PHASE 1 complète : 13 pages créées
-  - Accueil avec hero, catégories, intro
-  - Que faire : pilier + ce-week-end (~2000 mots)
-  - Quartiers : pilier + Velpeau (~2500 mots) + À éviter (~1800 mots)
-  - Bien-être : pilier + hypnothérapeute + pilates
-  - Manger : pilier + restaurants végétariens
-  - À propos et Contact
-- Tous les schemas SEO implémentés (WebSite, FAQ, Place, ItemList, Article)
-- Build validé : 13 pages, compression active
+- Pages bonus créées : prebendes, tours-centre, chiropracteur-tours, hebergement (pilier + love-room)
+- Données réelles ajoutées pour tous les établissements :
+  - 5 hypnothérapeutes avec adresses, téléphones, sites
+  - 5 studios de pilates avec tarifs et horaires
+  - 5 chiropracteurs avec spécialités
+  - 8 restaurants végétariens avec détails complets
+  - 6 love rooms avec prix et équipements
+- Image OG par défaut créée
+- Push GitHub et déploiement Vercel
 
-**Problèmes rencontrés :**
-- Tailwind v4 configuration différente (résolu)
-- Astro sous-dossier initial (résolu)
-
-**À faire :**
-- Ajouter vraies données (adresses, téléphones) pour les établissements
-- Créer images OG par défaut
-- Tester sur mobile
-- Déployer sur Vercel (après achat domaine)
+**Total : 18 pages**
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 /**
- * Footer du site avec liens et informations
+ * Footer moderne avec design élégant
  */
 const currentYear = new Date().getFullYear();
 
@@ -14,8 +14,7 @@ const footerLinks = {
   pratique: [
     { label: 'Se loger', href: '/hebergement/' },
     { label: 'Services', href: '/services/' },
-    { label: 'Infos pratiques', href: '/pratique/' },
-    { label: 'Blog', href: '/blog/' },
+    { label: 'Ce week-end', href: '/que-faire/ce-week-end/' },
   ],
   site: [
     { label: 'A propos', href: '/a-propos/' },
@@ -26,82 +25,129 @@ const footerLinks = {
 ---
 
 <footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <!-- Branding -->
-      <div class="footer-brand">
-        <a href="/" class="footer-logo">
-          Vivre a Tours
-        </a>
-        <p class="footer-tagline">
-          Le guide local pour decouvrir et vivre a Tours.
-          Conseils authentiques d'un Tourangeau.
+  <!-- Decorative wave -->
+  <div class="footer-wave">
+    <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="url(#footer-gradient)"/>
+      <defs>
+        <linearGradient id="footer-gradient" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#1e3a5f"/>
+          <stop offset="1" stop-color="#1e293b"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="footer-content">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Branding -->
+        <div class="footer-brand">
+          <a href="/" class="footer-logo">
+            <div class="footer-logo-icon">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
+                <path d="M8 12L16 8L24 12V20L16 24L8 20V12Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                <circle cx="16" cy="16" r="3" fill="white"/>
+                <defs>
+                  <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#3b82f6"/>
+                    <stop offset="1" stop-color="#2563eb"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span>Vivre a Tours</span>
+          </a>
+          <p class="footer-tagline">
+            Le guide local pour decouvrir et vivre a Tours.
+            Conseils authentiques d'un vrai Tourangeau.
+          </p>
+          <div class="footer-location">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Tours, Centre-Val de Loire</span>
+          </div>
+        </div>
+
+        <!-- Liens Decouvrir -->
+        <div class="footer-section">
+          <h3 class="footer-title">Decouvrir</h3>
+          <ul class="footer-links">
+            {footerLinks.decouvrir.map((link) => (
+              <li>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Liens Pratique -->
+        <div class="footer-section">
+          <h3 class="footer-title">Pratique</h3>
+          <ul class="footer-links">
+            {footerLinks.pratique.map((link) => (
+              <li>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Liens Site -->
+        <div class="footer-section">
+          <h3 class="footer-title">Le site</h3>
+          <ul class="footer-links">
+            {footerLinks.site.map((link) => (
+              <li>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; {currentYear} Vivre a Tours. Tous droits reserves.
         </p>
-        <p class="footer-location">
-          <span aria-hidden="true">📍</span> Tours, Centre-Val de Loire
+        <p class="footer-made">
+          Fait avec <span class="heart">❤️</span> a Tours
         </p>
       </div>
-
-      <!-- Liens Decouvrir -->
-      <div class="footer-section">
-        <h3 class="footer-title">Decouvrir</h3>
-        <ul class="footer-links">
-          {footerLinks.decouvrir.map((link) => (
-            <li>
-              <a href={link.href}>{link.label}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <!-- Liens Pratique -->
-      <div class="footer-section">
-        <h3 class="footer-title">Pratique</h3>
-        <ul class="footer-links">
-          {footerLinks.pratique.map((link) => (
-            <li>
-              <a href={link.href}>{link.label}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <!-- Liens Site -->
-      <div class="footer-section">
-        <h3 class="footer-title">Le site</h3>
-        <ul class="footer-links">
-          {footerLinks.site.map((link) => (
-            <li>
-              <a href={link.href}>{link.label}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-
-    <!-- Bottom bar -->
-    <div class="footer-bottom">
-      <p class="footer-copyright">
-        &copy; {currentYear} Vivre a Tours. Tous droits reserves.
-      </p>
-      <p class="footer-made">
-        Fait avec <span aria-hidden="true">❤️</span><span class="sr-only">amour</span> a Tours
-      </p>
     </div>
   </div>
 </footer>
 
 <style>
   .footer {
-    background: #1f2937;
-    color: #d1d5db;
+    margin-top: auto;
+    position: relative;
+  }
+
+  .footer-wave {
+    height: 60px;
+    overflow: hidden;
+    margin-bottom: -1px;
+  }
+
+  .footer-wave svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer-content {
+    background: linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%);
+    color: #cbd5e1;
     padding: 3rem 0 1.5rem;
-    margin-top: 4rem;
   }
 
   .footer-grid {
     display: grid;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 
   @media (min-width: 640px) {
@@ -112,49 +158,80 @@ const footerLinks = {
 
   @media (min-width: 1024px) {
     .footer-grid {
-      grid-template-columns: 2fr 1fr 1fr 1fr;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
     }
   }
 
+  /* Brand section */
   .footer-brand {
-    max-width: 280px;
+    max-width: 300px;
   }
 
   .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
     font-size: 1.25rem;
     font-weight: 700;
     color: white;
     text-decoration: none;
+    transition: opacity 0.2s ease;
   }
 
   .footer-logo:hover {
     text-decoration: none;
-    color: #93c5fd;
+    opacity: 0.9;
+  }
+
+  .footer-logo-icon {
+    flex-shrink: 0;
   }
 
   .footer-tagline {
-    margin-top: 0.75rem;
-    font-size: 0.875rem;
-    line-height: 1.6;
+    margin-top: 1rem;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: #94a3b8;
   }
 
   .footer-location {
-    margin-top: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
     font-size: 0.875rem;
-    color: #9ca3af;
+    color: #64748b;
   }
 
+  .footer-location svg {
+    flex-shrink: 0;
+  }
+
+  /* Footer sections */
   .footer-section {
     min-width: 0;
   }
 
   .footer-title {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     font-weight: 600;
     color: white;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.25rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+  }
+
+  .footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 24px;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    border-radius: 1px;
   }
 
   .footer-links {
@@ -163,25 +240,42 @@ const footerLinks = {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.625rem;
   }
 
   .footer-links a {
-    color: #d1d5db;
-    font-size: 0.875rem;
+    color: #94a3b8;
+    font-size: 0.9375rem;
     text-decoration: none;
-    transition: color 0.2s;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+
+  .footer-links a::before {
+    content: '';
+    width: 0;
+    height: 1px;
+    background: #3b82f6;
+    transition: width 0.2s ease;
   }
 
   .footer-links a:hover {
     color: white;
     text-decoration: none;
+    transform: translateX(4px);
   }
 
+  .footer-links a:hover::before {
+    width: 8px;
+  }
+
+  /* Bottom bar */
   .footer-bottom {
     margin-top: 3rem;
     padding-top: 1.5rem;
-    border-top: 1px solid #374151;
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -198,20 +292,18 @@ const footerLinks = {
 
   .footer-copyright,
   .footer-made {
-    font-size: 0.75rem;
-    color: #9ca3af;
+    font-size: 0.8125rem;
+    color: #64748b;
     margin: 0;
   }
 
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+  .heart {
+    display: inline-block;
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
   }
 </style>
