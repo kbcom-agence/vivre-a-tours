@@ -1,0 +1,237 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { label: 'Accueil', href: '/' },
+  { label: 'Hebergement' },
+];
+
+const categories = [
+  {
+    title: "Love Rooms & Nuits romantiques",
+    description: "Suites avec jacuzzi, spa privatif, ambiances coquines pour couples.",
+    href: "/hebergement/love-room-tours/",
+    icon: "❤️"
+  },
+  {
+    title: "Hotels de charme",
+    description: "Boutique-hotels et adresses avec cachet en centre-ville.",
+    href: "#",
+    icon: "🏨",
+    soon: true
+  },
+  {
+    title: "Gites et locations",
+    description: "Maisons et appartements pour sejours en famille ou entre amis.",
+    href: "#",
+    icon: "🏠",
+    soon: true
+  },
+  {
+    title: "Hebergements insolites",
+    description: "Cabanes, yourtes, bulles et autres nuits hors du commun.",
+    href: "#",
+    icon: "🏕️",
+    soon: true
+  }
+];
+---
+
+<BaseLayout
+  title="Hebergement a Tours : Hotels, Love Rooms, Gites"
+  description="Trouvez l'hebergement ideal a Tours : love rooms, hotels de charme, gites, locations insolites. Selection par un Tourangeau."
+>
+  <div class="container">
+    <Breadcrumb items={breadcrumbItems} />
+
+    <div class="page-header">
+      <h1>Ou dormir a Tours et en Touraine</h1>
+      <p class="page-intro">
+        Que vous cherchiez une nuit romantique en amoureux, un hotel de charme pour un
+        week-end culturel, ou un gite pour des vacances en famille, voici mes recommandations
+        pour dormir a Tours et dans ses environs.
+      </p>
+    </div>
+
+    <div class="categories-grid">
+      {categories.map((cat) => (
+        <a href={cat.href} class={`category-card ${cat.soon ? 'coming-soon' : ''}`}>
+          <span class="category-icon">{cat.icon}</span>
+          <h2>{cat.title}</h2>
+          <p>{cat.description}</p>
+          {cat.soon && <span class="badge">Bientot</span>}
+        </a>
+      ))}
+    </div>
+
+    <div class="intro-content">
+      <h2>Tours, une destination ideale pour un week-end</h2>
+
+      <p>
+        Tours est parfaitement situee pour explorer les chateaux de la Loire (Chenonceau,
+        Chambord, Amboise...), decouvrir les vignobles de Vouvray ou Chinon, ou simplement
+        profiter de l'art de vivre tourangeau.
+      </p>
+
+      <p>
+        Que vous veniez en couple, en famille ou entre amis, vous trouverez forcement
+        l'hebergement qui vous convient. J'ai teste et selectionne les meilleures adresses
+        pour chaque type de sejour.
+      </p>
+
+      <h3>Mes conseils selon votre profil</h3>
+
+      <ul>
+        <li>
+          <strong>En couple :</strong> Optez pour une love room avec spa privatif ou un hotel
+          de charme en centre-ville. Parfait pour un week-end romantique.
+        </li>
+        <li>
+          <strong>En famille :</strong> Privilegiez un gite ou une location avec espace.
+          Les environs de Tours offrent de belles maisons avec jardin.
+        </li>
+        <li>
+          <strong>Pour le travail :</strong> Les hotels pres de la gare ou du Vinci sont
+          ideaux pour les deplacements professionnels.
+        </li>
+        <li>
+          <strong>Experience insolite :</strong> Cabanes dans les arbres, yourtes, ou suites
+          troglodytes pour une nuit inoubliable.
+        </li>
+      </ul>
+
+      <div class="cta-box">
+        <h3>Vous cherchez une adresse specifique ?</h3>
+        <p>
+          Dites-moi ce que vous recherchez et je vous orienterai vers les meilleures options.
+        </p>
+        <a href="/contact/" class="btn btn-primary">Me contacter</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .page-intro {
+    font-size: 1.125rem;
+    color: #6b7280;
+    max-width: 700px;
+    margin: 1rem auto 0;
+  }
+
+  .categories-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-bottom: 3rem;
+  }
+
+  .category-card {
+    display: block;
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  .category-card:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .category-card.coming-soon {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  .category-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .category-card h2 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+  }
+
+  .category-card p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0;
+  }
+
+  .badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.75rem;
+    background: #e5e7eb;
+    color: #6b7280;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 9999px;
+  }
+
+  .intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .intro-content h2 {
+    margin-bottom: 1rem;
+  }
+
+  .intro-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .intro-content p {
+    line-height: 1.8;
+    color: #374151;
+    margin-bottom: 1rem;
+  }
+
+  .intro-content ul {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .intro-content li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .cta-box {
+    background: #f0f9ff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .cta-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-box p {
+    margin-bottom: 1.25rem;
+    color: #4b5563;
+  }
+</style>

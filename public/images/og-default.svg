@@ -1,0 +1,55 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Decorative elements - Loire river wave pattern -->
+  <path d="M0 500 Q150 470 300 500 T600 500 T900 500 T1200 500 L1200 630 L0 630 Z" fill="#1e3a8a" opacity="0.3"/>
+  <path d="M0 520 Q150 490 300 520 T600 520 T900 520 T1200 520 L1200 630 L0 630 Z" fill="#1e3a8a" opacity="0.2"/>
+
+  <!-- Cathedral silhouette hint -->
+  <path d="M950 350 L950 280 L970 250 L990 280 L990 350" fill="#1e3a8a" opacity="0.2"/>
+  <path d="M1000 350 L1000 300 L1020 260 L1040 300 L1040 350" fill="#1e3a8a" opacity="0.2"/>
+
+  <!-- Main content area -->
+  <rect x="60" y="80" width="700" height="470" rx="16" fill="white" opacity="0.1"/>
+
+  <!-- Logo/Brand area -->
+  <circle cx="130" cy="160" r="50" fill="url(#accentGradient)"/>
+  <text x="130" y="172" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#1e40af" text-anchor="middle">VàT</text>
+
+  <!-- Main title -->
+  <text x="200" y="155" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="white">Vivre à Tours</text>
+  <text x="200" y="195" font-family="Arial, sans-serif" font-size="20" fill="#93c5fd">Le guide local par un Tourangeau</text>
+
+  <!-- Accent line -->
+  <rect x="80" y="230" width="120" height="4" rx="2" fill="url(#accentGradient)"/>
+
+  <!-- Tagline -->
+  <text x="80" y="290" font-family="Arial, sans-serif" font-size="32" fill="white">Quartiers • Sorties • Bons plans</text>
+  <text x="80" y="340" font-family="Arial, sans-serif" font-size="32" fill="white">Adresses testées • Conseils</text>
+
+  <!-- Features -->
+  <text x="80" y="420" font-family="Arial, sans-serif" font-size="22" fill="#bfdbfe">✓ Avis honnêtes d'un habitant</text>
+  <text x="80" y="455" font-family="Arial, sans-serif" font-size="22" fill="#bfdbfe">✓ Mis à jour régulièrement</text>
+  <text x="80" y="490" font-family="Arial, sans-serif" font-size="22" fill="#bfdbfe">✓ 100% indépendant</text>
+
+  <!-- URL -->
+  <text x="80" y="560" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#accentGradient)">vivre-a-tours.fr</text>
+
+  <!-- Decorative dots -->
+  <circle cx="1100" cy="100" r="8" fill="#fbbf24" opacity="0.6"/>
+  <circle cx="1050" cy="150" r="6" fill="#fbbf24" opacity="0.4"/>
+  <circle cx="1120" cy="180" r="10" fill="#fbbf24" opacity="0.5"/>
+</svg>

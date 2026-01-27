@@ -1,0 +1,419 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const modifiedDate = new Date().toISOString().split('T')[0];
+
+const faqItems = [
+  {
+    question: "Le quartier des Prebendes est-il cher ?",
+    answer: "Oui, c'est le quartier le plus cher de Tours avec Grammont. Comptez 3 500 a 4 500 euros/m2 a l'achat. A la location, les loyers sont 15-20% plus eleves que la moyenne tourangelle. C'est le prix du standing et du cadre de vie exceptionnel."
+  },
+  {
+    question: "Les Prebendes sont-elles adaptees aux familles ?",
+    answer: "Absolument. Excellent groupe scolaire, jardin securise pour les enfants, ambiance calme et residentielles. C'est LE quartier des familles aisees a Tours. Seul bemol : peu de commerces pour ados, ils iront vers le centre."
+  },
+  {
+    question: "Comment se deplacer depuis les Prebendes ?",
+    answer: "Le tram est a 5-10 min a pied (arrets Verdun ou Palais des Sports). Bus 4 et 13 desservent le quartier. A velo, le centre est a 10 min. En voiture, acces rapide a l'A10 via l'avenue de Grammont."
+  },
+  {
+    question: "Quelle est la difference entre Prebendes et Grammont ?",
+    answer: "Les deux quartiers sont haut de gamme et voisins. Les Prebendes sont plus residentielles et calmes (maisons de maitre, villas). Grammont est plus commercant (avenue de Grammont) et un peu plus anime. Les prix sont similaires."
+  },
+  {
+    question: "Y a-t-il un marche aux Prebendes ?",
+    answer: "Pas de marche dans le quartier meme, mais le marche de la place Velpeau est a 10 min a pied et celui des Halles a 15 min. Le quartier a surtout des commerces de bouche haut de gamme (fromager, caviste...)."
+  }
+];
+
+const placeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Place",
+  "name": "Quartier des Prebendes - Tours",
+  "description": "Quartier residentiel haut de gamme de Tours, connu pour son jardin et ses maisons de maitre.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tours",
+    "addressRegion": "Centre-Val de Loire",
+    "postalCode": "37000",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "47.3851",
+    "longitude": "0.6845"
+  }
+};
+---
+
+<ArticleLayout
+  title="Quartier des Prebendes a Tours : Le guide complet"
+  description="Decouvrez le quartier des Prebendes a Tours : prix immobilier, ambiance, ecoles, transports. Le quartier le plus chic de Tours decrypte par un local."
+  category="Quartiers"
+  categoryHref="/quartiers/"
+  modifiedDate={modifiedDate}
+  schema={placeSchema}
+>
+  <div class="intro-section">
+    <p class="intro">
+      Le jardin des Prebendes, c'est un peu le Central Park tourangeau. Et le quartier
+      qui l'entoure est a l'image de ce parc : elegant, bourgeois, paisible. C'est ici
+      que reside la "bonne societe" tourangelle depuis plus d'un siecle. Si vous cherchez
+      le standing et le calme, vous etes au bon endroit.
+    </p>
+
+    <div class="quick-summary">
+      <h2>Les Prebendes en bref</h2>
+      <table>
+        <tr>
+          <td>Ambiance</td>
+          <td>Bourgeoise, calme, residentielle</td>
+        </tr>
+        <tr>
+          <td>Prix immobilier</td>
+          <td>€€€€ (3 500-4 500€/m2)</td>
+        </tr>
+        <tr>
+          <td>Transports</td>
+          <td>⭐⭐⭐⭐ (tram a 5-10 min)</td>
+        </tr>
+        <tr>
+          <td>Commerces</td>
+          <td>⭐⭐⭐ (haut de gamme mais peu nombreux)</td>
+        </tr>
+        <tr>
+          <td>Pour</td>
+          <td>Familles aisees, retraites, cadres</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <h2>Ou se situent les Prebendes ?</h2>
+
+  <p>
+    Le quartier des Prebendes se situe au sud-ouest du centre-ville, entre l'avenue
+    de Grammont et le boulevard Beranger. Il est delimite par :
+  </p>
+
+  <ul>
+    <li>Au nord : le boulevard Beranger</li>
+    <li>A l'est : l'avenue de Grammont</li>
+    <li>Au sud : la rue Blaise Pascal</li>
+    <li>A l'ouest : la rue du Hallebardier</li>
+  </ul>
+
+  <p>
+    Le coeur du quartier, c'est evidemment le <strong>Jardin des Prebendes d'Oe</strong>,
+    un parc a l'anglaise de 4 hectares classe aux Monuments Historiques. Autour,
+    des rues bordees de maisons de maitre, d'hotels particuliers et de villas
+    cossues du XIXe et debut XXe.
+  </p>
+
+  <h2>L'ambiance du quartier</h2>
+
+  <p>
+    Les Prebendes, c'est le "vieux Tours" dans ce qu'il a de plus elegant. Ici, pas
+    de bruit, pas d'agitation. Les voitures roulent doucement, les gens se saluent
+    poliment. Le dimanche matin, on promene le chien au jardin, on croise les voisins.
+  </p>
+
+  <p>
+    L'architecture est remarquable : maisons de maitre en tuffeau blanc, villas
+    avec tourelles, petits hotels particuliers. Les jardins sont soignes, les facades
+    restaurees. C'est beau, c'est calme, c'est... un peu fige aussi, il faut le dire.
+  </p>
+
+  <p>
+    Le jardin des Prebendes lui-meme est un bijou. Arbres centenaires, kiosque a
+    musique, statues, aire de jeux pour enfants. C'est le poumon vert du sud de Tours
+    et le terrain de jeu des familles du quartier.
+  </p>
+
+  <h2>Se deplacer depuis les Prebendes</h2>
+
+  <h3>En tram</h3>
+  <p>
+    Le tram ne passe pas dans le quartier meme (les riverains ont refuse), mais les
+    arrets <strong>Verdun</strong> et <strong>Palais des Sports</strong> sont a 5-10 min
+    a pied. De la, vous rejoignez le centre en 5 min, la gare en 10 min.
+  </p>
+
+  <h3>A velo</h3>
+  <p>
+    Le quartier est agreable a velo, peu de circulation. Le centre-ville est a 10 min
+    maximum. Stations Velociti a proximite (Palais des Sports, Grammont).
+  </p>
+
+  <h3>En voiture</h3>
+  <p>
+    Stationnement facile (zones bleues et parkings residentiels). L'avenue de Grammont
+    permet de rejoindre rapidement l'A10 ou le sud de l'agglo. Attention aux heures
+    de pointe sur Grammont.
+  </p>
+
+  <h2>Commerces et services</h2>
+
+  <p>
+    Le quartier n'est pas tres commercant - c'est sa limite. Pour les courses du
+    quotidien, vous irez plutot vers Grammont ou le centre. Mais on trouve quelques
+    commerces de qualite :
+  </p>
+
+  <ul>
+    <li><strong>Fromager</strong> place des Prebendes (excellent)</li>
+    <li><strong>Boulangerie</strong> artisanale rue de la Grandiere</li>
+    <li><strong>Caviste</strong> avenue de Grammont (a deux pas)</li>
+    <li><strong>Pharmacie</strong> rue de Bordeaux</li>
+  </ul>
+
+  <p>
+    Pour un supermarche, le Carrefour City de Grammont ou le Monoprix du centre sont
+    les plus proches (5-10 min a pied ou en voiture).
+  </p>
+
+  <h2>Ecoles et creches</h2>
+
+  <p>
+    C'est un des points forts du quartier pour les familles :
+  </p>
+
+  <h3>Ecoles</h3>
+  <ul>
+    <li><strong>Ecole maternelle et primaire des Prebendes</strong> - Tres bonne reputation</li>
+    <li><strong>Ecole privee Sainte-Ursule</strong> - A proximite, de la maternelle au lycee</li>
+  </ul>
+
+  <h3>Colleges et lycees</h3>
+  <ul>
+    <li><strong>College Anatole France</strong> - A quelques minutes</li>
+    <li><strong>Lycee Descartes</strong> - Le plus repute de Tours, a proximite</li>
+  </ul>
+
+  <p>
+    La carte scolaire du quartier est excellente, c'est un argument majeur pour les
+    familles qui s'installent ici.
+  </p>
+
+  <h2>Immobilier : prix et tendances</h2>
+
+  <h3>Prix a l'achat</h3>
+  <table>
+    <tr>
+      <td>Appartement ancien</td>
+      <td>3 500 - 4 200 €/m2</td>
+    </tr>
+    <tr>
+      <td>Maison de maitre</td>
+      <td>4 000 - 4 500 €/m2</td>
+    </tr>
+    <tr>
+      <td>Villa avec jardin</td>
+      <td>500 000 - 1 500 000 €</td>
+    </tr>
+  </table>
+
+  <h3>Prix a la location</h3>
+  <table>
+    <tr>
+      <td>T2 (50m2)</td>
+      <td>650 - 800 €/mois</td>
+    </tr>
+    <tr>
+      <td>T3 (70m2)</td>
+      <td>850 - 1 100 €/mois</td>
+    </tr>
+    <tr>
+      <td>Maison</td>
+      <td>1 200 - 2 000 €/mois</td>
+    </tr>
+  </table>
+
+  <p>
+    Le marche est tendu : peu de biens a vendre, et ils partent vite. Les maisons
+    de maitre avec jardin sont particulierement recherchees et se negocient peu.
+  </p>
+
+  <h2>Les + et les - du quartier</h2>
+
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>✅ Ce que j'aime</h3>
+      <ul>
+        <li>Le jardin des Prebendes, magnifique toute l'annee</li>
+        <li>Le calme absolu (parfait pour travailler de chez soi)</li>
+        <li>L'architecture exceptionnelle</li>
+        <li>Les excellentes ecoles</li>
+        <li>La securite (tres peu de delinquance)</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>❌ Ce que j'aime moins</h3>
+      <ul>
+        <li>Les prix immobiliers prohibitifs</li>
+        <li>Le peu de commerces de proximite</li>
+        <li>L'ambiance un peu "figee" (peu de vie le soir)</li>
+        <li>Le tram pas directement dans le quartier</li>
+        <li>Pas ideal pour les jeunes qui sortent</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Mon avis : pour qui sont faites les Prebendes ?</h2>
+
+  <p>
+    Les Prebendes, c'est le quartier des familles avec enfants qui ont les moyens
+    et qui cherchent le calme et la qualite de vie. C'est aussi le quartier des
+    retraites aises qui veulent profiter du jardin et de la tranquillite.
+  </p>
+
+  <p>
+    Si vous etes jeune, celibataire, ou que vous aimez sortir, les Prebendes risquent
+    de vous sembler un peu mortes. Vous serez mieux en centre-ville ou a Velpeau.
+  </p>
+
+  <p>
+    Budget serre ? Passez votre chemin, les prix sont les plus eleves de Tours.
+    Mais si vous en avez les moyens, c'est objectivement un des plus beaux quartiers
+    ou vivre dans la region.
+  </p>
+
+  <div class="cta-box">
+    <h3>Des questions sur les Prebendes ?</h3>
+    <p>
+      Vous envisagez de vous installer dans ce quartier ? N'hesitez pas a me contacter
+      pour des conseils personnalises.
+    </p>
+    <a href="/contact/" class="btn btn-primary">Me contacter</a>
+  </div>
+
+  <h2>A lire aussi</h2>
+
+  <ul>
+    <li><a href="/quartiers/velpeau/">Quartier Velpeau</a> - Plus abordable, meme charme</li>
+    <li><a href="/quartiers/a-eviter/">Quartiers a eviter a Tours</a></li>
+    <li><a href="/quartiers/">Tous les quartiers de Tours</a></li>
+  </ul>
+
+  <FAQ items={faqItems} title="Questions frequentes sur les Prebendes" />
+
+</ArticleLayout>
+
+<style>
+  .intro-section {
+    margin-bottom: 2rem;
+  }
+
+  .intro {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #374151;
+  }
+
+  .quick-summary {
+    background: #f0f9ff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .quick-summary h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+  }
+
+  .quick-summary table {
+    width: 100%;
+    margin: 0;
+  }
+
+  .quick-summary td {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e0e7ff;
+  }
+
+  .quick-summary td:first-child {
+    font-weight: 500;
+    width: 40%;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+
+  td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  td:first-child {
+    font-weight: 500;
+    width: 50%;
+  }
+
+  .pros-cons {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  @media (min-width: 768px) {
+    .pros-cons {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .pros, .cons {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+  }
+
+  .pros {
+    background: #f0fdf4;
+  }
+
+  .cons {
+    background: #fef2f2;
+  }
+
+  .pros h3 {
+    color: #059669;
+    margin-top: 0;
+  }
+
+  .cons h3 {
+    color: #dc2626;
+    margin-top: 0;
+  }
+
+  .pros ul, .cons ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  .pros li, .cons li {
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-box {
+    background: #f0f9ff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .cta-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-box p {
+    margin-bottom: 1.25rem;
+    color: #4b5563;
+  }
+</style>

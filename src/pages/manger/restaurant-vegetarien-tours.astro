@@ -7,15 +7,15 @@ const modifiedDate = new Date().toISOString().split('T')[0];
 const faqItems = [
   {
     question: "Quels sont les meilleurs restaurants vegetariens a Tours ?",
-    answer: "Mes favoris sont Le Green (100% vegetal, cuisine creative), La Parenthese Veggie (bio et local), et Chez Nous (carte mixte avec excellentes options veggie). Pour les vegans stricts, Le Green est la reference incontournable a Tours."
+    answer: "Mes favoris sont Tahina (cuisine libanaise raffinee), Lion et Papillon (healthy et biologique), et Le Gopal (cuisine indienne vegetarienne). Pour les vegans stricts, Tahina et Le Gopal offrent de nombreuses options. La Fourchette Paysanne propose une excellente cuisine bio avec options vegetariennes."
   },
   {
     question: "Y a-t-il des restaurants vegan a Tours ?",
-    answer: "Oui, Le Green est 100% vegan. D'autres restaurants comme La Parenthese Veggie proposent de nombreuses options vegan. La plupart des restaurants vegetariens de Tours indiquent clairement les plats vegan sur leur carte."
+    answer: "Oui, plusieurs adresses proposent des options vegan : Tahina (mezzes vegan), Le Gopal (cuisine indienne largement vegan), Lion et Papillon (bowls vegan). Les restaurants libanais comme Bamiyan et Kabuli ont aussi de nombreux plats vegan par tradition culinaire."
   },
   {
     question: "Les restaurants vegetariens de Tours sont-ils chers ?",
-    answer: "Les prix sont comparables aux restaurants classiques. Comptez 12-18 euros pour un plat, 20-30 euros pour un repas complet. Certains proposent des formules midi avantageuses (12-15 euros entree + plat ou plat + dessert)."
+    answer: "Les prix sont comparables aux restaurants classiques. Comptez 12-18 euros pour un plat, 15-25 euros pour un repas complet. Les formules midi sont souvent avantageuses (12-15 euros). Les restaurants afghans et indiens offrent un excellent rapport qualite-prix."
   },
   {
     question: "Peut-on manger vegetarien dans les restaurants classiques de Tours ?",
@@ -23,13 +23,31 @@ const faqItems = [
   },
   {
     question: "Ou bruncher vegetarien a Tours ?",
-    answer: "Chez Mamie propose un brunch avec options veggie. La Parenthese Veggie fait un brunch vegetarien le dimanche. Sinon, aux Halles de Tours, vous pouvez composer votre brunch veggie entre les differents stands."
+    answer: "Lion et Papillon propose un excellent brunch healthy avec options veggie. Pour un brunch plus traditionnel, les Halles de Tours permettent de composer son propre brunch vegetarien entre les differents stands."
   },
   {
-    question: "Les restaurants vegetariens de Tours acceptent-ils les enfants ?",
-    answer: "Oui, tous les restaurants de cette liste accueillent les familles. Le Green et La Parenthese Veggie ont des menus enfants. L'ambiance est generalement decontractee et family-friendly."
+    question: "Quels restaurants vegetariens livrent a Tours ?",
+    answer: "Pitaya (thai), Karamara (ethiopien) et la plupart des restaurants indiens livrent via les plateformes de livraison. Tahina propose aussi la vente a emporter. Verifiez sur Uber Eats ou Deliveroo pour les options du moment."
   }
 ];
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Meilleurs restaurants vegetariens a Tours",
+  "description": "Selection des meilleures adresses vegetariennes et vegan a Tours testees par un local",
+  "numberOfItems": 8,
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Tahina", "url": "https://tahina-tours.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Lion et Papillon" },
+    { "@type": "ListItem", "position": 3, "name": "Le Gopal" },
+    { "@type": "ListItem", "position": 4, "name": "La Fourchette Paysanne" },
+    { "@type": "ListItem", "position": 5, "name": "Bamiyan" },
+    { "@type": "ListItem", "position": 6, "name": "Kabuli" },
+    { "@type": "ListItem", "position": 7, "name": "Karamara" },
+    { "@type": "ListItem", "position": 8, "name": "Pitaya" }
+  ]
+};
 ---
 
 <ListLayout
@@ -39,66 +57,290 @@ const faqItems = [
   categoryHref="/manger/"
   modifiedDate={modifiedDate}
   itemCount={8}
+  schema={itemListSchema}
 >
   <div class="prose intro-section">
     <p class="intro">
       En tant que flexitarien, j'ai ecume les restaurants vegetariens de Tours ces dernieres
-      annees. Certains m'ont emballe, d'autres decu. Voici ma selection honnete des
-      meilleures adresses pour manger veggie a Tours, que vous soyez vegetarien convaincu
-      ou simplement curieux de manger moins de viande.
+      annees. La ville offre un beau panorama de cuisines du monde naturellement veggie-friendly :
+      libanais, indien, afghan, ethiopien, thai... Voici ma selection honnete des meilleures
+      adresses pour manger veggie a Tours, que vous soyez vegetarien convaincu ou simplement
+      curieux de manger moins de viande.
     </p>
   </div>
 
-  <h2>Les restaurants 100% vegetariens/vegan</h2>
+  <h2>Les restaurants avec cuisine vegetarienne de qualite</h2>
 
   <div class="establishment-list">
-    <!-- Restaurant 1 -->
+    <!-- Restaurant 1 : Tahina -->
     <article class="establishment-card">
       <div class="establishment-header">
         <div class="establishment-rank">1</div>
         <div class="establishment-title">
-          <h3>Le Green</h3>
-          <p class="establishment-tagline">Mon coup de coeur vegetal</p>
+          <h3>Tahina</h3>
+          <p class="establishment-tagline">Cuisine libanaise raffinee - Mon coup de coeur</p>
         </div>
-        <span class="label vegan">100% Vegan</span>
+        <span class="label vegan">Nombreux plats vegan</span>
       </div>
 
       <p class="establishment-description">
-        C'est LA reference vegetale a Tours. Cuisine creative, produits frais, et des
-        assiettes qui feraient meme envie aux carnivores convaincus. Le chef a le don
-        de sublimer les legumes. J'y emmene souvent des amis sceptiques sur le vegetal,
-        ils ressortent toujours surpris (dans le bon sens).
+        Tahina, c'est ma reference pour un repas vegetarien a Tours. La cuisine libanaise
+        se prete naturellement au vegetal : mezzes, falafels, houmous, tabboule... Tout
+        est fait maison avec des produits frais. L'ambiance est chaleureuse, le service
+        attentionne, et les portions genereuses. J'y emmene souvent des amis non-vegetariens
+        qui repartent toujours ravis.
       </p>
 
       <div class="establishment-favorites">
         <h4>Mes plats preferes :</h4>
         <ul>
-          <li>Le Buddha bowl aux legumes rotis (copieux et equilibre)</li>
-          <li>Les ravioles maison aux champignons</li>
-          <li>Le cheesecake vegan (bluffant)</li>
+          <li>L'assiette de mezzes a partager (incontournable)</li>
+          <li>Les falafels maison croustillants</li>
+          <li>Le houmous onctueux servi tiede</li>
+          <li>Le tabboule frais et parfume</li>
         </ul>
       </div>
 
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
-          <li>Cuisine creative et gourmande</li>
-          <li>Produits frais et de saison</li>
-          <li>Carte qui change regulierement</li>
+          <li>Cuisine authentique et savoureuse</li>
+          <li>Nombreuses options vegan naturellement</li>
+          <li>Cadre agreable et service souriant</li>
+          <li>Prix raisonnables pour la qualite</li>
         </ul>
       </div>
 
       <div class="establishment-cons">
         <h4>Ce que j'aime moins :</h4>
         <ul>
-          <li>Parfois un peu d'attente (victime de son succes)</li>
+          <li>Peut etre bruyant quand c'est plein le week-end</li>
         </ul>
       </div>
 
       <div class="establishment-info">
         <div class="info-item">
           <span class="info-label">📍 Adresse</span>
-          <span class="info-value">[Adresse a completer], Tours Centre (37000)</span>
+          <span class="info-value">20 rue du Grand Marche, Tours Centre (37000)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">🚃 Acces</span>
+          <span class="info-value">Arret Jean Jaures ou Nationale, 5 min a pied</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Prix moyen</span>
+          <span class="info-value">15-22€ par personne</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">⏰ Horaires</span>
+          <span class="info-value">Mar-Sam 12h-14h30, 19h-22h30</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">📞 Tel</span>
+          <span class="info-value">02 47 64 20 80</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">🌐 Site</span>
+          <span class="info-value"><a href="https://tahina-tours.fr" target="_blank" rel="noopener">tahina-tours.fr</a></span>
+        </div>
+      </div>
+
+      <div class="establishment-tip">
+        <strong>💡 Astuce :</strong> Commandez l'assiette de mezzes pour 2 personnes et
+        completez avec des falafels. C'est la combinaison parfaite ! Reservation recommandee
+        le vendredi et samedi soir.
+      </div>
+    </article>
+
+    <!-- Restaurant 2 : Lion et Papillon -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">2</div>
+        <div class="establishment-title">
+          <h3>Lion et Papillon</h3>
+          <p class="establishment-tagline">Healthy, bio et gourmand</p>
+        </div>
+        <span class="label vegetarian">Vegetarien</span>
+      </div>
+
+      <p class="establishment-description">
+        Un concept cafe-restaurant qui mise sur le healthy sans etre austere. Bowls colores,
+        salades composees, jus frais, tout est bio et prepare sur place. L'ambiance est
+        lumineuse et decontractee, parfaite pour un dejeuner entre collegues ou un brunch
+        du week-end. Les portions sont equilibrees et les saveurs bien presentes.
+      </p>
+
+      <div class="establishment-favorites">
+        <h4>Mes plats preferes :</h4>
+        <ul>
+          <li>Le Buddha bowl du jour (toujours une bonne surprise)</li>
+          <li>La salade gourmande aux graines</li>
+          <li>Les jus et smoothies frais</li>
+        </ul>
+      </div>
+
+      <div class="establishment-pros">
+        <h4>Ce que j'aime :</h4>
+        <ul>
+          <li>Tout est bio et fait maison</li>
+          <li>Carte qui change selon les saisons</li>
+          <li>Cadre lumineux et apaisant</li>
+        </ul>
+      </div>
+
+      <div class="establishment-cons">
+        <h4>Ce que j'aime moins :</h4>
+        <ul>
+          <li>Portions parfois legeres pour les gros appetits</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">57 rue Colbert, Tours Centre (37000)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">🚃 Acces</span>
+          <span class="info-value">Arret Nationale, 3 min a pied</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Prix moyen</span>
+          <span class="info-value">14-18€ par personne</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">⏰ Horaires</span>
+          <span class="info-value">Mar-Sam 9h-18h</span>
+        </div>
+      </div>
+
+      <div class="establishment-tip">
+        <strong>💡 Astuce :</strong> Parfait pour un dejeuner rapide et sain. Arrivez
+        avant 12h30 pour eviter la queue du midi.
+      </div>
+    </article>
+
+    <!-- Restaurant 3 : Le Gopal -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">3</div>
+        <div class="establishment-title">
+          <h3>Le Gopal</h3>
+          <p class="establishment-tagline">Cuisine indienne 100% vegetarienne</p>
+        </div>
+        <span class="label vegan">Options vegan</span>
+      </div>
+
+      <p class="establishment-description">
+        Une adresse atypique tenue par des adeptes de la tradition Hare Krishna. La cuisine
+        indienne est naturellement riche en options vegetariennes, et ici tout est fait
+        avec amour et epices. Les thalis sont copieux, les saveurs authentiques. Le cadre
+        est simple mais l'accueil chaleureux. Un excellent rapport qualite-prix.
+      </p>
+
+      <div class="establishment-favorites">
+        <h4>Mes plats preferes :</h4>
+        <ul>
+          <li>Le thali complet (assortiment de plats)</li>
+          <li>Le dal maison onctueux</li>
+          <li>Les pakoras croustillants</li>
+          <li>Les desserts indiens (gulab jamun)</li>
+        </ul>
+      </div>
+
+      <div class="establishment-pros">
+        <h4>Ce que j'aime :</h4>
+        <ul>
+          <li>100% vegetarien, nombreuses options vegan</li>
+          <li>Saveurs authentiques</li>
+          <li>Prix tres doux</li>
+          <li>Portions genereuses</li>
+        </ul>
+      </div>
+
+      <div class="establishment-cons">
+        <h4>Ce que j'aime moins :</h4>
+        <ul>
+          <li>Cadre tres simple (pas pour un diner romantique)</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">3 rue de la Rotisserie, Tours Centre (37000)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">🚃 Acces</span>
+          <span class="info-value">Arret Jean Jaures, 2 min a pied</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Prix moyen</span>
+          <span class="info-value">10-15€ par personne</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">⏰ Horaires</span>
+          <span class="info-value">Lun-Sam 11h30-14h30, 18h30-21h30</span>
+        </div>
+      </div>
+
+      <div class="establishment-tip">
+        <strong>💡 Astuce :</strong> Le thali est le meilleur choix pour decouvrir
+        plusieurs saveurs. Le midi, c'est souvent un peu moins cher.
+      </div>
+    </article>
+
+    <!-- Restaurant 4 : La Fourchette Paysanne -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">4</div>
+        <div class="establishment-title">
+          <h3>La Fourchette Paysanne</h3>
+          <p class="establishment-tagline">Bio, local et de saison</p>
+        </div>
+        <span class="label mixed">Carte mixte</span>
+      </div>
+
+      <p class="establishment-description">
+        Pas 100% vegetarien mais une excellente adresse pour manger bio et local. La carte
+        change au fil des saisons et des arrivages. Il y a toujours plusieurs plats
+        vegetariens travailles avec autant de soin que le reste. C'est l'adresse parfaite
+        quand vous sortez avec des non-vegetariens qui veulent aussi bien manger.
+      </p>
+
+      <div class="establishment-favorites">
+        <h4>Mes plats preferes :</h4>
+        <ul>
+          <li>Le plat vegetal du jour (toujours une surprise)</li>
+          <li>La tarte aux legumes de saison</li>
+          <li>Les desserts maison</li>
+        </ul>
+      </div>
+
+      <div class="establishment-pros">
+        <h4>Ce que j'aime :</h4>
+        <ul>
+          <li>Produits bio et locaux</li>
+          <li>Plats vegetariens travailles</li>
+          <li>Carte qui change avec les saisons</li>
+        </ul>
+      </div>
+
+      <div class="establishment-cons">
+        <h4>Ce que j'aime moins :</h4>
+        <ul>
+          <li>Choix vegetarien limite (2-3 options)</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">81 rue Colbert, Tours Centre (37000)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">🚃 Acces</span>
+          <span class="info-value">Arret Nationale, 5 min a pied</span>
         </div>
         <div class="info-item">
           <span class="info-label">💰 Prix moyen</span>
@@ -106,67 +348,61 @@ const faqItems = [
         </div>
         <div class="info-item">
           <span class="info-label">⏰ Horaires</span>
-          <span class="info-value">Mar-Sam 12h-14h30, Mer-Sam 19h-22h</span>
+          <span class="info-value">Mar-Sam 12h-14h, Jeu-Sam 19h30-21h30</span>
         </div>
         <div class="info-item">
-          <span class="info-label">📞 Reservation</span>
-          <span class="info-value">Recommandee le week-end</span>
+          <span class="info-label">📞 Tel</span>
+          <span class="info-value">02 47 05 51 81</span>
         </div>
       </div>
 
       <div class="establishment-tip">
-        <strong>💡 Astuce :</strong> Le menu du midi est excellent et plus accessible.
-        Arrivez avant 12h30 pour avoir une place sans reservation.
+        <strong>💡 Astuce :</strong> Appelez avant pour connaitre les plats vegetariens
+        du jour. Ils peuvent souvent adapter si vous prevenez a la reservation.
       </div>
     </article>
+  </div>
 
-    <!-- Restaurant 2 -->
+  <h2>Les cuisines du monde veggie-friendly</h2>
+
+  <p>
+    A Tours, les meilleures options vegetariennes viennent souvent des cuisines du monde.
+    Afghan, ethiopien, thai... Ces traditions culinaires font naturellement la part belle
+    aux legumes et legumineuses.
+  </p>
+
+  <div class="establishment-list">
+    <!-- Restaurant 5 : Bamiyan -->
     <article class="establishment-card">
       <div class="establishment-header">
-        <div class="establishment-rank">2</div>
+        <div class="establishment-rank">5</div>
         <div class="establishment-title">
-          <h3>La Parenthese Veggie</h3>
-          <p class="establishment-tagline">Bio, local et gourmand</p>
+          <h3>Bamiyan</h3>
+          <p class="establishment-tagline">Cuisine afghane authentique</p>
         </div>
-        <span class="label vegetarian">Vegetarien</span>
+        <span class="label vegan">Options vegan</span>
       </div>
 
       <p class="establishment-description">
-        Un petit restaurant cosy qui mise sur le bio et le local. L'ambiance est
-        chaleureuse, un peu comme manger chez une amie qui cuisine bien. Les portions
-        sont genereuses, les prix raisonnables, et tout est fait maison. C'est mon
-        choix quand je veux un repas simple et bon.
+        La cuisine afghane est une decouverte pour beaucoup. Chez Bamiyan, les plats
+        vegetariens sont nombreux et savoureux : bolani (chaussons aux legumes), plats
+        de legumes aux epices douces, riz parfumes... L'accueil est tres chaleureux et
+        les prix doux. Une belle decouverte.
       </p>
 
       <div class="establishment-favorites">
         <h4>Mes plats preferes :</h4>
         <ul>
-          <li>La quiche du jour (toujours croustillante)</li>
-          <li>La salade composee (copieuse)</li>
-          <li>Les gateaux maison</li>
-        </ul>
-      </div>
-
-      <div class="establishment-pros">
-        <h4>Ce que j'aime :</h4>
-        <ul>
-          <li>Ambiance cosy et accueillante</li>
-          <li>Tout fait maison avec produits bio</li>
-          <li>Prix doux</li>
-        </ul>
-      </div>
-
-      <div class="establishment-cons">
-        <h4>Ce que j'aime moins :</h4>
-        <ul>
-          <li>Petit espace, peu de places (reservation conseillee)</li>
+          <li>Les bolanis (chaussons aux poireaux ou pommes de terre)</li>
+          <li>L'assiette de legumes aux epices</li>
+          <li>Le riz kabuli parfume</li>
         </ul>
       </div>
 
       <div class="establishment-info">
         <div class="info-item">
           <span class="info-label">📍 Adresse</span>
-          <span class="info-value">[Adresse a completer], Tours (37000)</span>
+          <span class="info-value">22 rue du Change, Tours Centre (37000)</span>
         </div>
         <div class="info-item">
           <span class="info-label">💰 Prix moyen</span>
@@ -174,152 +410,184 @@ const faqItems = [
         </div>
         <div class="info-item">
           <span class="info-label">⏰ Horaires</span>
-          <span class="info-value">Lun-Sam 12h-14h30</span>
+          <span class="info-value">Lun-Sam 12h-14h30, 19h-22h</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">📞 Tel</span>
+          <span class="info-value">02 47 61 42 30</span>
         </div>
       </div>
+
+      <div class="establishment-tip">
+        <strong>💡 Astuce :</strong> Demandez au serveur quels plats sont vegetariens,
+        il y en a plus que ce qu'indique la carte.
+      </div>
     </article>
-  </div>
 
-  <h2>Les restaurants avec excellentes options vegetariennes</h2>
-
-  <div class="establishment-list">
-    <!-- Restaurant 3 -->
+    <!-- Restaurant 6 : Kabuli -->
     <article class="establishment-card">
       <div class="establishment-header">
-        <div class="establishment-rank">3</div>
+        <div class="establishment-rank">6</div>
         <div class="establishment-title">
-          <h3>Chez Nous</h3>
-          <p class="establishment-tagline">Carte mixte, options veggie au top</p>
+          <h3>Kabuli</h3>
+          <p class="establishment-tagline">Afghan familial et genereux</p>
         </div>
-        <span class="label mixed">Carte mixte</span>
+        <span class="label vegan">Options vegan</span>
       </div>
 
       <p class="establishment-description">
-        Pas un restaurant vegetarien, mais la chef a un vrai talent pour les plats
-        sans viande. Les options vegetariennes ne sont pas des "alternatives" mais
-        des plats a part entiere, travailles avec le meme soin que le reste de la carte.
-        Parfait quand vous sortez avec des non-vegetariens.
+        Autre adresse afghane a Tours, Kabuli propose une cuisine familiale genereuse.
+        Les portions sont copieuses, les prix tres doux. Moins raffine que Bamiyan mais
+        plus authentique dans l'esprit "cuisine de maman". Parfait pour un repas
+        reconfortant sans se ruiner.
+      </p>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">15 rue de la Monnaie, Tours Centre (37000)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Prix moyen</span>
+          <span class="info-value">10-15€ par personne</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">⏰ Horaires</span>
+          <span class="info-value">Lun-Sam 11h30-14h30, 18h30-22h</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Restaurant 7 : Karamara -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">7</div>
+        <div class="establishment-title">
+          <h3>Karamara</h3>
+          <p class="establishment-tagline">Cuisine ethiopienne a partager</p>
+        </div>
+        <span class="label vegan">Tres vegan-friendly</span>
+      </div>
+
+      <p class="establishment-description">
+        La cuisine ethiopienne est naturellement veggie-friendly grace aux jours de jeune
+        orthodoxes. Chez Karamara, on mange avec les mains sur une grande galette d'injera
+        (pain spongieux). Les plats de legumineuses et legumes sont savoureux et epices.
+        Une experience culinaire unique a Tours.
       </p>
 
       <div class="establishment-favorites">
         <h4>Mes plats preferes :</h4>
         <ul>
-          <li>Le risotto de saison (toujours parfait)</li>
-          <li>L'assiette de legumes rotis</li>
-          <li>Le dessert du jour</li>
+          <li>L'assiette vegetarienne complete (plusieurs plats sur injera)</li>
+          <li>Le misir wot (lentilles epices)</li>
+          <li>Le shiro (puree de pois chiches)</li>
         </ul>
       </div>
 
       <div class="establishment-info">
         <div class="info-item">
           <span class="info-label">📍 Adresse</span>
-          <span class="info-value">[Adresse a completer], Tours</span>
+          <span class="info-value">14 rue du Grand Marche, Tours Centre (37000)</span>
         </div>
         <div class="info-item">
           <span class="info-label">💰 Prix moyen</span>
-          <span class="info-value">22-30€ par personne</span>
-        </div>
-      </div>
-    </article>
-
-    <!-- Restaurant 4 -->
-    <article class="establishment-card">
-      <div class="establishment-header">
-        <div class="establishment-rank">4</div>
-        <div class="establishment-title">
-          <h3>Le Bistrot Bio</h3>
-          <p class="establishment-tagline">Bio et vegetarien-friendly</p>
-        </div>
-        <span class="label mixed">Carte mixte</span>
-      </div>
-
-      <p class="establishment-description">
-        Un bistrot qui travaille exclusivement en bio et qui fait une belle place
-        aux vegetariens. L'ardoise change tous les jours selon les arrivages.
-        Demandez au serveur les options veggie du jour, il y en a toujours.
-      </p>
-
-      <div class="establishment-info">
-        <div class="info-item">
-          <span class="info-label">📍 Adresse</span>
-          <span class="info-value">[Adresse a completer], Tours</span>
+          <span class="info-value">15-20€ par personne</span>
         </div>
         <div class="info-item">
-          <span class="info-label">💰 Prix moyen</span>
-          <span class="info-value">18-25€ par personne</span>
-        </div>
-      </div>
-    </article>
-
-    <!-- Restaurant 5 -->
-    <article class="establishment-card">
-      <div class="establishment-header">
-        <div class="establishment-rank">5</div>
-        <div class="establishment-title">
-          <h3>L'Epicerie</h3>
-          <p class="establishment-tagline">Petite restauration et vrac</p>
-        </div>
-        <span class="label vegetarian">Vegetarien</span>
-      </div>
-
-      <p class="establishment-description">
-        Un concept epicerie + petite restauration. Plats simples a base de produits
-        du magasin, souvent vegetariens. Ideal pour un dejeuner rapide et sain.
-        Vous pouvez aussi repartir avec vos courses en vrac.
-      </p>
-
-      <div class="establishment-info">
-        <div class="info-item">
-          <span class="info-label">📍 Adresse</span>
-          <span class="info-value">[Adresse a completer], Tours</span>
+          <span class="info-label">⏰ Horaires</span>
+          <span class="info-value">Mar-Sam 12h-14h30, 19h-22h30</span>
         </div>
         <div class="info-item">
-          <span class="info-label">💰 Prix moyen</span>
-          <span class="info-value">10-15€ par personne</span>
+          <span class="info-label">📞 Tel</span>
+          <span class="info-value">02 47 05 55 00</span>
         </div>
+      </div>
+
+      <div class="establishment-tip">
+        <strong>💡 Astuce :</strong> Commandez l'assiette vegetarienne a partager,
+        c'est le meilleur moyen de decouvrir cette cuisine. Mangez avec les mains,
+        c'est la tradition !
       </div>
     </article>
   </div>
 
-  <h2>Les options rapides et street food</h2>
+  <h2>Option rapide et street food</h2>
 
   <div class="establishment-list">
-    <!-- Restaurant 6 -->
-    <article class="establishment-card small">
-      <h3>Falafel House</h3>
-      <p>Falafels frais, houmous maison, sandwichs veggie. Parfait pour un dejeuner sur le pouce.</p>
-      <div class="small-info">
-        <span>📍 Centre-ville</span>
-        <span>💰 8-12€</span>
-        <span class="label vegan">Options vegan</span>
+    <!-- Restaurant 8 : Pitaya -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">8</div>
+        <div class="establishment-title">
+          <h3>Pitaya</h3>
+          <p class="establishment-tagline">Thai street food rapide</p>
+        </div>
+        <span class="label vegetarian">Options vegetariennes</span>
+      </div>
+
+      <p class="establishment-description">
+        Une chaine de restauration thai rapide avec plusieurs options vegetariennes.
+        Pad thai aux legumes, currys verts ou rouges vegetariens, bo bun veggie...
+        C'est rapide, frais et pratique. Pas de la grande cuisine mais parfait pour
+        un dejeuner sur le pouce ou une livraison.
+      </p>
+
+      <div class="establishment-favorites">
+        <h4>Mes plats preferes :</h4>
+        <ul>
+          <li>Le pad thai vegetarien</li>
+          <li>Le curry vert aux legumes</li>
+          <li>Le bo bun veggie</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">Rue Nationale, Tours Centre (37000)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Prix moyen</span>
+          <span class="info-value">12-16€ par personne</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">⏰ Horaires</span>
+          <span class="info-value">Tous les jours 11h30-22h</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">🚚 Livraison</span>
+          <span class="info-value">Uber Eats, Deliveroo</span>
+        </div>
       </div>
     </article>
 
-    <!-- Restaurant 7 -->
-    <article class="establishment-card small">
-      <h3>Pokawa</h3>
-      <p>Chaine de poke bowls avec options vegetariennes et vegan. Rapide, frais, pratique.</p>
-      <div class="small-info">
-        <span>📍 Centre-ville</span>
-        <span>💰 12-15€</span>
-        <span class="label vegetarian">Veggie-friendly</span>
-      </div>
-    </article>
-
-    <!-- Restaurant 8 -->
-    <article class="establishment-card small">
-      <h3>Les Halles de Tours</h3>
-      <p>Pas un restaurant, mais vous pouvez y composer un repas veggie avec les differents stands. Fromages, olives, houmous, salades...</p>
+    <!-- Mention speciale : Les Halles -->
+    <article class="establishment-card special">
+      <h3>🏆 Mention speciale : Les Halles de Tours</h3>
+      <p>
+        Pas un restaurant, mais LE spot pour composer son repas veggie a la carte.
+        Fromages, olives, houmous, falafels, salades, fruits... Vous pouvez vous faire
+        un festin vegetarien en piochant entre les differents stands. C'est frais, c'est
+        local, et l'ambiance est unique. Mon endroit prefere pour un samedi midi.
+      </p>
       <div class="small-info">
         <span>📍 Place Gaston Pailhou</span>
-        <span>💰 Variable</span>
-        <span class="label mixed">Options variees</span>
+        <span>⏰ Mar-Sam 7h-19h30, Dim 7h-13h30</span>
+        <span>💰 Variable selon vos envies</span>
       </div>
     </article>
   </div>
 
   <div class="prose">
     <h2>Mes conseils pour manger vegetarien a Tours</h2>
+
+    <h3>Privilegiez les cuisines du monde</h3>
+    <p>
+      A Tours, les meilleures options vegetariennes viennent souvent des cuisines etrangeres :
+      libanaise, indienne, afghane, ethiopienne, thai... Ces traditions culinaires font
+      naturellement la part belle aux legumes et legumineuses.
+    </p>
 
     <h3>N'ayez pas peur de demander</h3>
     <p>
@@ -328,17 +596,69 @@ const faqItems = [
       surtout si vous prevenez a la reservation.
     </p>
 
-    <h3>Privilegiez les bistrots de chef</h3>
+    <h3>Explorez les Halles</h3>
     <p>
-      Les bistrots qui cuisinent frais et changent leur carte sont souvent les meilleurs
-      pour les vegetariens. Ils travaillent les legumes avec autant de soin que la viande.
+      Les Halles de Tours sont un tresor pour les vegetariens. Entre le fromager, le
+      marchand d'olives, le traiteur libanais et les primeurs, vous pouvez composer
+      des repas vegetariens varies et de qualite.
     </p>
 
-    <h3>Pensez aux cuisines du monde</h3>
-    <p>
-      Les restaurants indiens, libanais, japonais et thailandais ont souvent de bonnes
-      options vegetariennes par tradition culinaire.
-    </p>
+    <h2>Comparatif des restaurants vegetariens de Tours</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Restaurant</th>
+          <th>Type</th>
+          <th>Budget</th>
+          <th>Pour qui ?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tahina</td>
+          <td>Libanais</td>
+          <td>€€</td>
+          <td>Diner entre amis, sortie en couple</td>
+        </tr>
+        <tr>
+          <td>Lion et Papillon</td>
+          <td>Healthy/Bio</td>
+          <td>€€</td>
+          <td>Dejeuner, brunch</td>
+        </tr>
+        <tr>
+          <td>Le Gopal</td>
+          <td>Indien</td>
+          <td>€</td>
+          <td>Repas simple et savoureux</td>
+        </tr>
+        <tr>
+          <td>La Fourchette Paysanne</td>
+          <td>Bio francais</td>
+          <td>€€</td>
+          <td>Sortie avec non-vegetariens</td>
+        </tr>
+        <tr>
+          <td>Bamiyan/Kabuli</td>
+          <td>Afghan</td>
+          <td>€</td>
+          <td>Decouverte, petit budget</td>
+        </tr>
+        <tr>
+          <td>Karamara</td>
+          <td>Ethiopien</td>
+          <td>€€</td>
+          <td>Experience insolite, repas a partager</td>
+        </tr>
+        <tr>
+          <td>Pitaya</td>
+          <td>Thai rapide</td>
+          <td>€€</td>
+          <td>Dejeuner rapide, livraison</td>
+        </tr>
+      </tbody>
+    </table>
 
     <div class="cta-box">
       <h3>Vous connaissez une bonne adresse ?</h3>
@@ -354,6 +674,7 @@ const faqItems = [
     <ul>
       <li><a href="/manger/">Tous les restaurants a Tours</a></li>
       <li><a href="/que-faire/ce-week-end/">Que faire a Tours ce week-end</a></li>
+      <li><a href="/quartiers/tours-centre/">Le centre-ville de Tours</a></li>
       <li><a href="/quartiers/velpeau/">Quartier Velpeau a Tours</a></li>
     </ul>
   </div>
@@ -387,27 +708,26 @@ const faqItems = [
     padding: 1.5rem;
   }
 
-  .establishment-card.small {
-    padding: 1.25rem;
+  .establishment-card.special {
+    background: #fef3c7;
+    border-color: #fcd34d;
   }
 
-  .establishment-card.small h3 {
-    font-size: 1.125rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .establishment-card.small > p {
-    font-size: 0.9375rem;
-    color: #4b5563;
+  .establishment-card.special h3 {
+    margin-top: 0;
     margin-bottom: 0.75rem;
+  }
+
+  .establishment-card.special > p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
   }
 
   .small-info {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    align-items: center;
-    font-size: 0.8125rem;
+    gap: 1rem;
+    font-size: 0.875rem;
     color: #6b7280;
   }
 
@@ -422,7 +742,7 @@ const faqItems = [
   .establishment-rank {
     width: 2.5rem;
     height: 2.5rem;
-    background: #1e40af;
+    background: #059669;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -538,12 +858,39 @@ const faqItems = [
     width: 6rem;
   }
 
+  .info-item a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .info-item a:hover {
+    text-decoration: underline;
+  }
+
   .establishment-tip {
     padding: 0.75rem 1rem;
     background: #fef3c7;
     border-radius: 0.5rem;
     font-size: 0.875rem;
     color: #92400e;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9375rem;
+  }
+
+  th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  th {
+    background: #f9fafb;
+    font-weight: 600;
   }
 
   .cta-box {

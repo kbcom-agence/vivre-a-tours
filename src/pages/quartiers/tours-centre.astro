@@ -1,0 +1,420 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const modifiedDate = new Date().toISOString().split('T')[0];
+
+const faqItems = [
+  {
+    question: "Le centre-ville de Tours est-il sur ?",
+    answer: "Globalement oui. Le secteur Plumereau peut etre bruyant le week-end (bars) et quelques rues sombres sont a eviter la nuit. Mais ce n'est pas un quartier dangereux. Les secteurs Cathedrale et Halles sont tres calmes."
+  },
+  {
+    question: "Peut-on vivre en centre-ville sans voiture ?",
+    answer: "Absolument, c'est meme ideal ! Tout est a pied ou en tram. Le velo suffit pour la plupart des besoins. Avoir une voiture en centre-ville est meme une contrainte (stationnement difficile et cher)."
+  },
+  {
+    question: "Les loyers sont-ils chers en centre-ville ?",
+    answer: "Oui, c'est le secteur le plus cher avec les Prebendes. Comptez 15-16€/m2 pour un appartement correct. Les petites surfaces (studios, T2) sont particulierement cheres, prisees par les etudiants."
+  },
+  {
+    question: "Le centre de Tours est-il bruyant ?",
+    answer: "Ca depend du secteur. Place Plumereau et rue Colbert peuvent etre bruyantes (bars, animations). Le secteur Cathedrale, les rues derriere les Halles ou vers Grammont sont beaucoup plus calmes."
+  },
+  {
+    question: "Y a-t-il des ecoles en centre-ville ?",
+    answer: "Oui, plusieurs ecoles primaires (Michelet, Paul-Louis Courier). Pour les colleges et lycees, les eleves vont generalement vers Descartes ou Anatole France, a proximite. Pas ideal pour les grandes familles, manque d'espace."
+  }
+];
+
+const placeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Place",
+  "name": "Centre-ville de Tours",
+  "description": "Coeur historique de Tours avec la cathedrale, les Halles, la place Plumereau et la rue Colbert.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tours",
+    "addressRegion": "Centre-Val de Loire",
+    "postalCode": "37000",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "47.3941",
+    "longitude": "0.6848"
+  }
+};
+---
+
+<ArticleLayout
+  title="Vivre dans le centre-ville de Tours : Le guide complet"
+  description="Decouvrez le centre-ville de Tours : Plumereau, Cathedrale, Halles. Prix immobilier, ambiance, transports. Guide par un Tourangeau."
+  category="Quartiers"
+  categoryHref="/quartiers/"
+  modifiedDate={modifiedDate}
+  schema={placeSchema}
+>
+  <div class="intro-section">
+    <p class="intro">
+      Le centre de Tours, c'est le coeur battant de la ville. La cathedrale, les Halles,
+      la place Plum', la rue Colbert... C'est ici que ca se passe. Vivre en centre-ville,
+      c'est avoir tout a portee de main, mais c'est aussi accepter l'animation permanente.
+      Voici mon guide complet pour savoir si ce quartier est fait pour vous.
+    </p>
+
+    <div class="quick-summary">
+      <h2>Le centre-ville en bref</h2>
+      <table>
+        <tr>
+          <td>Ambiance</td>
+          <td>Anime, historique, touristique</td>
+        </tr>
+        <tr>
+          <td>Prix immobilier</td>
+          <td>€€€ (3 400-3 800€/m2)</td>
+        </tr>
+        <tr>
+          <td>Transports</td>
+          <td>⭐⭐⭐⭐⭐ (tout a pied/tram)</td>
+        </tr>
+        <tr>
+          <td>Commerces</td>
+          <td>⭐⭐⭐⭐⭐ (tout sur place)</td>
+        </tr>
+        <tr>
+          <td>Pour</td>
+          <td>Jeunes actifs, etudiants, couples sans enfants</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <h2>Les differents secteurs du centre-ville</h2>
+
+  <p>
+    Le centre de Tours n'est pas homogene. Chaque secteur a sa personnalite :
+  </p>
+
+  <h3>Place Plumereau et Vieux Tours</h3>
+  <p>
+    Le quartier le plus anime et le plus touristique. Maisons a colombages, bars,
+    restaurants, terrasses. C'est la que ca bouge le soir et le week-end. Ideal si
+    vous aimez sortir, mais attention au bruit si vous cherchez le calme.
+  </p>
+
+  <h3>Quartier Cathedrale</h3>
+  <p>
+    Plus calme et plus "bourgeois". Beaux immeubles en pierre, rues pavees, ambiance
+    plus feutree. La cathedrale Saint-Gatien, le musee des Beaux-Arts, la rue Nationale...
+    C'est le centre historique et culturel.
+  </p>
+
+  <h3>Secteur des Halles</h3>
+  <p>
+    Autour des Halles de Tours, un secteur anime le matin (marche) mais calme le reste
+    du temps. Boulangeries, fromageries, poissonneries... Le paradis des gourmands.
+    Bon compromis entre animation et tranquillite.
+  </p>
+
+  <h3>Rue Colbert et Grand Passage</h3>
+  <p>
+    L'axe commercant du centre. Boutiques, enseignes, restaurants. Plus "city" que
+    le Vieux Tours, moins de charme mais plus pratique pour le shopping quotidien.
+  </p>
+
+  <h2>Se deplacer depuis le centre</h2>
+
+  <h3>A pied</h3>
+  <p>
+    C'est le grand avantage du centre : tout est accessible a pied. Les Halles, la gare,
+    les commerces, les restos, les bars... En 15 min de marche, vous faites le tour du
+    quartier. Une voiture est non seulement inutile mais contraignante (stationnement).
+  </p>
+
+  <h3>En tram</h3>
+  <p>
+    La ligne A traverse le centre avec les arrets <strong>Jean Jaures</strong>,
+    <strong>Nationale</strong> et <strong>Gare</strong>. Vous pouvez rejoindre n'importe
+    quel point de Tours en moins de 20 min.
+  </p>
+
+  <h3>A velo</h3>
+  <p>
+    Le centre est en zone 30, agreable a velo. Stations Velociti un peu partout. Le
+    reseau cyclable permet de rejoindre facilement les autres quartiers.
+  </p>
+
+  <h3>En voiture</h3>
+  <p>
+    Honnement, avoir une voiture en centre-ville est une galere. Stationnement payant
+    et rare, zones pietonnes, sens uniques... Si vous pouvez vous en passer, passez
+    vous-en. Sinon, prevoyez un parking en sous-sol (Place Jean Jaures, Anatole France).
+  </p>
+
+  <h2>Commerces et vie quotidienne</h2>
+
+  <p>
+    C'est le point fort absolu du centre-ville. Tout est sur place :
+  </p>
+
+  <ul>
+    <li><strong>Les Halles de Tours</strong> - Marche couvert tous les jours</li>
+    <li><strong>Monoprix</strong> rue Nationale - Pour les courses du quotidien</li>
+    <li><strong>Boulangeries, fromageries, cavistes</strong> - Excellente qualite</li>
+    <li><strong>Pharmacies</strong> - Plusieurs dans le centre</li>
+    <li><strong>La Poste</strong> place de la Cathedrale</li>
+    <li><strong>Banques</strong> - Toutes les enseignes representees</li>
+  </ul>
+
+  <p>
+    Pour les courses en grande surface, le Carrefour de Saint-Pierre-des-Corps ou
+    le centre commercial des Atlantes (Saint-Pierre) sont a 10 min en tram.
+  </p>
+
+  <h2>Vie nocturne et sorties</h2>
+
+  <p>
+    Si vous aimez sortir, le centre est fait pour vous :
+  </p>
+
+  <ul>
+    <li><strong>Place Plumereau</strong> - Le quartier des bars et terrasses</li>
+    <li><strong>Rue Colbert</strong> - Restaurants et bars a vin</li>
+    <li><strong>Rue du Commerce</strong> - Bars alternatifs et concerts</li>
+    <li><strong>Les Trois Orfevres</strong> - Institution tourangelle</li>
+  </ul>
+
+  <p>
+    Le week-end, le Vieux Tours est tres anime jusqu'a 2h du matin. C'est genial si
+    vous aimez ca, moins si vous voulez dormir fenetre ouverte.
+  </p>
+
+  <h2>Immobilier : prix et conseils</h2>
+
+  <h3>Prix a l'achat</h3>
+  <table>
+    <tr>
+      <td>Studio / T1</td>
+      <td>3 800 - 4 200 €/m2</td>
+    </tr>
+    <tr>
+      <td>T2 / T3</td>
+      <td>3 400 - 3 800 €/m2</td>
+    </tr>
+    <tr>
+      <td>Grand appartement</td>
+      <td>3 200 - 3 600 €/m2</td>
+    </tr>
+  </table>
+
+  <h3>Prix a la location</h3>
+  <table>
+    <tr>
+      <td>Studio (20-25m2)</td>
+      <td>400 - 550 €/mois</td>
+    </tr>
+    <tr>
+      <td>T2 (40-50m2)</td>
+      <td>600 - 800 €/mois</td>
+    </tr>
+    <tr>
+      <td>T3 (60-75m2)</td>
+      <td>800 - 1 000 €/mois</td>
+    </tr>
+  </table>
+
+  <h3>Mes conseils</h3>
+  <ul>
+    <li>Evitez les rues donnant directement sur Plumereau si vous cherchez le calme</li>
+    <li>Verifiez l'isolation phonique (vieux immeubles = murs fins)</li>
+    <li>Privilegiez les etages eleves pour echapper au bruit de la rue</li>
+    <li>Le secteur Cathedrale est le meilleur compromis calme/centralite</li>
+  </ul>
+
+  <h2>Les + et les - du centre-ville</h2>
+
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>✅ Ce que j'aime</h3>
+      <ul>
+        <li>Tout a pied, pas besoin de voiture</li>
+        <li>Vie culturelle et nocturne riche</li>
+        <li>Architecture historique magnifique</li>
+        <li>Les Halles pour les courses</li>
+        <li>Tram et transports parfaits</li>
+        <li>Toujours quelque chose a faire</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3>❌ Ce que j'aime moins</h3>
+      <ul>
+        <li>Bruit le soir et le week-end (Plumereau)</li>
+        <li>Stationnement difficile et cher</li>
+        <li>Loyers eleves pour les petites surfaces</li>
+        <li>Touristes en ete (Vieux Tours)</li>
+        <li>Peu adapte aux familles (pas d'espace)</li>
+        <li>Immeubles anciens parfois mal isoles</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Mon avis : pour qui est fait le centre-ville ?</h2>
+
+  <p>
+    Le centre de Tours est ideal pour les <strong>jeunes actifs</strong> et les
+    <strong>couples sans enfants</strong> qui veulent vivre au coeur de l'action.
+    C'est aussi parfait pour les <strong>etudiants</strong> qui veulent tout avoir
+    a portee de main.
+  </p>
+
+  <p>
+    Si vous avez une famille avec enfants, le centre sera vite contraignant : pas
+    d'espace vert, appartements petits, bruit... Vous serez mieux a Velpeau ou aux
+    Prebendes.
+  </p>
+
+  <p>
+    Et si vous avez une voiture dont vous ne pouvez pas vous passer, le centre n'est
+    pas fait pour vous. Privilegiez un quartier avec stationnement plus facile.
+  </p>
+
+  <div class="cta-box">
+    <h3>Des questions sur le centre-ville ?</h3>
+    <p>
+      Vous cherchez un quartier specifique ou vous hesitez ? N'hesitez pas a me
+      contacter pour des conseils personnalises.
+    </p>
+    <a href="/contact/" class="btn btn-primary">Me contacter</a>
+  </div>
+
+  <h2>A lire aussi</h2>
+
+  <ul>
+    <li><a href="/quartiers/velpeau/">Quartier Velpeau</a> - Plus calme, meme proximite</li>
+    <li><a href="/quartiers/prebendes/">Quartier des Prebendes</a> - Le calme bourgeois</li>
+    <li><a href="/quartiers/a-eviter/">Quartiers a eviter a Tours</a></li>
+    <li><a href="/quartiers/">Tous les quartiers de Tours</a></li>
+  </ul>
+
+  <FAQ items={faqItems} title="Questions frequentes sur le centre-ville" />
+
+</ArticleLayout>
+
+<style>
+  .intro-section {
+    margin-bottom: 2rem;
+  }
+
+  .intro {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #374151;
+  }
+
+  .quick-summary {
+    background: #f0f9ff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .quick-summary h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+  }
+
+  .quick-summary table {
+    width: 100%;
+    margin: 0;
+  }
+
+  .quick-summary td {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e0e7ff;
+  }
+
+  .quick-summary td:first-child {
+    font-weight: 500;
+    width: 40%;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+
+  td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  td:first-child {
+    font-weight: 500;
+    width: 50%;
+  }
+
+  .pros-cons {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  @media (min-width: 768px) {
+    .pros-cons {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .pros, .cons {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+  }
+
+  .pros {
+    background: #f0fdf4;
+  }
+
+  .cons {
+    background: #fef2f2;
+  }
+
+  .pros h3 {
+    color: #059669;
+    margin-top: 0;
+  }
+
+  .cons h3 {
+    color: #dc2626;
+    margin-top: 0;
+  }
+
+  .pros ul, .cons ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  .pros li, .cons li {
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-box {
+    background: #f0f9ff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .cta-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-box p {
+    margin-bottom: 1.25rem;
+    color: #4b5563;
+  }
+</style>
