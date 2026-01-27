@@ -28,7 +28,8 @@ const {
   modifiedDate,
   author = 'Vivre à Tours',
   schema,
-  noindex = false,
+  // TEMPORAIRE: noindex par défaut jusqu'à la mise en ligne sur le vrai domaine
+  noindex = true,
 } = Astro.props;
 
 const siteName = 'Vivre à Tours';

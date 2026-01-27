@@ -300,6 +300,7 @@ const featuredArticles = [
     z-index: 1;
     text-align: center;
     color: white;
+    width: 100%;
   }
 
   .hero-badge {
@@ -329,12 +330,15 @@ const featuredArticles = [
   }
 
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.15;
     color: white;
     margin-bottom: 1.5rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-title .text-gradient {
@@ -344,9 +348,16 @@ const featuredArticles = [
     background-clip: text;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 640px) {
     .hero-title {
-      font-size: 4.5rem;
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-title {
+      font-size: 4rem;
+      max-width: 900px;
     }
   }
 
