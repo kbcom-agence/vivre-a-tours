@@ -1,0 +1,495 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { label: 'Accueil', href: '/' },
+  { label: 'Quartiers de Tours' },
+];
+
+const quartiers = [
+  {
+    name: 'Velpeau / La Fuye',
+    slug: 'velpeau',
+    description: 'Le village dans la ville. Marche du samedi, vie de quartier authentique.',
+    price: '€€',
+    vibe: 'Familial, authentique',
+    highlight: 'Le marche du samedi',
+    available: true,
+  },
+  {
+    name: 'Centre / Cathedrale',
+    slug: 'tours-centre',
+    description: 'Coeur historique, Place Plumereau, vie nocturne animee.',
+    price: '€€€',
+    vibe: 'Anime, historique',
+    highlight: 'Place Plumereau',
+    available: false,
+  },
+  {
+    name: 'Grammont-Prebendes',
+    slug: 'prebendes',
+    description: 'Quartier bourgeois, belles demeures, jardin des Prebendes.',
+    price: '€€€€',
+    vibe: 'Chic, calme',
+    highlight: 'Jardin des Prebendes',
+    available: false,
+  },
+  {
+    name: 'Deux-Lions',
+    slug: 'deux-lions',
+    description: 'Quartier moderne, universite, jeune et dynamique.',
+    price: '€€',
+    vibe: 'Etudiant, moderne',
+    highlight: 'Campus universitaire',
+    available: false,
+  },
+  {
+    name: 'Tours Nord',
+    slug: 'tours-nord',
+    description: 'Residentiel, familial, proche Loire.',
+    price: '€€',
+    vibe: 'Familial, calme',
+    highlight: 'Proximite Loire',
+    available: false,
+  },
+  {
+    name: 'Sanitas',
+    slug: 'sanitas',
+    description: 'Quartier populaire en renouveau, proche centre.',
+    price: '€',
+    vibe: 'Populaire, accessible',
+    highlight: 'Prix attractifs',
+    available: false,
+  },
+];
+---
+
+<BaseLayout
+  title="Quartiers de Tours : Guide pour s'installer"
+  description="Decouvrez tous les quartiers de Tours : ambiance, prix, transports, avis. Guide complet pour choisir ou habiter a Tours par un Tourangeau."
+>
+  <div class="container">
+    <Breadcrumb items={breadcrumbItems} />
+
+    <header class="page-header">
+      <h1>Les quartiers de Tours : Ou s'installer ?</h1>
+      <p class="page-intro">
+        Vous cherchez ou habiter a Tours ? Chaque quartier a sa personnalite.
+        Du centre anime aux quartiers residentiels, je vous aide a trouver celui qui vous correspond.
+        Voici mon guide de Tourangeau, avec les vrais avantages et inconvenients de chaque quartier.
+      </p>
+    </header>
+
+    <section class="alert-section">
+      <a href="/quartiers/a-eviter/" class="alert-card">
+        <span class="alert-icon">⚠️</span>
+        <div class="alert-content">
+          <h2>Quartiers de Tours a eviter ?</h2>
+          <p>Un sujet delicat traite avec honnetete. Mon avis nuance sur les zones qui posent question.</p>
+        </div>
+        <span class="alert-link">Lire l'article →</span>
+      </a>
+    </section>
+
+    <section class="quartiers-section">
+      <h2>Tous les quartiers de Tours</h2>
+
+      <div class="quartiers-grid">
+        {quartiers.map((q) => (
+          <div class={`quartier-card ${!q.available ? 'coming-soon' : ''}`}>
+            {q.available ? (
+              <a href={`/quartiers/${q.slug}/`} class="quartier-link">
+                <div class="quartier-header">
+                  <h3>{q.name}</h3>
+                  <span class="quartier-price">{q.price}</span>
+                </div>
+                <p class="quartier-description">{q.description}</p>
+                <div class="quartier-meta">
+                  <span class="quartier-vibe">{q.vibe}</span>
+                  <span class="quartier-highlight">✨ {q.highlight}</span>
+                </div>
+                <span class="quartier-cta">Decouvrir le quartier →</span>
+              </a>
+            ) : (
+              <div class="quartier-link disabled">
+                <div class="quartier-header">
+                  <h3>{q.name}</h3>
+                  <span class="quartier-price">{q.price}</span>
+                </div>
+                <p class="quartier-description">{q.description}</p>
+                <div class="quartier-meta">
+                  <span class="quartier-vibe">{q.vibe}</span>
+                  <span class="quartier-highlight">✨ {q.highlight}</span>
+                </div>
+                <span class="quartier-cta coming">Bientot disponible</span>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="comparison-section">
+      <h2>Comparatif rapide des quartiers</h2>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Quartier</th>
+              <th>Prix m2</th>
+              <th>Transport</th>
+              <th>Ambiance</th>
+              <th>Pour qui ?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Centre / Cathedrale</strong></td>
+              <td>3 400-3 800€</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>Anime</td>
+              <td>Jeunes actifs, etudiants</td>
+            </tr>
+            <tr>
+              <td><strong>Grammont-Prebendes</strong></td>
+              <td>3 500-4 500€</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>Chic</td>
+              <td>Familles aisees, cadres</td>
+            </tr>
+            <tr>
+              <td><strong>Velpeau</strong></td>
+              <td>2 600-3 200€</td>
+              <td>⭐⭐⭐</td>
+              <td>Village</td>
+              <td>Familles, jeunes couples</td>
+            </tr>
+            <tr>
+              <td><strong>Deux-Lions</strong></td>
+              <td>2 800-3 200€</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>Moderne</td>
+              <td>Etudiants, jeunes actifs</td>
+            </tr>
+            <tr>
+              <td><strong>Tours Nord</strong></td>
+              <td>2 500-3 000€</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>Residentiel</td>
+              <td>Familles</td>
+            </tr>
+            <tr>
+              <td><strong>Sanitas</strong></td>
+              <td>2 000-2 500€</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>Populaire</td>
+              <td>Budgets serres</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="tips-section">
+      <h2>Mes conseils pour choisir votre quartier</h2>
+
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h3>🚃 Privilegiez le tram</h3>
+          <p>
+            La ligne A du tram traverse Tours du nord au sud. Habiter pres d'un arret,
+            c'est se faciliter la vie au quotidien. Les bus Fil Bleu completent le reseau.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <h3>🛒 Verifiez les commerces</h3>
+          <p>
+            Avant de signer, faites un tour du quartier. Boulangerie, superette, pharmacie...
+            Les commerces de proximite font la difference au quotidien.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <h3>🏫 Pensez aux ecoles</h3>
+          <p>
+            Si vous avez des enfants, renseignez-vous sur les ecoles du secteur.
+            La carte scolaire peut vous orienter vers un quartier plutot qu'un autre.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <h3>🚗 Le stationnement</h3>
+          <p>
+            En centre-ville, se garer releve du parcours du combattant. Si vous avez une voiture,
+            verifiez qu'il y a un parking ou une place de stationnement incluse.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <h2>Besoin d'un conseil personnalise ?</h2>
+      <p>
+        Chaque situation est unique. Si vous hesitez entre plusieurs quartiers,
+        n'hesitez pas a me contacter. Je serai ravi de vous aider a trouver
+        le quartier qui correspond a vos besoins.
+      </p>
+      <a href="/contact/" class="btn btn-primary">Me contacter</a>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .page-intro {
+    font-size: 1.125rem;
+    color: #4b5563;
+    max-width: 700px;
+    line-height: 1.7;
+  }
+
+  .alert-section {
+    margin-bottom: 3rem;
+  }
+
+  .alert-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .alert-card:hover {
+    background: #fee2e2;
+    border-color: #fca5a5;
+    text-decoration: none;
+  }
+
+  .alert-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .alert-content {
+    flex: 1;
+  }
+
+  .alert-content h2 {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+    color: #991b1b;
+  }
+
+  .alert-content p {
+    font-size: 0.875rem;
+    color: #7f1d1d;
+    margin: 0;
+  }
+
+  .alert-link {
+    font-weight: 500;
+    color: #b91c1c;
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+
+  .quartiers-section {
+    margin-bottom: 4rem;
+  }
+
+  .quartiers-section h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .quartiers-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .quartier-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+
+  .quartier-card:hover:not(.coming-soon) {
+    border-color: #2563eb;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  }
+
+  .quartier-card.coming-soon {
+    opacity: 0.7;
+  }
+
+  .quartier-link {
+    display: block;
+    padding: 1.5rem;
+    text-decoration: none;
+    height: 100%;
+  }
+
+  .quartier-link.disabled {
+    cursor: default;
+  }
+
+  .quartier-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+  }
+
+  .quartier-header h3 {
+    font-size: 1.125rem;
+    color: #111827;
+    margin: 0;
+  }
+
+  .quartier-price {
+    font-weight: 600;
+    color: #059669;
+    font-size: 0.875rem;
+  }
+
+  .quartier-description {
+    color: #6b7280;
+    font-size: 0.9375rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .quartier-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .quartier-vibe,
+  .quartier-highlight {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+  }
+
+  .quartier-vibe {
+    background: #e0e7ff;
+    color: #3730a3;
+  }
+
+  .quartier-highlight {
+    background: #fef3c7;
+    color: #92400e;
+  }
+
+  .quartier-cta {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #2563eb;
+  }
+
+  .quartier-cta.coming {
+    color: #9ca3af;
+  }
+
+  .comparison-section {
+    margin-bottom: 4rem;
+  }
+
+  .comparison-section h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+
+  th, td {
+    padding: 0.875rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  th {
+    background: #f9fafb;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  tr:hover {
+    background: #f9fafb;
+  }
+
+  .tips-section {
+    margin-bottom: 4rem;
+  }
+
+  .tips-section h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .tips-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .tip-card {
+    padding: 1.5rem;
+    background: #f9fafb;
+    border-radius: 0.75rem;
+  }
+
+  .tip-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tip-card p {
+    font-size: 0.875rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 3rem;
+    background: #f0f9ff;
+    border-radius: 1rem;
+  }
+
+  .cta-section h2 {
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>

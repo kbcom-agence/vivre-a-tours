@@ -1,0 +1,555 @@
+---
+import ListLayout from '../../layouts/ListLayout.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const modifiedDate = new Date().toISOString().split('T')[0];
+
+const faqItems = [
+  {
+    question: "Combien coute un cours de Pilates a Tours ?",
+    answer: "Un cours collectif coute entre 15 et 25 euros. Les cours particuliers vont de 50 a 80 euros. La plupart des studios proposent des forfaits (10 cours, abonnement mensuel) plus avantageux. Comptez 120-180 euros pour un forfait 10 cours et 80-120 euros/mois pour un abonnement illimite."
+  },
+  {
+    question: "Pilates mat ou Pilates reformer : que choisir ?",
+    answer: "Le Pilates mat (au sol) est ideal pour debuter et moins cher. Le Pilates reformer (machine) permet un travail plus profond et plus guide, parfait si vous avez des problemes de dos. Commencez par le mat pour apprendre les bases, puis passez au reformer si vous voulez aller plus loin."
+  },
+  {
+    question: "Le Pilates est-il efficace pour le mal de dos ?",
+    answer: "Oui, le Pilates est tres efficace pour le mal de dos. Il renforce les muscles profonds qui stabilisent la colonne vertebrale. De nombreux kines recommandent le Pilates en complement de leurs soins. Prevoyez quelques cours particuliers au debut pour apprendre les bonnes postures."
+  },
+  {
+    question: "Peut-on faire du Pilates enceinte ?",
+    answer: "Oui, le Pilates prenatal est excellent pendant la grossesse. Il renforce le perinee, soulage le dos et prepare a l'accouchement. Choisissez un cours specifique 'prenatal' avec un instructeur forme. Evitez le Pilates classique apres le premier trimestre."
+  },
+  {
+    question: "Combien de cours de Pilates par semaine ?",
+    answer: "Pour des resultats visibles, prevoyez 2 a 3 cours par semaine. Un cours hebdomadaire permet d'entretenir mais pas de progresser significativement. Au debut, commencez par un cours pour maitriser les mouvements avant d'augmenter la frequence."
+  },
+  {
+    question: "Faut-il etre souple pour faire du Pilates ?",
+    answer: "Non, pas du tout ! Le Pilates est justement excellent pour gagner en souplesse progressivement. Les exercices sont adaptables a tous les niveaux. Precisez a l'instructeur que vous debutez, il adaptera les mouvements."
+  }
+];
+---
+
+<ListLayout
+  title="Pilates a Tours : Les meilleurs studios et cours"
+  description="Decouvrez les meilleurs studios de Pilates a Tours : mat, reformer, prenatal. Comparatif des cours, tarifs et avis par un Tourangeau."
+  category="Bien-etre"
+  categoryHref="/bien-etre/"
+  modifiedDate={modifiedDate}
+  itemCount={5}
+>
+  <div class="prose intro-section">
+    <p class="intro">
+      Le Pilates a envahi Tours ces dernieres annees, et tant mieux ! Apres avoir teste
+      plusieurs studios de la ville (mon dos me remercie), je vous livre ma selection
+      des meilleurs endroits pour pratiquer. Que vous cherchiez du mat, du reformer
+      ou du prenatal, vous trouverez votre bonheur.
+    </p>
+
+    <div class="types-box">
+      <h2>Les types de Pilates</h2>
+      <div class="types-grid">
+        <div class="type-card">
+          <h3>Mat (au sol)</h3>
+          <p>Sur tapis, avec petit materiel. Ideal pour debuter. Le plus accessible.</p>
+        </div>
+        <div class="type-card">
+          <h3>Reformer (machine)</h3>
+          <p>Sur appareil avec ressorts. Plus technique, plus profond. Resultats rapides.</p>
+        </div>
+        <div class="type-card">
+          <h3>Prenatal</h3>
+          <p>Adapte aux femmes enceintes. Renforce le perinee, soulage le dos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Les 5 meilleurs studios de Pilates a Tours</h2>
+
+  <div class="establishment-list">
+    <!-- Studio 1 -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">1</div>
+        <div class="establishment-title">
+          <h3>Studio Pilates Tours Centre</h3>
+          <p class="establishment-tagline">Le plus complet (mat + reformer)</p>
+        </div>
+      </div>
+
+      <p class="establishment-description">
+        C'est le studio que je frequente le plus. Equipe de reformers derniere generation,
+        cours en petits groupes (6 personnes max), et instructrices vraiment competentes.
+        Le niveau est exigeant mais l'ambiance reste bienveillante. Parfait pour progresser.
+      </p>
+
+      <div class="establishment-tags">
+        <span class="tag">Mat</span>
+        <span class="tag">Reformer</span>
+        <span class="tag">Cours particuliers</span>
+      </div>
+
+      <div class="establishment-pros">
+        <h4>Ce que j'aime :</h4>
+        <ul>
+          <li>Materiel haut de gamme (reformers Balanced Body)</li>
+          <li>Petits groupes, attention personnalisee</li>
+          <li>Instructrices certifiees Stott Pilates</li>
+        </ul>
+      </div>
+
+      <div class="establishment-cons">
+        <h4>Ce que j'aime moins :</h4>
+        <ul>
+          <li>Prix eleve (mais justifie par la qualite)</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">[Adresse a completer], Tours Centre</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Tarifs</span>
+          <span class="info-value">Cours collectif 25€ | Forfait 10 cours 200€ | Particulier 70€</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">⏰ Horaires</span>
+          <span class="info-value">Lun-Ven 7h-21h, Sam 9h-13h</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Studio 2 -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">2</div>
+        <div class="establishment-title">
+          <h3>Pilates & Yoga Tours</h3>
+          <p class="establishment-tagline">Ideal pour debuter</p>
+        </div>
+      </div>
+
+      <p class="establishment-description">
+        Un studio polyvalent qui propose Pilates et yoga dans un meme espace.
+        L'ambiance est detendue, les cours accessibles aux debutants, et les tarifs
+        raisonnables. Si vous n'avez jamais fait de Pilates, c'est un bon endroit pour
+        commencer sans pression.
+      </p>
+
+      <div class="establishment-tags">
+        <span class="tag">Mat</span>
+        <span class="tag">Debutant friendly</span>
+        <span class="tag">Yoga aussi</span>
+      </div>
+
+      <div class="establishment-pros">
+        <h4>Ce que j'aime :</h4>
+        <ul>
+          <li>Prix accessibles</li>
+          <li>Cours debutants sans jugement</li>
+          <li>Possibilite de combiner avec le yoga</li>
+        </ul>
+      </div>
+
+      <div class="establishment-cons">
+        <h4>Ce que j'aime moins :</h4>
+        <ul>
+          <li>Groupes parfois un peu grands (10-12 personnes)</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">[Adresse a completer], Tours</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Tarifs</span>
+          <span class="info-value">Cours collectif 18€ | Forfait 10 cours 150€ | Illimite 95€/mois</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Studio 3 -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">3</div>
+        <div class="establishment-title">
+          <h3>Espace Pilates Prenatal</h3>
+          <p class="establishment-tagline">Specialiste Pilates grossesse et postnatal</p>
+        </div>
+      </div>
+
+      <p class="establishment-description">
+        Le studio de reference pour les futures mamans et jeunes mamans. L'instructrice,
+        egalement sage-femme, connait parfaitement les besoins des femmes enceintes.
+        Les cours sont adaptes trimestre par trimestre, et elle propose aussi du postnatal
+        pour la reeducation perineale.
+      </p>
+
+      <div class="establishment-tags">
+        <span class="tag">Prenatal</span>
+        <span class="tag">Postnatal</span>
+        <span class="tag">Sage-femme</span>
+      </div>
+
+      <div class="establishment-pros">
+        <h4>Ce que j'aime :</h4>
+        <ul>
+          <li>Expertise medicale (sage-femme diplomee)</li>
+          <li>Cours adaptes a chaque trimestre</li>
+          <li>Petits groupes de futures mamans</li>
+        </ul>
+      </div>
+
+      <div class="establishment-cons">
+        <h4>Ce que j'aime moins :</h4>
+        <ul>
+          <li>Uniquement prenatal/postnatal, pas de cours classiques</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">[Adresse a completer], Tours</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Tarifs</span>
+          <span class="info-value">Cours collectif 22€ | Forfait 8 cours 160€</span>
+        </div>
+      </div>
+
+      <div class="establishment-tip">
+        <strong>💡 Info :</strong> Certains cours prenatals peuvent etre partiellement
+        rembourses par la Secu si prescrits par une sage-femme.
+      </div>
+    </article>
+
+    <!-- Studio 4 -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">4</div>
+        <div class="establishment-title">
+          <h3>Pilates Deux-Lions</h3>
+          <p class="establishment-tagline">Pratique pour les etudiants et actifs du sud</p>
+        </div>
+      </div>
+
+      <p class="establishment-description">
+        Situe dans le quartier des Deux-Lions, ce studio est pratique pour ceux qui
+        travaillent ou etudient dans ce secteur. Les cours du midi et du soir permettent
+        de caser une seance entre deux obligations. L'ambiance est jeune et dynamique.
+      </p>
+
+      <div class="establishment-tags">
+        <span class="tag">Mat</span>
+        <span class="tag">Cours midi</span>
+        <span class="tag">Proche tram</span>
+      </div>
+
+      <div class="establishment-pros">
+        <h4>Ce que j'aime :</h4>
+        <ul>
+          <li>Creneaux horaires pratiques (midi, apres-travail)</li>
+          <li>Bien desservi par le tram</li>
+          <li>Tarif etudiant interessant</li>
+        </ul>
+      </div>
+
+      <div class="establishment-cons">
+        <h4>Ce que j'aime moins :</h4>
+        <ul>
+          <li>Pas de reformer, uniquement mat</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">[Adresse a completer], Deux-Lions (37200)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Tarifs</span>
+          <span class="info-value">Cours 15€ | Etudiants 12€ | Forfait 10 cours 120€</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Studio 5 -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">5</div>
+        <div class="establishment-title">
+          <h3>Kine Pilates Tours</h3>
+          <p class="establishment-tagline">Ideal pour les problemes de dos</p>
+        </div>
+      </div>
+
+      <p class="establishment-description">
+        Ce cabinet de kinesitherapie propose des cours de Pilates therapeutique.
+        Si vous avez des douleurs chroniques, une hernie discale, ou que votre medecin
+        vous a recommande du Pilates, c'est l'endroit ideal. Le kine adapte les exercices
+        a vos pathologies.
+      </p>
+
+      <div class="establishment-tags">
+        <span class="tag">Therapeutique</span>
+        <span class="tag">Kine</span>
+        <span class="tag">Mal de dos</span>
+      </div>
+
+      <div class="establishment-pros">
+        <h4>Ce que j'aime :</h4>
+        <ul>
+          <li>Encadrement medical</li>
+          <li>Exercices adaptes a votre pathologie</li>
+          <li>Possibilite de remboursement partiel</li>
+        </ul>
+      </div>
+
+      <div class="establishment-cons">
+        <h4>Ce que j'aime moins :</h4>
+        <ul>
+          <li>Ambiance plus "medicale" que sportive</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">[Adresse a completer], Tours</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Tarifs</span>
+          <span class="info-value">Sur prescription medicale, partiellement rembourse</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="prose">
+    <h2>Mon conseil pour bien commencer</h2>
+
+    <p>
+      Si vous n'avez jamais fait de Pilates, voici mon conseil : commencez par 2-3 cours
+      particuliers. Oui, ca coute plus cher, mais ca vous evitera de prendre de mauvaises
+      habitudes. Le Pilates, c'est de la precision. Mal execute, ca ne sert a rien
+      (voire ca peut faire mal).
+    </p>
+
+    <p>
+      Une fois les bases acquises, passez en cours collectif. Vous progresserez plus vite
+      et ca reviendra moins cher. Et surtout, ecoutez votre corps. Si un exercice vous
+      fait mal, arretez et demandez a l'instructeur.
+    </p>
+
+    <div class="cta-box">
+      <h3>Une question sur ces studios ?</h3>
+      <p>
+        Si vous hesitez ou voulez plus de details sur un studio en particulier,
+        n'hesitez pas a me contacter.
+      </p>
+      <a href="/contact/" class="btn btn-primary">Me contacter</a>
+    </div>
+
+    <h2>A lire aussi</h2>
+
+    <ul>
+      <li><a href="/bien-etre/hypnotherapeute-tours/">Hypnotherapeutes a Tours</a></li>
+      <li><a href="/bien-etre/">Tous les services bien-etre</a></li>
+      <li><a href="/que-faire/ce-week-end/">Que faire a Tours ce week-end</a></li>
+    </ul>
+  </div>
+
+  <FAQ items={faqItems} title="Questions frequentes sur le Pilates a Tours" />
+
+</ListLayout>
+
+<style>
+  .intro-section {
+    margin-bottom: 2rem;
+  }
+
+  .intro {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #374151;
+  }
+
+  .types-box {
+    margin: 1.5rem 0;
+  }
+
+  .types-box h2 {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+  }
+
+  .types-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .type-card {
+    padding: 1rem;
+    background: #f0f9ff;
+    border-radius: 0.5rem;
+  }
+
+  .type-card h3 {
+    font-size: 0.9375rem;
+    margin-bottom: 0.5rem;
+    color: #1e40af;
+  }
+
+  .type-card p {
+    font-size: 0.8125rem;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  .establishment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .establishment-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  .establishment-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .establishment-rank {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #1e40af;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+    flex-shrink: 0;
+  }
+
+  .establishment-title h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.25rem;
+  }
+
+  .establishment-tagline {
+    margin: 0;
+    color: #059669;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .establishment-description {
+    color: #374151;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .establishment-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .tag {
+    padding: 0.25rem 0.75rem;
+    background: #e0e7ff;
+    color: #3730a3;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 9999px;
+  }
+
+  .establishment-pros, .establishment-cons {
+    margin-bottom: 1rem;
+  }
+
+  .establishment-pros h4, .establishment-cons h4 {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .establishment-pros h4 {
+    color: #059669;
+  }
+
+  .establishment-cons h4 {
+    color: #dc2626;
+  }
+
+  .establishment-pros ul, .establishment-cons ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  .establishment-info {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-item {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .info-label {
+    flex-shrink: 0;
+    width: 5rem;
+  }
+
+  .establishment-tip {
+    padding: 0.75rem 1rem;
+    background: #fef3c7;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: #92400e;
+  }
+
+  .cta-box {
+    background: #f0f9ff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .cta-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-box p {
+    margin-bottom: 1.25rem;
+    color: #4b5563;
+  }
+</style>

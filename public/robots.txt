@@ -1,0 +1,10 @@
+# robots.txt pour vivre-a-tours.fr
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://vivre-a-tours.fr/sitemap-index.xml
+
+# Bloquer les dossiers non pertinents
+Disallow: /draft/
+Disallow: /_astro/

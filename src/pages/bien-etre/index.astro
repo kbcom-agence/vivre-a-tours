@@ -1,0 +1,334 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { label: 'Accueil', href: '/' },
+  { label: 'Bien-etre a Tours' },
+];
+
+const services = [
+  {
+    name: 'Hypnotherapeute',
+    slug: 'hypnotherapeute-tours',
+    description: 'Arret tabac, gestion du stress, phobies... Les meilleurs praticiens de Tours.',
+    icon: '🧠',
+    available: true,
+  },
+  {
+    name: 'Pilates',
+    slug: 'pilates-tours',
+    description: 'Studios et cours de Pilates a Tours. Mat, reformer, prenatal...',
+    icon: '🧘',
+    available: true,
+  },
+  {
+    name: 'Spa et hammam',
+    slug: 'spa-tours',
+    description: 'Detente et relaxation : les meilleurs spas de Tours.',
+    icon: '💆',
+    available: false,
+  },
+  {
+    name: 'Reflexologie',
+    slug: 'reflexologie-tours',
+    description: 'Reflexologie plantaire et palmaire a Tours.',
+    icon: '🦶',
+    available: false,
+  },
+  {
+    name: 'Chiropracteur',
+    slug: 'chiropracteur-tours',
+    description: 'Soins chiropratiques pour dos, nuque et articulations.',
+    icon: '🦴',
+    available: false,
+  },
+  {
+    name: 'Massage',
+    slug: 'massage-tours',
+    description: 'Massages bien-etre, relaxants, sportifs a Tours.',
+    icon: '✋',
+    available: false,
+  },
+  {
+    name: 'Institut de beaute',
+    slug: 'institut-beaute-tours',
+    description: 'Soins visage, corps, epilation, manucure...',
+    icon: '💅',
+    available: false,
+  },
+  {
+    name: 'Head Spa',
+    slug: 'head-spa-tours',
+    description: 'Le soin tendance venu du Japon. Relaxation capillaire.',
+    icon: '💇',
+    available: false,
+  },
+];
+---
+
+<BaseLayout
+  title="Bien-etre a Tours : Spa, soins et relaxation"
+  description="Trouvez les meilleurs praticiens bien-etre a Tours : hypnotherapeutes, spas, pilates, massage, reflexologie. Adresses testees par un Tourangeau."
+>
+  <div class="container">
+    <Breadcrumb items={breadcrumbItems} />
+
+    <header class="page-header">
+      <h1>Bien-etre a Tours : Prendre soin de soi</h1>
+      <p class="page-intro">
+        Besoin de decompresser, de soigner un mal de dos, ou simplement de prendre du temps
+        pour vous ? Tours compte de nombreux praticiens et etablissements de qualite.
+        Voici mes adresses testees et recommandees.
+      </p>
+    </header>
+
+    <section class="services-section">
+      <div class="services-grid">
+        {services.map((service) => (
+          <div class={`service-card ${!service.available ? 'coming-soon' : ''}`}>
+            {service.available ? (
+              <a href={`/bien-etre/${service.slug}/`} class="service-link">
+                <span class="service-icon">{service.icon}</span>
+                <h2>{service.name}</h2>
+                <p>{service.description}</p>
+                <span class="service-cta">Voir les adresses →</span>
+              </a>
+            ) : (
+              <div class="service-link disabled">
+                <span class="service-icon">{service.icon}</span>
+                <h2>{service.name}</h2>
+                <p>{service.description}</p>
+                <span class="service-cta coming">Bientot disponible</span>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="tips-section">
+      <h2>Mes conseils pour choisir un praticien</h2>
+
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h3>Verifiez les qualifications</h3>
+          <p>
+            Un bon praticien affiche ses diplomes et certifications. Pour l'hypnose,
+            privilegiez les formations reconnues (ARCHE, IFH...). Pour le Pilates,
+            les certifications Stott ou BASI sont des gages de qualite.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <h3>Lisez les avis (avec recul)</h3>
+          <p>
+            Les avis Google sont utiles mais pas suffisants. Mefiez-vous des profils
+            avec uniquement des 5 etoiles. Les avis detailles et nuances sont plus
+            fiables que les "super" sans explication.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <h3>Faites confiance au feeling</h3>
+          <p>
+            La relation avec un praticien est importante. Si vous ne vous sentez pas
+            a l'aise lors du premier RDV, n'hesitez pas a en consulter un autre.
+            C'est normal de chercher la bonne personne.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <h3>Demandez les tarifs</h3>
+          <p>
+            Un bon praticien annonce ses tarifs clairement. Si les prix ne sont pas
+            affiches ou si on vous fait payer des "supplements", mefiance.
+            Comparez toujours plusieurs adresses.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-section">
+      <h2>Pourquoi se faire accompagner ?</h2>
+
+      <p>
+        Prendre soin de soi n'est pas un luxe, c'est une necessite. Que ce soit pour
+        gerer le stress du quotidien, soulager des douleurs chroniques, ou simplement
+        s'offrir un moment de detente, les praticiens du bien-etre peuvent vous aider.
+      </p>
+
+      <p>
+        A Tours, nous avons la chance d'avoir un large choix de professionnels qualifies,
+        dans toutes les disciplines. Des hypnotherapeutes reconnus aux studios de Pilates
+        en passant par les spas et les masseurs, vous trouverez forcement ce qui vous
+        convient.
+      </p>
+
+      <p>
+        Mon conseil : n'attendez pas d'etre au bout du rouleau pour consulter. La prevention
+        et l'entretien regulier sont les meilleurs allies de votre bien-etre.
+      </p>
+    </section>
+
+    <section class="cta-section">
+      <h2>Vous cherchez une adresse precise ?</h2>
+      <p>
+        Je n'ai pas encore tout liste. Si vous cherchez un praticien dans une discipline
+        qui n'apparait pas ici, contactez-moi et je ferai de mon mieux pour vous aider.
+      </p>
+      <a href="/contact/" class="btn btn-primary">Me contacter</a>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .page-intro {
+    font-size: 1.125rem;
+    color: #4b5563;
+    max-width: 700px;
+    line-height: 1.7;
+  }
+
+  .services-section {
+    margin-bottom: 4rem;
+  }
+
+  .services-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .service-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+
+  .service-card:hover:not(.coming-soon) {
+    border-color: #2563eb;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transform: translateY(-2px);
+  }
+
+  .service-card.coming-soon {
+    opacity: 0.7;
+  }
+
+  .service-link {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    text-decoration: none;
+    height: 100%;
+  }
+
+  .service-link.disabled {
+    cursor: default;
+  }
+
+  .service-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-card h2 {
+    font-size: 1.125rem;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+
+  .service-card p {
+    color: #6b7280;
+    font-size: 0.9375rem;
+    flex: 1;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .service-cta {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #2563eb;
+  }
+
+  .service-cta.coming {
+    color: #9ca3af;
+  }
+
+  .tips-section {
+    margin-bottom: 4rem;
+  }
+
+  .tips-section h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .tips-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .tip-card {
+    padding: 1.5rem;
+    background: #f9fafb;
+    border-radius: 0.75rem;
+  }
+
+  .tip-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: #1e40af;
+  }
+
+  .tip-card p {
+    font-size: 0.875rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .why-section {
+    margin-bottom: 4rem;
+    max-width: 700px;
+  }
+
+  .why-section h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .why-section p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #374151;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 3rem;
+    background: #f0f9ff;
+    border-radius: 1rem;
+  }
+
+  .cta-section h2 {
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>

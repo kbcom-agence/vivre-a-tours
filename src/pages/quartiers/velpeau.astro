@@ -1,0 +1,613 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const modifiedDate = new Date().toISOString().split('T')[0];
+
+const faqItems = [
+  {
+    question: "Le quartier Velpeau est-il sur a Tours ?",
+    answer: "Oui, Velpeau est un quartier tres sur. C'est un quartier residentiel avec une ambiance village. La delinquance y est faible et les habitants se connaissent. C'est l'un des quartiers les plus paisibles de Tours, ideal pour les familles."
+  },
+  {
+    question: "Quel est le prix au m2 dans le quartier Velpeau ?",
+    answer: "Les prix a Velpeau oscillent entre 2 600 et 3 200 euros le m2 a l'achat. C'est un bon rapport qualite-prix compare au centre-ville ou aux Prebendes. Pour la location, comptez environ 10 a 12 euros le m2, soit 500 a 600 euros pour un T2."
+  },
+  {
+    question: "Velpeau est-il bien desservi par les transports ?",
+    answer: "Velpeau n'a pas d'arret de tram direct, ce qui est son principal inconvenient. Le quartier est desservi par le bus ligne 15 (arret Velpeau). Le centre-ville est a 10-15 minutes a velo ou 20 minutes a pied. En voiture, comptez 5 minutes pour rejoindre le tram."
+  },
+  {
+    question: "Quand a lieu le marche de Velpeau ?",
+    answer: "Le marche de Velpeau a lieu tous les samedis matin, de 7h a 13h environ sur la place Velpeau. C'est l'un des meilleurs marches de Tours avec des producteurs locaux. Conseil : arrivez avant 10h pour eviter la foule et avoir le meilleur choix."
+  },
+  {
+    question: "Y a-t-il de bonnes ecoles a Velpeau ?",
+    answer: "Oui, le quartier compte plusieurs ecoles bien reputees : l'ecole maternelle et primaire Velpeau, et l'ecole Jules Ferry a proximite. Le college Rabelais est egalement accessible. Les parents du quartier sont globalement satisfaits de la qualite de l'enseignement."
+  },
+  {
+    question: "Velpeau ou Prebendes : quel quartier choisir ?",
+    answer: "Ca depend de votre budget et de vos priorites. Prebendes est plus chic et plus cher (3 500-4 500 euros/m2), avec le beau jardin des Prebendes. Velpeau est plus accessible, plus authentique, avec une vraie vie de quartier. Si vous cherchez du caractere a prix raisonnable, choisissez Velpeau."
+  }
+];
+
+const placeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Place",
+  "name": "Quartier Velpeau - Tours",
+  "description": "Quartier residentiel de Tours avec une ambiance village, connu pour son marche du samedi.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tours",
+    "postalCode": "37000",
+    "addressRegion": "Centre-Val de Loire",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "47.3827",
+    "longitude": "0.6778"
+  },
+  "containedInPlace": {
+    "@type": "City",
+    "name": "Tours"
+  }
+};
+---
+
+<ArticleLayout
+  title="Quartier Velpeau a Tours : Le guide complet pour s'installer"
+  description="Decouvrez le quartier Velpeau a Tours : ambiance village, marche du samedi, prix immobilier, transports. Guide complet par un Tourangeau."
+  category="Quartiers"
+  categoryHref="/quartiers/"
+  modifiedDate={modifiedDate}
+  schema={placeSchema}
+>
+  <p class="intro">
+    Le quartier Velpeau, c'est mon coup de coeur a Tours. Apres avoir habite dans plusieurs quartiers
+    de la ville, c'est ici que j'ai pose mes valises. Pourquoi ? L'ambiance village, le fameux
+    marche du samedi, et cette sensation d'etre dans une petite ville tout en restant a 10 minutes
+    du centre. Je vous dis tout sur ce quartier attachant.
+  </p>
+
+  <div class="summary-box">
+    <h2>Velpeau en bref</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td><strong>Ambiance</strong></td>
+          <td>Village dans la ville, authentique</td>
+        </tr>
+        <tr>
+          <td><strong>Prix immobilier</strong></td>
+          <td>2 600 - 3 200 euros/m2 (€€)</td>
+        </tr>
+        <tr>
+          <td><strong>Transports</strong></td>
+          <td>⭐⭐⭐ (bus, pas de tram direct)</td>
+        </tr>
+        <tr>
+          <td><strong>Commerces</strong></td>
+          <td>⭐⭐⭐⭐ (tres bonne proximite)</td>
+        </tr>
+        <tr>
+          <td><strong>Vie nocturne</strong></td>
+          <td>⭐⭐ (quartier calme)</td>
+        </tr>
+        <tr>
+          <td><strong>Ideal pour</strong></td>
+          <td>Familles, jeunes couples, primo-accedants</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Ou se situe le quartier Velpeau ?</h2>
+
+  <p>
+    Le quartier Velpeau se situe au sud-est du centre-ville de Tours, dans le 37000.
+    Il est delimite approximativement par le boulevard Beranger au nord, l'avenue de Grammont
+    a l'ouest, et s'etend vers La Fuye au sud-est. C'est un quartier compact et facile a parcourir a pied.
+  </p>
+
+  <p>
+    Pour vous reperer : depuis la gare de Tours, comptez 15 minutes a pied en direction du sud-est.
+    La place Velpeau, coeur du quartier, est facilement reconnaissable avec son eglise et ses
+    commerces. C'est la que se tient le fameux marche du samedi.
+  </p>
+
+  <p>
+    Les quartiers voisins sont le centre-ville au nord, Grammont-Prebendes a l'ouest, et
+    La Fuye/Rabelais au sud. Cette position offre un bon compromis entre calme residentiel
+    et acces rapide aux commodites du centre.
+  </p>
+
+  <h2>L'ambiance du quartier Velpeau</h2>
+
+  <p>
+    Ce qui frappe en arrivant a Velpeau, c'est l'ambiance village. Ici, on se salue dans la rue,
+    on connait son boulanger, on papote avec le marchand de legumes le samedi matin. Ca peut
+    paraitre cliche, mais c'est vraiment ca.
+  </p>
+
+  <p>
+    Le quartier est principalement compose de petits immeubles (3-4 etages maximum) et de maisons
+    de ville. L'architecture est variee : du XIXe siecle cotoie des constructions plus recentes.
+    Les rues sont calmes, bordees d'arbres par endroits, et la circulation automobile reste
+    raisonnable.
+  </p>
+
+  <p>
+    <strong>Le samedi matin, c'est la que tout se joue.</strong> Le marche de Velpeau transforme
+    le quartier. Les etals s'installent autour de la place, l'odeur du poulet roti se mele a
+    celle des fromages, les discussions s'etirent autour d'un cafe. C'est un moment de vie
+    sociale que j'adore.
+  </p>
+
+  <p>
+    En semaine, le quartier est plus calme. Les commercants ouvrent leurs boutiques, les enfants
+    vont a l'ecole, les gens partent travailler. Le soir, l'ambiance est paisible. Ce n'est pas
+    un quartier pour faire la fete, mais c'est parfait pour se reposer.
+  </p>
+
+  <div class="highlight-box">
+    <h3>Mon moment prefere</h3>
+    <p>
+      Le samedi matin vers 10h, apres avoir fait mes courses au marche. Je m'installe a la
+      terrasse du cafe face a l'eglise, un croissant du boulanger a la main, et je regarde
+      les gens passer. C'est simple, mais ca resume bien l'esprit du quartier.
+    </p>
+  </div>
+
+  <h2>Se deplacer depuis Velpeau</h2>
+
+  <h3>En transports en commun</h3>
+
+  <p>
+    Soyons honnetes : c'est le point faible du quartier. Velpeau n'a pas d'arret de tram direct.
+    La ligne A passe par l'avenue de Grammont, mais les arrets les plus proches (Palais des Sports,
+    Verdun) sont a 10-15 minutes de marche.
+  </p>
+
+  <p>
+    Le quartier est desservi par le <strong>bus ligne 15</strong> (arret Velpeau) qui rejoint
+    le centre-ville. C'est pratique, mais moins frequent que le tram. Comptez un bus toutes les
+    15-20 minutes en journee.
+  </p>
+
+  <p>
+    <strong>Mon conseil :</strong> si les transports en commun sont essentiels pour vous,
+    privilegiez le nord du quartier, plus proche des arrets de tram. Ou investissez dans un velo.
+  </p>
+
+  <h3>A velo</h3>
+
+  <p>
+    Le velo est clairement le meilleur moyen de se deplacer depuis Velpeau. Le centre-ville
+    est a 10 minutes, la gare a 12 minutes, les Deux-Lions a 15 minutes. Les rues sont
+    assez calmes pour circuler en securite, meme s'il manque des pistes cyclables dediees.
+  </p>
+
+  <p>
+    Il y a une station Velociti (velos en libre-service) a proximite de la place Velpeau.
+    Pratique pour les deplacements ponctuels.
+  </p>
+
+  <h3>En voiture</h3>
+
+  <p>
+    Avoir une voiture a Velpeau est assez confortable. Le stationnement est plus facile qu'en
+    centre-ville (sauf le samedi matin pendant le marche !). La plupart des immeubles ont des
+    places de parking, et on trouve des places dans les rues adjacentes.
+  </p>
+
+  <p>
+    Pour rejoindre l'autoroute A10, comptez 10-15 minutes via l'avenue de Grammont.
+    Le centre commercial des Atlantes est a 10 minutes en voiture.
+  </p>
+
+  <h3>A pied</h3>
+
+  <ul>
+    <li>Centre-ville (Place Jean Jaures) : 20 minutes</li>
+    <li>Gare SNCF : 15 minutes</li>
+    <li>Jardin des Prebendes : 10 minutes</li>
+    <li>Les Halles : 18 minutes</li>
+  </ul>
+
+  <h2>Commerces et services a Velpeau</h2>
+
+  <h3>Courses du quotidien</h3>
+
+  <p>
+    C'est l'un des grands atouts du quartier. Vous trouverez tout ce qu'il faut sans prendre
+    la voiture :
+  </p>
+
+  <ul>
+    <li><strong>Supermarche Carrefour City</strong> place Velpeau - ouvert tard, pratique en depannage</li>
+    <li><strong>Boulangerie "Au Pain Gourmand"</strong> - excellente, je recommande le pain au levain</li>
+    <li><strong>Boucherie Charcuterie Robin</strong> - produits de qualite, le patron est sympa</li>
+    <li><strong>Pharmacie de Velpeau</strong> - bien fournie, equipe agreable</li>
+    <li><strong>Tabac-presse</strong> - pour les journaux et le loto</li>
+    <li><strong>Primeur</strong> - fruits et legumes corrects, pratique en semaine</li>
+  </ul>
+
+  <h3>Le marche de Velpeau</h3>
+
+  <p>
+    <strong>Le marche du samedi est une institution.</strong> C'est l'un des meilleurs marches
+    de Tours, peut-etre le plus authentique. Vous y trouverez :
+  </p>
+
+  <ul>
+    <li>Maraichers et producteurs locaux (legumes de saison, bio pour certains)</li>
+    <li>Fromagers exceptionnels (le chevre de Sainte-Maure est un must)</li>
+    <li>Poissonnier avec arrivage frais</li>
+    <li>Boucher/charcutier (rillettes, pate, viandes)</li>
+    <li>Stands de miel, confitures, produits regionaux</li>
+    <li>Fleuriste</li>
+    <li>Et le fameux stand de poulet roti dont l'odeur embaume tout le quartier</li>
+  </ul>
+
+  <div class="tip-box">
+    <h4>💡 Astuce marche</h4>
+    <p>
+      Venez avant 10h pour avoir le choix et eviter la foule. Apres 11h30, les meilleurs produits
+      sont partis et la circulation devient infernale. Apportez vos sacs, beaucoup de vendeurs
+      n'en fournissent plus. Et preparez du liquide, tous les stands n'acceptent pas la carte.
+    </p>
+  </div>
+
+  <h3>Sante</h3>
+
+  <ul>
+    <li><strong>Medecins generalistes</strong> : plusieurs cabinets dans le quartier</li>
+    <li><strong>Dentiste</strong> : cabinet rue [nom]</li>
+    <li><strong>Kine</strong> : plusieurs praticiens</li>
+    <li><strong>Laboratoire d'analyses</strong> : a proximite</li>
+    <li><strong>CHU Bretonneau</strong> : a 10 minutes en voiture pour les urgences</li>
+  </ul>
+
+  <h2>Ecoles et creches a Velpeau</h2>
+
+  <p>
+    Le quartier est bien equipe pour les familles avec enfants :
+  </p>
+
+  <h3>Creches</h3>
+  <ul>
+    <li>Creche municipale Velpeau</li>
+    <li>Plusieurs assistantes maternelles agreees dans le quartier</li>
+  </ul>
+
+  <h3>Ecoles</h3>
+  <ul>
+    <li><strong>Ecole maternelle Velpeau</strong> - bonne reputation</li>
+    <li><strong>Ecole elementaire Velpeau</strong> - dans la continuite</li>
+    <li><strong>Ecole Jules Ferry</strong> - a proximite, egalement appreciee</li>
+  </ul>
+
+  <h3>Colleges et lycees</h3>
+  <ul>
+    <li><strong>College Rabelais</strong> - college de secteur, resultats corrects</li>
+    <li><strong>Lycee Descartes</strong> - a 15 minutes a pied, bon lycee public</li>
+  </ul>
+
+  <h2>Les espaces verts</h2>
+
+  <p>
+    Velpeau n'est pas le quartier le plus vert de Tours, mais vous avez des options :
+  </p>
+
+  <ul>
+    <li>
+      <strong>Le jardin des Prebendes</strong> - a 10 minutes a pied, c'est le plus beau
+      parc de Tours. Arbres centenaires, kiosque a musique, canards... Parfait pour une balade.
+    </li>
+    <li>
+      <strong>Square Velpeau</strong> - petit espace vert avec jeux pour enfants, pratique
+      pour les familles.
+    </li>
+    <li>
+      <strong>Les bords du Cher</strong> - a 15 minutes a velo, pour des balades nature.
+    </li>
+  </ul>
+
+  <h2>Ou manger dans le quartier Velpeau ?</h2>
+
+  <p>
+    Le quartier n'est pas un haut lieu gastronomique, mais on y mange bien :
+  </p>
+
+  <ul>
+    <li>
+      <strong>La P'tite Cantine</strong> - cuisine maison, ambiance conviviale, prix doux.
+      Mon spot du quartier.
+    </li>
+    <li>
+      <strong>Le cafe de la place</strong> - pour un dejeuner simple ou un cafe en terrasse.
+    </li>
+    <li>
+      <strong>Pizza du coin</strong> - pizzas a emporter correctes pour les soirs de flemme.
+    </li>
+  </ul>
+
+  <p>
+    Pour les restaurants gastronomiques ou les sorties, direction le centre-ville a 10 minutes.
+  </p>
+
+  <h2>Immobilier : acheter ou louer a Velpeau</h2>
+
+  <h3>Prix a l'achat</h3>
+
+  <p>
+    Le quartier offre un bon rapport qualite-prix pour Tours :
+  </p>
+
+  <ul>
+    <li><strong>Appartements</strong> : 2 600 - 3 200 euros/m2 selon l'etat et l'etage</li>
+    <li><strong>Maisons de ville</strong> : 3 000 - 3 500 euros/m2, assez rares</li>
+  </ul>
+
+  <p>
+    C'est moins cher que le centre-ville (3 400-3 800 euros) ou Grammont-Prebendes (3 500-4 500 euros),
+    mais plus cher que les Deux-Lions neufs ou Tours Nord.
+  </p>
+
+  <h3>Prix a la location</h3>
+
+  <ul>
+    <li><strong>Studio</strong> : 350 - 450 euros/mois</li>
+    <li><strong>T2</strong> : 500 - 650 euros/mois</li>
+    <li><strong>T3</strong> : 650 - 850 euros/mois</li>
+    <li><strong>Maison</strong> : 900 - 1 200 euros/mois (rares)</li>
+  </ul>
+
+  <h3>Tendance du marche</h3>
+
+  <p>
+    Le quartier est recherche, notamment par les jeunes couples et les familles.
+    Les biens partent vite, surtout les T3 et les appartements avec balcon ou jardin.
+    Mon conseil : si vous trouvez un bien qui vous plait, ne trainez pas.
+  </p>
+
+  <h2>Les + et les - du quartier Velpeau</h2>
+
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>✅ Ce que j'aime</h3>
+      <ul>
+        <li>L'ambiance village, les voisins qui se saluent</li>
+        <li>Le marche du samedi, veritable institution</li>
+        <li>Les commerces de proximite, tout a pied</li>
+        <li>Le calme, quartier paisible et sur</li>
+        <li>Les prix raisonnables compare au centre</li>
+        <li>La proximite du jardin des Prebendes</li>
+        <li>Le bon mix de population (familles, jeunes, retraites)</li>
+      </ul>
+    </div>
+
+    <div class="cons">
+      <h3>❌ Ce que j'aime moins</h3>
+      <ul>
+        <li>Pas de tram direct, transports moyens</li>
+        <li>Stationnement difficile le samedi matin</li>
+        <li>Peu de bars/restaurants pour sortir</li>
+        <li>Quartier calme le soir (pas pour les fetards)</li>
+        <li>Manque d'espaces verts dans le quartier meme</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Mon avis : pour qui est fait Velpeau ?</h2>
+
+  <p>
+    <strong>Velpeau est ideal si vous cherchez :</strong>
+  </p>
+
+  <ul>
+    <li>Une ambiance de quartier authentique, pas un dortoir</li>
+    <li>Un cadre de vie calme sans etre eloigne de tout</li>
+    <li>Des commerces de proximite et un marche de qualite</li>
+    <li>Un bon rapport qualite-prix pour l'immobilier</li>
+  </ul>
+
+  <p>
+    <strong>Evitez Velpeau si :</strong>
+  </p>
+
+  <ul>
+    <li>Vous dependez fortement des transports en commun (prenez plutot Tours Nord ou Deux-Lions)</li>
+    <li>Vous cherchez un quartier anime le soir (direction centre-ville)</li>
+    <li>Vous voulez du standing et du prestige (Grammont-Prebendes sera mieux)</li>
+  </ul>
+
+  <p>
+    En resume, Velpeau est parfait pour les familles, les jeunes couples qui s'installent,
+    et tous ceux qui veulent une vraie vie de quartier sans les inconvenients du centre-ville.
+    C'est mon quartier depuis plusieurs annees et je ne le quitterais pour rien au monde.
+  </p>
+
+  <div class="cta-box">
+    <h3>Vous cherchez a vous installer a Tours ?</h3>
+    <p>
+      N'hesitez pas a me contacter si vous avez des questions sur Velpeau ou les autres
+      quartiers de Tours. Je serai ravi de vous aider dans votre recherche.
+    </p>
+    <a href="/contact/" class="btn btn-primary">Me contacter</a>
+  </div>
+
+  <h2>A lire aussi</h2>
+
+  <ul>
+    <li><a href="/quartiers/a-eviter/">Quartiers de Tours a eviter ?</a></li>
+    <li><a href="/quartiers/">Tous les quartiers de Tours</a></li>
+    <li><a href="/que-faire/ce-week-end/">Que faire a Tours ce week-end</a></li>
+  </ul>
+
+  <FAQ items={faqItems} title="Questions frequentes sur le quartier Velpeau" />
+
+</ArticleLayout>
+
+<style>
+  .intro {
+    font-size: 1.125rem;
+    color: #374151;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .summary-box {
+    background: #f0f9ff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .summary-box h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .summary-box table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .summary-box td {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #bfdbfe;
+  }
+
+  .summary-box tr:last-child td {
+    border-bottom: none;
+  }
+
+  .summary-box td:first-child {
+    width: 40%;
+  }
+
+  .highlight-box {
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .highlight-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #92400e;
+    font-size: 1rem;
+  }
+
+  .highlight-box p {
+    margin: 0;
+    color: #78350f;
+  }
+
+  .tip-box {
+    background: #ecfdf5;
+    border: 1px solid #6ee7b7;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 0.5rem;
+  }
+
+  .tip-box h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #065f46;
+  }
+
+  .tip-box p {
+    margin: 0;
+    color: #047857;
+    font-size: 0.9375rem;
+  }
+
+  .pros-cons {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  @media (min-width: 768px) {
+    .pros-cons {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .pros, .cons {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+  }
+
+  .pros {
+    background: #ecfdf5;
+  }
+
+  .cons {
+    background: #fef2f2;
+  }
+
+  .pros h3 {
+    color: #065f46;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .cons h3 {
+    color: #991b1b;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .pros ul, .cons ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  .pros li, .cons li {
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-box {
+    background: #f0f9ff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .cta-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-box p {
+    margin-bottom: 1.25rem;
+    color: #4b5563;
+  }
+
+  h2 {
+    margin-top: 2.5rem;
+  }
+
+  h3 {
+    margin-top: 1.5rem;
+  }
+
+  ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+</style>

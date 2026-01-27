@@ -1,0 +1,164 @@
+---
+/**
+ * Layout pour les articles de blog et pages de contenu
+ */
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  image?: string;
+  imageAlt?: string;
+  publishedDate?: string;
+  modifiedDate?: string;
+  author?: string;
+  category?: string;
+  categoryHref?: string;
+  schema?: object | object[];
+}
+
+const {
+  title,
+  description,
+  canonical,
+  image,
+  imageAlt,
+  publishedDate,
+  modifiedDate,
+  author = 'Vivre a Tours',
+  category,
+  categoryHref,
+  schema,
+} = Astro.props;
+
+// Breadcrumb items
+const breadcrumbItems = [
+  { label: 'Accueil', href: '/' },
+  ...(category && categoryHref ? [{ label: category, href: categoryHref }] : []),
+  { label: title },
+];
+
+// Article schema
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "author": {
+    "@type": "Person",
+    "name": author,
+    "url": "https://vivre-a-tours.fr/a-propos/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vivre a Tours",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://vivre-a-tours.fr/images/logo.png"
+    }
+  },
+  ...(publishedDate && { "datePublished": publishedDate }),
+  ...(modifiedDate && { "dateModified": modifiedDate }),
+  ...(image && { "image": image.startsWith('http') ? image : `https://vivre-a-tours.fr${image}` }),
+  "mainEntityOfPage": canonical || Astro.url.href
+};
+
+// Combine with additional schemas
+const allSchemas = schema
+  ? Array.isArray(schema)
+    ? [articleSchema, ...schema]
+    : [articleSchema, schema]
+  : articleSchema;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  image={image}
+  imageAlt={imageAlt}
+  type="article"
+  publishedDate={publishedDate}
+  modifiedDate={modifiedDate}
+  schema={allSchemas}
+>
+  <article class="article">
+    <div class="container">
+      <Breadcrumb items={breadcrumbItems} />
+
+      <header class="article-header">
+        <h1 class="article-title">{title}</h1>
+
+        {(publishedDate || author) && (
+          <div class="article-meta">
+            {author && (
+              <span class="article-author">
+                Par <strong>{author}</strong>
+              </span>
+            )}
+            {publishedDate && (
+              <time class="article-date" datetime={publishedDate}>
+                {new Date(publishedDate).toLocaleDateString('fr-FR', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </time>
+            )}
+            {modifiedDate && modifiedDate !== publishedDate && (
+              <span class="article-updated">
+                (mis a jour le {new Date(modifiedDate).toLocaleDateString('fr-FR', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })})
+              </span>
+            )}
+          </div>
+        )}
+      </header>
+
+      <div class="article-content prose">
+        <slot />
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article {
+    padding: 1rem 0 4rem;
+  }
+
+  .article-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .article-title {
+    margin-bottom: 1rem;
+  }
+
+  .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+
+  .article-author strong {
+    color: #374151;
+  }
+
+  .article-updated {
+    font-style: italic;
+  }
+
+  .article-content {
+    max-width: 75ch;
+  }
+</style>

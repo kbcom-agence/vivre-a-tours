@@ -1,0 +1,217 @@
+---
+/**
+ * Footer du site avec liens et informations
+ */
+const currentYear = new Date().getFullYear();
+
+const footerLinks = {
+  decouvrir: [
+    { label: 'Que faire a Tours', href: '/que-faire/' },
+    { label: 'Les quartiers', href: '/quartiers/' },
+    { label: 'Ou manger', href: '/manger/' },
+    { label: 'Bien-etre', href: '/bien-etre/' },
+  ],
+  pratique: [
+    { label: 'Se loger', href: '/hebergement/' },
+    { label: 'Services', href: '/services/' },
+    { label: 'Infos pratiques', href: '/pratique/' },
+    { label: 'Blog', href: '/blog/' },
+  ],
+  site: [
+    { label: 'A propos', href: '/a-propos/' },
+    { label: 'Contact', href: '/contact/' },
+    { label: 'Mentions legales', href: '/mentions-legales/' },
+  ],
+};
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Branding -->
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          Vivre a Tours
+        </a>
+        <p class="footer-tagline">
+          Le guide local pour decouvrir et vivre a Tours.
+          Conseils authentiques d'un Tourangeau.
+        </p>
+        <p class="footer-location">
+          <span aria-hidden="true">📍</span> Tours, Centre-Val de Loire
+        </p>
+      </div>
+
+      <!-- Liens Decouvrir -->
+      <div class="footer-section">
+        <h3 class="footer-title">Decouvrir</h3>
+        <ul class="footer-links">
+          {footerLinks.decouvrir.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Liens Pratique -->
+      <div class="footer-section">
+        <h3 class="footer-title">Pratique</h3>
+        <ul class="footer-links">
+          {footerLinks.pratique.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Liens Site -->
+      <div class="footer-section">
+        <h3 class="footer-title">Le site</h3>
+        <ul class="footer-links">
+          {footerLinks.site.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p class="footer-copyright">
+        &copy; {currentYear} Vivre a Tours. Tous droits reserves.
+      </p>
+      <p class="footer-made">
+        Fait avec <span aria-hidden="true">❤️</span><span class="sr-only">amour</span> a Tours
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #1f2937;
+    color: #d1d5db;
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 640px) {
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+  }
+
+  .footer-brand {
+    max-width: 280px;
+  }
+
+  .footer-logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-logo:hover {
+    text-decoration: none;
+    color: #93c5fd;
+  }
+
+  .footer-tagline {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .footer-location {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: #9ca3af;
+  }
+
+  .footer-section {
+    min-width: 0;
+  }
+
+  .footer-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-links a {
+    color: #d1d5db;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-bottom {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #374151;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  @media (min-width: 640px) {
+    .footer-bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+
+  .footer-copyright,
+  .footer-made {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin: 0;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>

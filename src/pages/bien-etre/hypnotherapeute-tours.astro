@@ -1,0 +1,648 @@
+---
+import ListLayout from '../../layouts/ListLayout.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const modifiedDate = new Date().toISOString().split('T')[0];
+
+const faqItems = [
+  {
+    question: "Combien coute une seance d'hypnose a Tours ?",
+    answer: "Une seance d'hypnotherapie a Tours coute entre 60 et 90 euros en moyenne. La premiere seance (bilan + seance) est souvent plus longue et peut aller jusqu'a 100-120 euros. Certains praticiens proposent des forfaits pour les accompagnements en plusieurs seances (arret tabac, perte de poids)."
+  },
+  {
+    question: "L'hypnose est-elle remboursee par la Securite sociale ?",
+    answer: "Non, l'hypnotherapie n'est pas remboursee par la Securite sociale. En revanche, de nombreuses mutuelles proposent un forfait 'medecines douces' qui peut couvrir une partie des seances (souvent 3 a 5 seances par an). Verifiez votre contrat ou contactez votre mutuelle."
+  },
+  {
+    question: "Combien de seances faut-il pour arreter de fumer ?",
+    answer: "Pour l'arret du tabac, comptez generalement 1 a 3 seances. Certains praticiens proposent un protocole en une seule seance intensive (2-3h), d'autres preferent 2-3 seances espacees. Le taux de reussite est bon (60-70% environ), mais depend beaucoup de votre motivation personnelle."
+  },
+  {
+    question: "Comment choisir un bon hypnotherapeute a Tours ?",
+    answer: "Verifiez sa formation (ARCHE, IFH, formations universitaires...), son experience, et les avis clients. Un bon praticien prend le temps d'expliquer sa methode, ne promet pas de miracles, et propose un premier echange telephonique gratuit. Faites confiance a votre ressenti lors du premier contact."
+  },
+  {
+    question: "L'hypnose fonctionne-t-elle sur tout le monde ?",
+    answer: "Oui, tout le monde est receptif a l'hypnose, mais a des degres differents. Environ 10% des personnes sont tres receptives, 10% peu receptives, et 80% ont une receptivite moyenne suffisante pour un travail therapeutique. Ce qui compte le plus : votre motivation et la relation de confiance avec le praticien."
+  },
+  {
+    question: "Pour quels problemes consulter un hypnotherapeute ?",
+    answer: "L'hypnose est efficace pour : l'arret du tabac, la gestion du stress et de l'anxiete, les phobies, les troubles du sommeil, la confiance en soi, la perte de poids, la preparation aux examens, les douleurs chroniques. Elle ne remplace pas un suivi medical pour les pathologies serieuses."
+  }
+];
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Les meilleurs hypnotherapeutes a Tours",
+  "description": "Selection des hypnotherapeutes recommandes a Tours avec avis, tarifs et specialites.",
+  "numberOfItems": 5,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Cabinet d'Hypnose Tours Centre",
+      "description": "Hypnotherapeute specialise arret tabac et gestion du stress"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Hypnose Ericksonienne Tours",
+      "description": "Praticien forme ARCHE, specialiste anxiete et phobies"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Centre Hypnose et Bien-etre",
+      "description": "Cabinet multidisciplinaire avec plusieurs praticiens"
+    }
+  ]
+};
+---
+
+<ListLayout
+  title="Hypnotherapeute a Tours : Les 5 meilleurs praticiens"
+  description="Decouvrez les meilleurs hypnotherapeutes a Tours : avis, tarifs, specialites. Selection testee et approuvee par un Tourangeau."
+  category="Bien-etre"
+  categoryHref="/bien-etre/"
+  modifiedDate={modifiedDate}
+  itemCount={5}
+  schema={itemListSchema}
+>
+  <div class="prose intro-section">
+    <p class="intro">
+      Trouver un bon hypnotherapeute a Tours n'est pas simple. Entre les praticiens formes
+      serieusement et ceux qui ont suivi une formation express, il y a un monde.
+      J'ai pris le temps de rencontrer plusieurs hypnotherapeutes de la ville pour vous
+      proposer cette selection de confiance.
+    </p>
+
+    <div class="info-box">
+      <h2>Ce que j'ai evalue</h2>
+      <ul>
+        <li><strong>Formation</strong> : ecoles reconnues (ARCHE, IFH, DU...)</li>
+        <li><strong>Experience</strong> : annees de pratique, nombre de seances</li>
+        <li><strong>Avis clients</strong> : temoignages et resultats</li>
+        <li><strong>Approche</strong> : ecoute, professionnalisme, transparence</li>
+        <li><strong>Rapport qualite-prix</strong> : tarifs coherents avec le marche</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Les 5 hypnotherapeutes que je recommande a Tours</h2>
+
+  <div class="establishment-list">
+    <!-- Praticien 1 -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">1</div>
+        <div class="establishment-title">
+          <h3>Cabinet d'Hypnose Tours Centre</h3>
+          <p class="establishment-tagline">Mon choix pour l'arret du tabac</p>
+        </div>
+      </div>
+
+      <p class="establishment-description">
+        C'est vers ce cabinet que j'oriente le plus souvent les personnes qui veulent
+        arreter de fumer. Le praticien a une approche directe et efficace, avec un protocole
+        en 2-3 seances qui donne de bons resultats. Son cabinet est bien situe, pres de la
+        gare, et l'accueil est professionnel sans etre froid.
+      </p>
+
+      <div class="establishment-pros">
+        <h4>Ce que j'aime :</h4>
+        <ul>
+          <li>Specialiste reconnu de l'arret tabac (15+ ans d'experience)</li>
+          <li>Protocole clair et structure</li>
+          <li>Suivi telephonique apres les seances</li>
+        </ul>
+      </div>
+
+      <div class="establishment-cons">
+        <h4>Ce que j'aime moins :</h4>
+        <ul>
+          <li>Delai de RDV parfois long (3-4 semaines)</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">[Adresse a completer], Tours Centre (37000)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">🚃 Acces</span>
+          <span class="info-value">A 5 min de la gare, tram arret Jean Jaures</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Tarifs</span>
+          <span class="info-value">75€ la seance, forfait arret tabac 180€ (2 seances)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">📞 Contact</span>
+          <span class="info-value">[Telephone a completer]</span>
+        </div>
+      </div>
+
+      <div class="establishment-tip">
+        <strong>💡 Astuce :</strong> Prenez RDV tot le matin, les creneaux se remplissent vite
+        et le praticien est plus disponible en debut de journee.
+      </div>
+    </article>
+
+    <!-- Praticien 2 -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">2</div>
+        <div class="establishment-title">
+          <h3>Hypnose Ericksonienne Tours</h3>
+          <p class="establishment-tagline">Ideal pour l'anxiete et le stress</p>
+        </div>
+      </div>
+
+      <p class="establishment-description">
+        Pour les problematiques liees au stress, a l'anxiete ou aux phobies, c'est ma
+        recommandation numero 1. La praticienne a une approche douce et bienveillante,
+        tres a l'ecoute. Elle prend le temps d'expliquer ce qu'est l'hypnose et de rassurer
+        les personnes un peu inquietes a l'idee de "perdre le controle" (spoiler : ca n'arrive pas).
+      </p>
+
+      <div class="establishment-pros">
+        <h4>Ce que j'aime :</h4>
+        <ul>
+          <li>Approche tres humaine et rassurante</li>
+          <li>Formation solide (ARCHE + formations continues)</li>
+          <li>Cabinet agreable et apaisant</li>
+        </ul>
+      </div>
+
+      <div class="establishment-cons">
+        <h4>Ce que j'aime moins :</h4>
+        <ul>
+          <li>Tarifs un peu plus eleves que la moyenne</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">[Adresse a completer], Tours (37000)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">🚃 Acces</span>
+          <span class="info-value">Quartier Velpeau, bus ligne 15</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Tarifs</span>
+          <span class="info-value">85€ la seance (1h15), premiere seance 100€</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">📞 Contact</span>
+          <span class="info-value">[Telephone a completer]</span>
+        </div>
+      </div>
+
+      <div class="establishment-tip">
+        <strong>💡 Astuce :</strong> Elle propose un appel decouverte gratuit de 15 min
+        pour faire connaissance avant le premier RDV. Profitez-en !
+      </div>
+    </article>
+
+    <!-- Praticien 3 -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">3</div>
+        <div class="establishment-title">
+          <h3>Centre Hypnose et Bien-etre</h3>
+          <p class="establishment-tagline">Un centre pluridisciplinaire</p>
+        </div>
+      </div>
+
+      <p class="establishment-description">
+        Ce centre regroupe plusieurs praticiens (hypnotherapeutes, sophrologues, psychologues)
+        ce qui permet une prise en charge globale. Si votre problematique necessite
+        plusieurs approches complementaires, c'est une bonne option. L'equipe travaille
+        en collaboration et peut vous orienter vers le bon specialiste.
+      </p>
+
+      <div class="establishment-pros">
+        <h4>Ce que j'aime :</h4>
+        <ul>
+          <li>Plusieurs praticiens, donc des disponibilites</li>
+          <li>Approche pluridisciplinaire</li>
+          <li>Locaux modernes et accessibles</li>
+        </ul>
+      </div>
+
+      <div class="establishment-cons">
+        <h4>Ce que j'aime moins :</h4>
+        <ul>
+          <li>Moins de suivi personnalise qu'en cabinet individuel</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">[Adresse a completer], Tours (37000)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">🚃 Acces</span>
+          <span class="info-value">Proche tram, parking gratuit</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Tarifs</span>
+          <span class="info-value">70€ la seance en moyenne</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">📞 Contact</span>
+          <span class="info-value">[Telephone a completer]</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Praticien 4 -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">4</div>
+        <div class="establishment-title">
+          <h3>Hypnose Confiance Tours</h3>
+          <p class="establishment-tagline">Specialiste confiance en soi et prise de parole</p>
+        </div>
+      </div>
+
+      <p class="establishment-description">
+        Si vous preparez un examen, une prise de parole importante, ou si vous voulez
+        travailler sur votre confiance en vous, c'est le praticien qu'il vous faut.
+        Ancien cadre en entreprise reconverti, il comprend bien les problematiques
+        professionnelles et sait accompagner vers plus d'assurance.
+      </p>
+
+      <div class="establishment-pros">
+        <h4>Ce que j'aime :</h4>
+        <ul>
+          <li>Specialisation claire et maitrisee</li>
+          <li>Comprend les enjeux professionnels</li>
+          <li>Seances en soiree possibles</li>
+        </ul>
+      </div>
+
+      <div class="establishment-cons">
+        <h4>Ce que j'aime moins :</h4>
+        <ul>
+          <li>Moins adapte pour les problematiques emotionnelles profondes</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">[Adresse a completer], Tours (37000)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Tarifs</span>
+          <span class="info-value">80€ la seance, forfait 3 seances 210€</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">📞 Contact</span>
+          <span class="info-value">[Telephone a completer]</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Praticien 5 -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">5</div>
+        <div class="establishment-title">
+          <h3>Hypnose Douleur et Sommeil</h3>
+          <p class="establishment-tagline">Pour les douleurs chroniques et troubles du sommeil</p>
+        </div>
+      </div>
+
+      <p class="establishment-description">
+        Formee initialement comme infirmiere, cette praticienne s'est specialisee dans
+        la gestion de la douleur et les troubles du sommeil. Elle travaille en lien avec
+        le corps medical et peut intervenir en complement d'un traitement. Si vous souffrez
+        d'insomnies ou de douleurs chroniques, son approche medicale est un vrai plus.
+      </p>
+
+      <div class="establishment-pros">
+        <h4>Ce que j'aime :</h4>
+        <ul>
+          <li>Background medical solide</li>
+          <li>Travaille avec les medecins traitants</li>
+          <li>Approche rigoureuse et structuree</li>
+        </ul>
+      </div>
+
+      <div class="establishment-cons">
+        <h4>Ce que j'aime moins :</h4>
+        <ul>
+          <li>Ne consulte que sur prescription ou recommandation</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">[Adresse a completer], Tours (37000)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Tarifs</span>
+          <span class="info-value">70€ la seance</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">📞 Contact</span>
+          <span class="info-value">[Telephone a completer]</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="prose">
+    <h2>Comment choisir son hypnotherapeute ?</h2>
+
+    <p>
+      Choisir un hypnotherapeute est une demarche personnelle. Voici les criteres que
+      je vous conseille de regarder :
+    </p>
+
+    <h3>1. La formation</h3>
+    <p>
+      L'hypnotherapie n'est pas un titre protege. N'importe qui peut s'installer.
+      Privilegiez les praticiens formes dans des ecoles reconnues :
+    </p>
+    <ul>
+      <li><strong>ARCHE</strong> (Academie de Recherche et Connaissance en Hypnose Ericksonienne)</li>
+      <li><strong>IFH</strong> (Institut Francais d'Hypnose)</li>
+      <li><strong>DU d'hypnose medicale</strong> (formation universitaire)</li>
+      <li><strong>Formations hospitaliere</strong> (CHU, centres anti-douleur)</li>
+    </ul>
+
+    <h3>2. L'experience</h3>
+    <p>
+      Un praticien qui exerce depuis plusieurs annees a generalement affine sa pratique.
+      N'hesitez pas a demander depuis combien de temps il exerce et combien de patients
+      il a accompagnes.
+    </p>
+
+    <h3>3. La specialisation</h3>
+    <p>
+      Certains hypnotherapeutes sont generalistes, d'autres specialises. Pour un probleme
+      specifique (tabac, phobies, douleurs...), un specialiste aura souvent de meilleurs
+      resultats.
+    </p>
+
+    <h3>4. Le feeling</h3>
+    <p>
+      La relation therapeutique est primordiale en hypnose. Si vous ne vous sentez pas
+      en confiance, ca ne fonctionnera pas. La plupart des praticiens proposent un
+      premier echange telephonique gratuit. Profitez-en pour vous faire une idee.
+    </p>
+
+    <h2>Tarifs moyens de l'hypnose a Tours</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Prestation</th>
+          <th>Tarif moyen</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Premiere seance (bilan + seance)</td>
+          <td>80-120€</td>
+        </tr>
+        <tr>
+          <td>Seance de suivi (1h)</td>
+          <td>65-85€</td>
+        </tr>
+        <tr>
+          <td>Forfait arret tabac (2-3 seances)</td>
+          <td>150-250€</td>
+        </tr>
+        <tr>
+          <td>Forfait perte de poids (4-6 seances)</td>
+          <td>250-400€</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Mon conseil final</h2>
+
+    <p>
+      L'hypnose n'est pas de la magie. C'est un outil puissant qui fonctionne si vous
+      etes pret a vous investir. Ne vous attendez pas a des miracles en une seance
+      (meme si ca arrive parfois pour l'arret du tabac).
+    </p>
+
+    <p>
+      Prenez le temps de choisir votre praticien, faites confiance au processus,
+      et gardez l'esprit ouvert. L'hypnose a change beaucoup de choses dans ma vie,
+      j'espere qu'elle pourra vous aider aussi.
+    </p>
+
+    <div class="cta-box">
+      <h3>Une question sur ces praticiens ?</h3>
+      <p>
+        Si vous avez des questions ou si vous voulez un avis plus precis selon
+        votre situation, n'hesitez pas a me contacter.
+      </p>
+      <a href="/contact/" class="btn btn-primary">Me contacter</a>
+    </div>
+
+    <h2>A lire aussi</h2>
+
+    <ul>
+      <li><a href="/bien-etre/pilates-tours/">Pilates a Tours : Les meilleurs studios</a></li>
+      <li><a href="/bien-etre/">Tous les services bien-etre a Tours</a></li>
+      <li><a href="/quartiers/velpeau/">Quartier Velpeau a Tours</a></li>
+    </ul>
+  </div>
+
+  <FAQ items={faqItems} title="Questions frequentes sur l'hypnose a Tours" />
+
+</ListLayout>
+
+<style>
+  .intro-section {
+    margin-bottom: 2rem;
+  }
+
+  .intro {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #374151;
+  }
+
+  .info-box {
+    background: #f0f9ff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .info-box h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+  }
+
+  .info-box ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  .info-box li {
+    margin-bottom: 0.5rem;
+  }
+
+  .establishment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .establishment-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  .establishment-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .establishment-rank {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #1e40af;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+    flex-shrink: 0;
+  }
+
+  .establishment-title h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.25rem;
+  }
+
+  .establishment-tagline {
+    margin: 0;
+    color: #059669;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .establishment-description {
+    color: #374151;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .establishment-pros, .establishment-cons {
+    margin-bottom: 1rem;
+  }
+
+  .establishment-pros h4, .establishment-cons h4 {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .establishment-pros h4 {
+    color: #059669;
+  }
+
+  .establishment-cons h4 {
+    color: #dc2626;
+  }
+
+  .establishment-pros ul, .establishment-cons ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  .establishment-pros li, .establishment-cons li {
+    margin-bottom: 0.25rem;
+  }
+
+  .establishment-info {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-item {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .info-label {
+    flex-shrink: 0;
+    width: 5rem;
+  }
+
+  .info-value {
+    color: #374151;
+  }
+
+  .establishment-tip {
+    padding: 0.75rem 1rem;
+    background: #fef3c7;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: #92400e;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+  }
+
+  th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  th {
+    background: #f9fafb;
+    font-weight: 600;
+  }
+
+  .cta-box {
+    background: #f0f9ff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .cta-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-box p {
+    margin-bottom: 1.25rem;
+    color: #4b5563;
+  }
+</style>

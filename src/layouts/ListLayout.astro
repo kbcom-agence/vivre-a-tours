@@ -1,0 +1,157 @@
+---
+/**
+ * Layout pour les pages de liste (top X, guides de services, etc.)
+ */
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  image?: string;
+  imageAlt?: string;
+  publishedDate?: string;
+  modifiedDate?: string;
+  category?: string;
+  categoryHref?: string;
+  itemCount?: number;
+  schema?: object | object[];
+}
+
+const {
+  title,
+  description,
+  canonical,
+  image,
+  imageAlt,
+  publishedDate,
+  modifiedDate,
+  category,
+  categoryHref,
+  itemCount,
+  schema,
+} = Astro.props;
+
+// Breadcrumb items
+const breadcrumbItems = [
+  { label: 'Accueil', href: '/' },
+  ...(category && categoryHref ? [{ label: category, href: categoryHref }] : []),
+  { label: title },
+];
+
+// ItemList schema (will be completed by page content)
+const baseSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": title,
+  "description": description,
+  ...(itemCount && { "numberOfItems": itemCount }),
+};
+
+// Combine schemas
+const allSchemas = schema
+  ? Array.isArray(schema)
+    ? [baseSchema, ...schema]
+    : [baseSchema, schema]
+  : baseSchema;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  image={image}
+  imageAlt={imageAlt}
+  type="article"
+  publishedDate={publishedDate}
+  modifiedDate={modifiedDate}
+  schema={allSchemas}
+>
+  <div class="list-page">
+    <div class="container">
+      <Breadcrumb items={breadcrumbItems} />
+
+      <header class="list-header">
+        <h1 class="list-title">{title}</h1>
+
+        <div class="list-meta">
+          {itemCount && (
+            <span class="list-count">
+              {itemCount} {itemCount > 1 ? 'adresses' : 'adresse'}
+            </span>
+          )}
+          {modifiedDate && (
+            <span class="list-updated">
+              Mis a jour le {new Date(modifiedDate).toLocaleDateString('fr-FR', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              })}
+            </span>
+          )}
+        </div>
+      </header>
+
+      <div class="list-content">
+        <slot />
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .list-page {
+    padding: 1rem 0 4rem;
+  }
+
+  .list-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .list-title {
+    margin-bottom: 0.75rem;
+  }
+
+  .list-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+
+  .list-count {
+    background: #e0e7ff;
+    color: #1e40af;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-weight: 500;
+  }
+
+  .list-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* Pour les enfants de type prose */
+  .list-content :global(.prose) {
+    max-width: 75ch;
+  }
+
+  /* Cartes dans la liste */
+  .list-content :global(.establishment-card) {
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    transition: box-shadow 0.2s;
+  }
+
+  .list-content :global(.establishment-card:hover) {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  }
+</style>

@@ -1,0 +1,511 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const modifiedDate = new Date().toISOString().split('T')[0];
+
+const faqItems = [
+  {
+    question: "Tours est-elle une ville dangereuse ?",
+    answer: "Non, Tours n'est pas une ville dangereuse. C'est une ville moyenne francaise avec un taux de delinquance inferieur a la moyenne nationale. Comme partout, certains quartiers sont plus calmes que d'autres, mais il n'y a pas de zones vraiment dangereuses comme on peut en trouver dans certaines grandes metropoles."
+  },
+  {
+    question: "Le quartier du Sanitas est-il dangereux ?",
+    answer: "Le Sanitas a une reputation qui ne correspond plus a la realite. C'est un quartier populaire en pleine renovation urbaine, bien desservi par le tram, avec des prix tres accessibles. Certaines rues sont moins agreables, mais le quartier n'est pas dangereux. Je conseille simplement de visiter avant d'acheter ou louer pour voir si l'ambiance vous convient."
+  },
+  {
+    question: "Quels quartiers eviter pour une famille a Tours ?",
+    answer: "Pour une famille, je deconseille surtout les abords immediats de la gare (bruyant, peu de vie de quartier) et certaines rues du Sanitas (ambiance moins familiale). Privilegiez Velpeau, Tours Nord, les Prebendes ou les Deux-Lions qui offrent un cadre plus adapte aux familles avec enfants."
+  },
+  {
+    question: "Le centre-ville de Tours est-il bruyant ?",
+    answer: "Oui, le centre-ville (surtout autour de Place Plumereau) est bruyant, particulierement le week-end. Si vous cherchez le calme, evitez les rues autour de 'Plum' et de la rue Colbert. Les nuisances sonores nocturnes sont frequentes les vendredis et samedis soirs."
+  },
+  {
+    question: "Ou ne pas habiter pres de Tours ?",
+    answer: "Concernant les communes proches, Saint-Pierre-des-Corps a des zones contrastees - certaines sont tres agreables, d'autres moins. Joue-les-Tours varie beaucoup selon les quartiers. Je recommande toujours de visiter plusieurs fois, a differentes heures, avant de vous decider."
+  },
+  {
+    question: "Les prix sont-ils plus bas dans les quartiers a eviter ?",
+    answer: "Oui, les prix sont generalement 20 a 30% moins chers dans les quartiers moins cotes. Au Sanitas par exemple, on trouve des biens a 2 000-2 500 euros/m2 contre 3 400-3 800 euros en centre-ville. Mais attention, un prix bas n'est pas toujours une bonne affaire si vous n'etes pas a l'aise dans le quartier."
+  }
+];
+---
+
+<ArticleLayout
+  title="Quartiers de Tours a eviter : Mon avis honnete"
+  description="Quels quartiers eviter a Tours ? Un Tourangeau vous donne son avis honnete et nuance sur les quartiers qui posent question. Guide objectif."
+  category="Quartiers"
+  categoryHref="/quartiers/"
+  modifiedDate={modifiedDate}
+>
+  <p class="intro">
+    "Quels quartiers eviter a Tours ?" C'est une question que je recois souvent. Je vais etre
+    honnete avec vous : il n'y a pas de quartiers vraiment "a eviter" a Tours comme on peut
+    en trouver dans certaines grandes villes. Mais certaines zones meritent une reflexion
+    particuliere selon votre profil. Voici mon analyse nuancee.
+  </p>
+
+  <div class="disclaimer-box">
+    <h2>Avant de commencer</h2>
+    <p>
+      Cet article vise a donner une information honnete, pas a stigmatiser des quartiers
+      ou leurs habitants. Chaque quartier a ses qualites et ses defauts. Mon objectif est
+      de vous aider a faire un choix eclaire, pas de vous faire peur. Tours reste une ville
+      agreable et sure dans son ensemble.
+    </p>
+  </div>
+
+  <h2>Tours : une ville globalement sure</h2>
+
+  <p>
+    Mettons les choses au clair d'emblee : <strong>Tours n'est pas une ville dangereuse</strong>.
+    C'est une ville moyenne de province, avec un taux de delinquance inferieur a la moyenne
+    nationale et bien en dessous de celui des grandes metropoles comme Lyon, Marseille ou Paris.
+  </p>
+
+  <p>
+    Les "quartiers a eviter" dont on parle a Tours n'ont rien a voir avec les zones sensibles
+    des grandes agglomerations. Il s'agit plutot de quartiers moins agreables, plus bruyants,
+    ou avec une ambiance qui ne conviendra pas a tout le monde.
+  </p>
+
+  <p>
+    Cela dit, comme dans toute ville, tous les quartiers ne se valent pas. Voici mon analyse
+    honnete.
+  </p>
+
+  <h2>Les zones a considerer avec prudence</h2>
+
+  <h3>Le quartier du Sanitas</h3>
+
+  <div class="neighborhood-card">
+    <div class="neighborhood-header">
+      <span class="neighborhood-name">Sanitas</span>
+      <span class="neighborhood-verdict nuanced">A visiter avant de decider</span>
+    </div>
+
+    <p>
+      Le Sanitas est systematiquement cite quand on parle des quartiers a eviter a Tours.
+      Est-ce merite ? <strong>En partie seulement.</strong>
+    </p>
+
+    <p>
+      C'est un quartier de grands ensembles construit dans les annees 60-70, en pleine
+      renovation urbaine depuis plusieurs annees. Il est tres bien desservi (arret de tram
+      Sanitas) et offre des prix imbattables (2 000-2 500 euros/m2).
+    </p>
+
+    <h4>Ce que je reproche au Sanitas :</h4>
+    <ul>
+      <li>Certaines cages d'escalier peu entretenues (variable selon les batiments)</li>
+      <li>Une ambiance qui peut etre pesante dans certaines rues</li>
+      <li>Des incivilites ponctuelles (bruit, rodeos de scooters)</li>
+      <li>Un sentiment d'insecurite pour certains residents (subjectif)</li>
+    </ul>
+
+    <h4>Ce qui est positif :</h4>
+    <ul>
+      <li>Prix tres accessibles, ideal pour les petits budgets</li>
+      <li>Excellente desserte tram (5 min du centre)</li>
+      <li>Renovation urbaine en cours qui ameliore le cadre</li>
+      <li>Proximite immediate du centre-ville</li>
+      <li>Commerces de proximite presents</li>
+    </ul>
+
+    <div class="my-advice">
+      <strong>Mon conseil :</strong> Ne rayez pas le Sanitas de votre liste sans l'avoir visite.
+      Allez-y plusieurs fois, a differentes heures. Certains batiments sont tres corrects,
+      d'autres moins. C'est un quartier qui convient aux personnes pragmatiques qui privilegient
+      le budget et l'accessibilite sur l'image.
+    </div>
+  </div>
+
+  <h3>Les abords de la gare</h3>
+
+  <div class="neighborhood-card">
+    <div class="neighborhood-header">
+      <span class="neighborhood-name">Quartier Gare</span>
+      <span class="neighborhood-verdict avoid">A eviter pour habiter</span>
+    </div>
+
+    <p>
+      Le secteur immediat de la gare (rue de Nantes, avenue de Grammont cote gare)
+      n'est pas un quartier ou je conseillerais de s'installer.
+    </p>
+
+    <h4>Les problemes :</h4>
+    <ul>
+      <li>Passage constant, peu de vie de quartier</li>
+      <li>Nuisances sonores (trains, circulation, noctambules)</li>
+      <li>Presence de personnes en difficulte (SDF, addictions)</li>
+      <li>Immeubles parfois degrades</li>
+      <li>Ambiance peu chaleureuse</li>
+    </ul>
+
+    <div class="my-advice">
+      <strong>Mon conseil :</strong> Ce n'est pas dangereux, mais c'est inconfortable pour
+      y vivre au quotidien. Si vous cherchez un logement proche de la gare pour des raisons
+      pratiques, privilegiez les rues un peu en retrait ou le quartier Velpeau (15 min a pied).
+    </div>
+  </div>
+
+  <h3>Le centre-ville festif</h3>
+
+  <div class="neighborhood-card">
+    <div class="neighborhood-header">
+      <span class="neighborhood-name">Place Plumereau et alentours</span>
+      <span class="neighborhood-verdict nuanced">A eviter si vous cherchez le calme</span>
+    </div>
+
+    <p>
+      Paradoxalement, l'un des quartiers les plus recherches de Tours peut aussi etre
+      l'un des plus penibles a habiter. La Place Plumereau ("Plum'") et les rues adjacentes
+      sont le coeur de la vie nocturne tourangelle.
+    </p>
+
+    <h4>Les problemes pour les residents :</h4>
+    <ul>
+      <li>Bruit intense les vendredis et samedis soirs (jusqu'a 3-4h du matin)</li>
+      <li>Nuisances liees aux terrasses et aux noctambules</li>
+      <li>Difficulte a dormir fenetre ouverte en ete</li>
+      <li>Dechets et odeurs le dimanche matin</li>
+    </ul>
+
+    <h4>Ce qui reste positif :</h4>
+    <ul>
+      <li>Quartier historique magnifique</li>
+      <li>Animation garantie</li>
+      <li>Tout a pied</li>
+      <li>Ideal si vous aimez sortir</li>
+    </ul>
+
+    <div class="my-advice">
+      <strong>Mon conseil :</strong> Si vous etes jeune, celibataire et aimez sortir, vous
+      adorerez. Si vous avez des enfants, travaillez tot le matin ou etes sensible au bruit,
+      fuyez. Privilegiez les rues perpendiculaires ou le quartier Colbert, plus calme tout
+      en restant central.
+    </div>
+  </div>
+
+  <h2>Les zones qui divisent</h2>
+
+  <h3>Tours Nord (certains secteurs)</h3>
+
+  <p>
+    Tours Nord est globalement un quartier familial agreable, mais certains secteurs
+    (notamment vers les grands ensembles de l'Europe) ont une reputation mitigee.
+    Ce n'est pas dangereux, mais l'ambiance est moins sympathique que dans le reste
+    du quartier.
+  </p>
+
+  <h3>Joue-les-Tours (commune voisine)</h3>
+
+  <p>
+    Joue-les-Tours n'est pas a Tours mais colle a la ville. Certains quartiers (La Rabiere
+    notamment) sont classes en politique de la ville et connaissent des problematiques
+    sociales. D'autres secteurs de Joue sont tres agreables et residentiels.
+    A considerer au cas par cas.
+  </p>
+
+  <h3>Saint-Pierre-des-Corps</h3>
+
+  <p>
+    Commune independante collee a Tours, Saint-Pierre est tres heterogene.
+    Le centre et certains quartiers residentiel sont corrects. D'autres zones
+    (grands ensembles) sont plus compliquees. L'avantage : les prix sont bas
+    et la desserte TGV est excellente.
+  </p>
+
+  <h2>Mes criteres pour eviter les mauvaises surprises</h2>
+
+  <p>
+    Plutot que de vous donner une liste noire de quartiers, voici les criteres que
+    j'utilise pour evaluer un quartier :
+  </p>
+
+  <div class="criteria-list">
+    <div class="criterion">
+      <h4>1. Visitez a differentes heures</h4>
+      <p>
+        Un quartier peut etre agreable le jour et bruyant la nuit (ou l'inverse).
+        Passez en journee, en soiree, et le week-end si possible.
+      </p>
+    </div>
+
+    <div class="criterion">
+      <h4>2. Observez les parties communes</h4>
+      <p>
+        Si vous visitez un appartement, regardez l'etat du hall, de la cage d'escalier,
+        des boites aux lettres. C'est revelateur de l'ambiance de l'immeuble.
+      </p>
+    </div>
+
+    <div class="criterion">
+      <h4>3. Parlez aux voisins</h4>
+      <p>
+        Croisez les voisins, demandez-leur leur avis. Les gens sont generalement
+        honnetes sur leur quartier.
+      </p>
+    </div>
+
+    <div class="criterion">
+      <h4>4. Verifiez la desserte</h4>
+      <p>
+        Un quartier mal desservi peut devenir un probleme au quotidien.
+        Verifiez les transports avant de signer.
+      </p>
+    </div>
+
+    <div class="criterion">
+      <h4>5. Faites confiance a votre instinct</h4>
+      <p>
+        Si vous ne vous sentez pas a l'aise en visitant, meme sans raison objective,
+        ecoutez votre intuition. Vous allez y vivre tous les jours.
+      </p>
+    </div>
+  </div>
+
+  <h2>Les quartiers que je recommande</h2>
+
+  <p>
+    Plutot que de s'attarder sur le negatif, voici les quartiers ou je conseille
+    de chercher selon votre profil :
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Profil</th>
+        <th>Quartiers recommandes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Famille avec enfants</td>
+        <td><a href="/quartiers/velpeau/">Velpeau</a>, Tours Nord, Grammont-Prebendes</td>
+      </tr>
+      <tr>
+        <td>Jeune actif</td>
+        <td>Centre-ville (hors Plum'), Deux-Lions, Velpeau</td>
+      </tr>
+      <tr>
+        <td>Etudiant</td>
+        <td>Deux-Lions, Centre-ville, Tours Nord</td>
+      </tr>
+      <tr>
+        <td>Budget serre</td>
+        <td>Sanitas (bien choisir), Tours Nord, La Riche</td>
+      </tr>
+      <tr>
+        <td>Recherche de standing</td>
+        <td>Grammont-Prebendes, quartier Cathedrale</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Mon avis final</h2>
+
+  <p>
+    <strong>Tours est une ville ou l'on vit bien.</strong> Il n'y a pas de quartiers
+    vraiment "a eviter" au sens ou on l'entend dans les grandes metropoles. Il y a des
+    quartiers plus ou moins agreables, plus ou moins bruyants, plus ou moins chers.
+  </p>
+
+  <p>
+    Mon conseil : ne vous arretez pas aux reputations. Visitez, observez, ressentez.
+    Un appartement dans un quartier repute difficile peut etre tres bien si l'immeuble
+    est correct. Et a l'inverse, un quartier cote peut cacher de mauvaises surprises
+    (bruit, voisinage complique).
+  </p>
+
+  <p>
+    Prenez le temps de bien choisir, et vous trouverez votre bonheur a Tours.
+  </p>
+
+  <div class="cta-box">
+    <h3>Une question sur un quartier ?</h3>
+    <p>
+      Si vous hesitez sur un quartier en particulier ou voulez un avis sur une adresse
+      precise, n'hesitez pas a me contacter. Je ferai de mon mieux pour vous aider.
+    </p>
+    <a href="/contact/" class="btn btn-primary">Me contacter</a>
+  </div>
+
+  <h2>A lire aussi</h2>
+
+  <ul>
+    <li><a href="/quartiers/velpeau/">Quartier Velpeau : Le guide complet</a></li>
+    <li><a href="/quartiers/">Tous les quartiers de Tours</a></li>
+    <li><a href="/que-faire/ce-week-end/">Que faire a Tours ce week-end</a></li>
+  </ul>
+
+  <FAQ items={faqItems} title="Questions frequentes sur les quartiers de Tours" />
+
+</ArticleLayout>
+
+<style>
+  .intro {
+    font-size: 1.125rem;
+    color: #374151;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .disclaimer-box {
+    background: #fef3c7;
+    border: 1px solid #fcd34d;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .disclaimer-box h2 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.125rem;
+    color: #92400e;
+  }
+
+  .disclaimer-box p {
+    margin: 0;
+    color: #78350f;
+  }
+
+  .neighborhood-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .neighborhood-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .neighborhood-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  .neighborhood-verdict {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .neighborhood-verdict.avoid {
+    background: #fef2f2;
+    color: #b91c1c;
+  }
+
+  .neighborhood-verdict.nuanced {
+    background: #fef3c7;
+    color: #92400e;
+  }
+
+  .neighborhood-card h4 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9375rem;
+  }
+
+  .neighborhood-card ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .neighborhood-card li {
+    margin-bottom: 0.375rem;
+    font-size: 0.9375rem;
+  }
+
+  .my-advice {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f0f9ff;
+    border-radius: 0.5rem;
+    font-size: 0.9375rem;
+  }
+
+  .criteria-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .criterion {
+    padding: 1.25rem;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+  }
+
+  .criterion h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #1e40af;
+  }
+
+  .criterion p {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: #4b5563;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9375rem;
+  }
+
+  th, td {
+    padding: 0.875rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  th {
+    background: #f9fafb;
+    font-weight: 600;
+  }
+
+  .cta-box {
+    background: #f0f9ff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .cta-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-box p {
+    margin-bottom: 1.25rem;
+    color: #4b5563;
+  }
+
+  h2 {
+    margin-top: 2.5rem;
+  }
+
+  h3 {
+    margin-top: 2rem;
+  }
+</style>

@@ -1,0 +1,309 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { label: 'Accueil', href: '/' },
+  { label: 'Contact' },
+];
+---
+
+<BaseLayout
+  title="Contact : Une question sur Tours ?"
+  description="Contactez-moi pour des questions sur Tours, suggerer une adresse, signaler une erreur ou simplement dire bonjour. Je reponds a tous les messages."
+>
+  <div class="container">
+    <Breadcrumb items={breadcrumbItems} />
+
+    <div class="contact-page">
+      <header class="contact-header">
+        <h1>Me contacter</h1>
+        <p class="contact-intro">
+          Une question, une suggestion, une adresse a partager ?
+          Je suis toujours content d'avoir des nouvelles des lecteurs.
+        </p>
+      </header>
+
+      <div class="contact-grid">
+        <div class="contact-form-section">
+          <h2>Envoyez-moi un message</h2>
+
+          <form class="contact-form" action="#" method="POST" id="contact-form">
+            <div class="form-group">
+              <label for="name">Votre nom</label>
+              <input type="text" id="name" name="name" required placeholder="Jean Dupont" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Votre email</label>
+              <input type="email" id="email" name="email" required placeholder="jean@email.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Sujet</label>
+              <select id="subject" name="subject" required>
+                <option value="">Choisissez un sujet...</option>
+                <option value="suggestion">Suggerer une adresse</option>
+                <option value="erreur">Signaler une erreur</option>
+                <option value="question">Question sur Tours</option>
+                <option value="partenariat">Proposition de partenariat</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Votre message</label>
+              <textarea id="message" name="message" rows="6" required placeholder="Votre message..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Envoyer le message
+            </button>
+
+            <p class="form-note">
+              Je reponds generalement sous 48h. Si vous ne recevez pas de reponse,
+              verifiez vos spams !
+            </p>
+          </form>
+        </div>
+
+        <div class="contact-info-section">
+          <h2>Autres moyens de contact</h2>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <h3>Par email</h3>
+              <p>
+                Vous pouvez aussi m'ecrire directement a :
+              </p>
+              <a href="mailto:contact@vivre-a-tours.fr" class="contact-email">
+                contact@vivre-a-tours.fr
+              </a>
+            </div>
+
+            <div class="contact-card">
+              <h3>Reseaux sociaux</h3>
+              <p>
+                Les comptes reseaux sociaux arrivent bientot.
+                En attendant, le formulaire reste le meilleur moyen de me joindre.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-faq">
+            <h2>Questions frequentes</h2>
+
+            <details class="faq-item">
+              <summary>Puis-je suggerer une adresse ?</summary>
+              <p>
+                Oui, absolument ! J'adore decouvrir de nouvelles adresses.
+                Utilisez le formulaire avec le sujet "Suggerer une adresse".
+                Je ne promets pas de tout tester, mais je lis toutes les suggestions.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>J'ai trouve une erreur sur le site</summary>
+              <p>
+                Merci de me le signaler ! Les infos changent vite (fermetures, changements d'horaires...).
+                Utilisez le formulaire avec "Signaler une erreur" et donnez-moi le maximum de details.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Je suis un professionnel, puis-je apparaitre sur le site ?</summary>
+              <p>
+                Ce site n'est pas un annuaire payant. Je ne fais pas de publi-reportages.
+                Si votre etablissement merite d'etre cite, je le ferai naturellement
+                apres l'avoir teste. Vous pouvez me suggerer votre adresse, sans garantie.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Quel est le delai de reponse ?</summary>
+              <p>
+                Je reponds generalement sous 48h, parfois plus vite.
+                Si vous n'avez pas de reponse apres une semaine, votre message
+                s'est peut-etre perdu - renvoyez-le !
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .contact-page {
+    padding: 1rem 0 4rem;
+  }
+
+  .contact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .contact-intro {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-top: 1rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    gap: 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    .contact-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+  }
+
+  .contact-form-section h2,
+  .contact-info-section h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-weight: 500;
+    font-size: 0.9375rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+
+  .form-note {
+    font-size: 0.8125rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-card {
+    padding: 1.25rem;
+    background: #f9fafb;
+    border-radius: 0.75rem;
+  }
+
+  .contact-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-card p {
+    font-size: 0.9375rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-email {
+    font-weight: 500;
+    color: #2563eb;
+  }
+
+  .contact-faq {
+    margin-top: 2rem;
+  }
+
+  .contact-faq h2 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .faq-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+  }
+
+  .faq-item summary {
+    padding: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.25rem;
+    color: #6b7280;
+  }
+
+  .faq-item[open] summary::after {
+    content: '-';
+  }
+
+  .faq-item[open] summary {
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .faq-item p {
+    padding: 1rem;
+    margin: 0;
+    font-size: 0.9375rem;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+</style>
+
+<script>
+  // Simple form handling (to be replaced with actual form submission)
+  const form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Merci pour votre message ! (Note: Le formulaire n\'est pas encore connecte a un service d\'envoi)');
+    });
+  }
+</script>

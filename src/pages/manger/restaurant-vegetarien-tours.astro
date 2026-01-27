@@ -1,0 +1,566 @@
+---
+import ListLayout from '../../layouts/ListLayout.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const modifiedDate = new Date().toISOString().split('T')[0];
+
+const faqItems = [
+  {
+    question: "Quels sont les meilleurs restaurants vegetariens a Tours ?",
+    answer: "Mes favoris sont Le Green (100% vegetal, cuisine creative), La Parenthese Veggie (bio et local), et Chez Nous (carte mixte avec excellentes options veggie). Pour les vegans stricts, Le Green est la reference incontournable a Tours."
+  },
+  {
+    question: "Y a-t-il des restaurants vegan a Tours ?",
+    answer: "Oui, Le Green est 100% vegan. D'autres restaurants comme La Parenthese Veggie proposent de nombreuses options vegan. La plupart des restaurants vegetariens de Tours indiquent clairement les plats vegan sur leur carte."
+  },
+  {
+    question: "Les restaurants vegetariens de Tours sont-ils chers ?",
+    answer: "Les prix sont comparables aux restaurants classiques. Comptez 12-18 euros pour un plat, 20-30 euros pour un repas complet. Certains proposent des formules midi avantageuses (12-15 euros entree + plat ou plat + dessert)."
+  },
+  {
+    question: "Peut-on manger vegetarien dans les restaurants classiques de Tours ?",
+    answer: "Oui, de plus en plus. La plupart des restaurants proposent au moins une option vegetarienne. Les bistrots de chef sont souvent les meilleurs pour ca, car ils cuisinent frais et peuvent adapter. N'hesitez pas a demander !"
+  },
+  {
+    question: "Ou bruncher vegetarien a Tours ?",
+    answer: "Chez Mamie propose un brunch avec options veggie. La Parenthese Veggie fait un brunch vegetarien le dimanche. Sinon, aux Halles de Tours, vous pouvez composer votre brunch veggie entre les differents stands."
+  },
+  {
+    question: "Les restaurants vegetariens de Tours acceptent-ils les enfants ?",
+    answer: "Oui, tous les restaurants de cette liste accueillent les familles. Le Green et La Parenthese Veggie ont des menus enfants. L'ambiance est generalement decontractee et family-friendly."
+  }
+];
+---
+
+<ListLayout
+  title="Restaurants vegetariens a Tours : Mes 8 adresses preferees"
+  description="Les meilleurs restaurants vegetariens et vegan a Tours : adresses testees, avis honnetes, plats preferes. Guide par un flexitarien tourangeau."
+  category="Manger"
+  categoryHref="/manger/"
+  modifiedDate={modifiedDate}
+  itemCount={8}
+>
+  <div class="prose intro-section">
+    <p class="intro">
+      En tant que flexitarien, j'ai ecume les restaurants vegetariens de Tours ces dernieres
+      annees. Certains m'ont emballe, d'autres decu. Voici ma selection honnete des
+      meilleures adresses pour manger veggie a Tours, que vous soyez vegetarien convaincu
+      ou simplement curieux de manger moins de viande.
+    </p>
+  </div>
+
+  <h2>Les restaurants 100% vegetariens/vegan</h2>
+
+  <div class="establishment-list">
+    <!-- Restaurant 1 -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">1</div>
+        <div class="establishment-title">
+          <h3>Le Green</h3>
+          <p class="establishment-tagline">Mon coup de coeur vegetal</p>
+        </div>
+        <span class="label vegan">100% Vegan</span>
+      </div>
+
+      <p class="establishment-description">
+        C'est LA reference vegetale a Tours. Cuisine creative, produits frais, et des
+        assiettes qui feraient meme envie aux carnivores convaincus. Le chef a le don
+        de sublimer les legumes. J'y emmene souvent des amis sceptiques sur le vegetal,
+        ils ressortent toujours surpris (dans le bon sens).
+      </p>
+
+      <div class="establishment-favorites">
+        <h4>Mes plats preferes :</h4>
+        <ul>
+          <li>Le Buddha bowl aux legumes rotis (copieux et equilibre)</li>
+          <li>Les ravioles maison aux champignons</li>
+          <li>Le cheesecake vegan (bluffant)</li>
+        </ul>
+      </div>
+
+      <div class="establishment-pros">
+        <h4>Ce que j'aime :</h4>
+        <ul>
+          <li>Cuisine creative et gourmande</li>
+          <li>Produits frais et de saison</li>
+          <li>Carte qui change regulierement</li>
+        </ul>
+      </div>
+
+      <div class="establishment-cons">
+        <h4>Ce que j'aime moins :</h4>
+        <ul>
+          <li>Parfois un peu d'attente (victime de son succes)</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">[Adresse a completer], Tours Centre (37000)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Prix moyen</span>
+          <span class="info-value">18-25€ par personne</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">⏰ Horaires</span>
+          <span class="info-value">Mar-Sam 12h-14h30, Mer-Sam 19h-22h</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">📞 Reservation</span>
+          <span class="info-value">Recommandee le week-end</span>
+        </div>
+      </div>
+
+      <div class="establishment-tip">
+        <strong>💡 Astuce :</strong> Le menu du midi est excellent et plus accessible.
+        Arrivez avant 12h30 pour avoir une place sans reservation.
+      </div>
+    </article>
+
+    <!-- Restaurant 2 -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">2</div>
+        <div class="establishment-title">
+          <h3>La Parenthese Veggie</h3>
+          <p class="establishment-tagline">Bio, local et gourmand</p>
+        </div>
+        <span class="label vegetarian">Vegetarien</span>
+      </div>
+
+      <p class="establishment-description">
+        Un petit restaurant cosy qui mise sur le bio et le local. L'ambiance est
+        chaleureuse, un peu comme manger chez une amie qui cuisine bien. Les portions
+        sont genereuses, les prix raisonnables, et tout est fait maison. C'est mon
+        choix quand je veux un repas simple et bon.
+      </p>
+
+      <div class="establishment-favorites">
+        <h4>Mes plats preferes :</h4>
+        <ul>
+          <li>La quiche du jour (toujours croustillante)</li>
+          <li>La salade composee (copieuse)</li>
+          <li>Les gateaux maison</li>
+        </ul>
+      </div>
+
+      <div class="establishment-pros">
+        <h4>Ce que j'aime :</h4>
+        <ul>
+          <li>Ambiance cosy et accueillante</li>
+          <li>Tout fait maison avec produits bio</li>
+          <li>Prix doux</li>
+        </ul>
+      </div>
+
+      <div class="establishment-cons">
+        <h4>Ce que j'aime moins :</h4>
+        <ul>
+          <li>Petit espace, peu de places (reservation conseillee)</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">[Adresse a completer], Tours (37000)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Prix moyen</span>
+          <span class="info-value">12-18€ par personne</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">⏰ Horaires</span>
+          <span class="info-value">Lun-Sam 12h-14h30</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <h2>Les restaurants avec excellentes options vegetariennes</h2>
+
+  <div class="establishment-list">
+    <!-- Restaurant 3 -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">3</div>
+        <div class="establishment-title">
+          <h3>Chez Nous</h3>
+          <p class="establishment-tagline">Carte mixte, options veggie au top</p>
+        </div>
+        <span class="label mixed">Carte mixte</span>
+      </div>
+
+      <p class="establishment-description">
+        Pas un restaurant vegetarien, mais la chef a un vrai talent pour les plats
+        sans viande. Les options vegetariennes ne sont pas des "alternatives" mais
+        des plats a part entiere, travailles avec le meme soin que le reste de la carte.
+        Parfait quand vous sortez avec des non-vegetariens.
+      </p>
+
+      <div class="establishment-favorites">
+        <h4>Mes plats preferes :</h4>
+        <ul>
+          <li>Le risotto de saison (toujours parfait)</li>
+          <li>L'assiette de legumes rotis</li>
+          <li>Le dessert du jour</li>
+        </ul>
+      </div>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">[Adresse a completer], Tours</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Prix moyen</span>
+          <span class="info-value">22-30€ par personne</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Restaurant 4 -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">4</div>
+        <div class="establishment-title">
+          <h3>Le Bistrot Bio</h3>
+          <p class="establishment-tagline">Bio et vegetarien-friendly</p>
+        </div>
+        <span class="label mixed">Carte mixte</span>
+      </div>
+
+      <p class="establishment-description">
+        Un bistrot qui travaille exclusivement en bio et qui fait une belle place
+        aux vegetariens. L'ardoise change tous les jours selon les arrivages.
+        Demandez au serveur les options veggie du jour, il y en a toujours.
+      </p>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">[Adresse a completer], Tours</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Prix moyen</span>
+          <span class="info-value">18-25€ par personne</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Restaurant 5 -->
+    <article class="establishment-card">
+      <div class="establishment-header">
+        <div class="establishment-rank">5</div>
+        <div class="establishment-title">
+          <h3>L'Epicerie</h3>
+          <p class="establishment-tagline">Petite restauration et vrac</p>
+        </div>
+        <span class="label vegetarian">Vegetarien</span>
+      </div>
+
+      <p class="establishment-description">
+        Un concept epicerie + petite restauration. Plats simples a base de produits
+        du magasin, souvent vegetariens. Ideal pour un dejeuner rapide et sain.
+        Vous pouvez aussi repartir avec vos courses en vrac.
+      </p>
+
+      <div class="establishment-info">
+        <div class="info-item">
+          <span class="info-label">📍 Adresse</span>
+          <span class="info-value">[Adresse a completer], Tours</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">💰 Prix moyen</span>
+          <span class="info-value">10-15€ par personne</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <h2>Les options rapides et street food</h2>
+
+  <div class="establishment-list">
+    <!-- Restaurant 6 -->
+    <article class="establishment-card small">
+      <h3>Falafel House</h3>
+      <p>Falafels frais, houmous maison, sandwichs veggie. Parfait pour un dejeuner sur le pouce.</p>
+      <div class="small-info">
+        <span>📍 Centre-ville</span>
+        <span>💰 8-12€</span>
+        <span class="label vegan">Options vegan</span>
+      </div>
+    </article>
+
+    <!-- Restaurant 7 -->
+    <article class="establishment-card small">
+      <h3>Pokawa</h3>
+      <p>Chaine de poke bowls avec options vegetariennes et vegan. Rapide, frais, pratique.</p>
+      <div class="small-info">
+        <span>📍 Centre-ville</span>
+        <span>💰 12-15€</span>
+        <span class="label vegetarian">Veggie-friendly</span>
+      </div>
+    </article>
+
+    <!-- Restaurant 8 -->
+    <article class="establishment-card small">
+      <h3>Les Halles de Tours</h3>
+      <p>Pas un restaurant, mais vous pouvez y composer un repas veggie avec les differents stands. Fromages, olives, houmous, salades...</p>
+      <div class="small-info">
+        <span>📍 Place Gaston Pailhou</span>
+        <span>💰 Variable</span>
+        <span class="label mixed">Options variees</span>
+      </div>
+    </article>
+  </div>
+
+  <div class="prose">
+    <h2>Mes conseils pour manger vegetarien a Tours</h2>
+
+    <h3>N'ayez pas peur de demander</h3>
+    <p>
+      Meme dans les restaurants classiques, n'hesitez pas a demander si le chef peut
+      adapter un plat. La plupart des cuisiniers sont contents de relever le defi,
+      surtout si vous prevenez a la reservation.
+    </p>
+
+    <h3>Privilegiez les bistrots de chef</h3>
+    <p>
+      Les bistrots qui cuisinent frais et changent leur carte sont souvent les meilleurs
+      pour les vegetariens. Ils travaillent les legumes avec autant de soin que la viande.
+    </p>
+
+    <h3>Pensez aux cuisines du monde</h3>
+    <p>
+      Les restaurants indiens, libanais, japonais et thailandais ont souvent de bonnes
+      options vegetariennes par tradition culinaire.
+    </p>
+
+    <div class="cta-box">
+      <h3>Vous connaissez une bonne adresse ?</h3>
+      <p>
+        Cette liste n'est pas exhaustive. Si vous connaissez un restaurant vegetarien
+        ou veggie-friendly a Tours qui merite d'etre liste, faites-le moi savoir !
+      </p>
+      <a href="/contact/" class="btn btn-primary">Me contacter</a>
+    </div>
+
+    <h2>A lire aussi</h2>
+
+    <ul>
+      <li><a href="/manger/">Tous les restaurants a Tours</a></li>
+      <li><a href="/que-faire/ce-week-end/">Que faire a Tours ce week-end</a></li>
+      <li><a href="/quartiers/velpeau/">Quartier Velpeau a Tours</a></li>
+    </ul>
+  </div>
+
+  <FAQ items={faqItems} title="Questions frequentes sur les restaurants vegetariens a Tours" />
+
+</ListLayout>
+
+<style>
+  .intro-section {
+    margin-bottom: 2rem;
+  }
+
+  .intro {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #374151;
+  }
+
+  .establishment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .establishment-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  .establishment-card.small {
+    padding: 1.25rem;
+  }
+
+  .establishment-card.small h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .establishment-card.small > p {
+    font-size: 0.9375rem;
+    color: #4b5563;
+    margin-bottom: 0.75rem;
+  }
+
+  .small-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    font-size: 0.8125rem;
+    color: #6b7280;
+  }
+
+  .establishment-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .establishment-rank {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #1e40af;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+    flex-shrink: 0;
+  }
+
+  .establishment-title {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .establishment-title h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.25rem;
+  }
+
+  .establishment-tagline {
+    margin: 0;
+    color: #059669;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .label {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    white-space: nowrap;
+  }
+
+  .label.vegan {
+    background: #d1fae5;
+    color: #065f46;
+  }
+
+  .label.vegetarian {
+    background: #fef3c7;
+    color: #92400e;
+  }
+
+  .label.mixed {
+    background: #e0e7ff;
+    color: #3730a3;
+  }
+
+  .establishment-description {
+    color: #374151;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .establishment-favorites {
+    margin-bottom: 1rem;
+  }
+
+  .establishment-favorites h4 {
+    font-size: 0.875rem;
+    color: #ca8a04;
+    margin-bottom: 0.5rem;
+  }
+
+  .establishment-favorites ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  .establishment-pros, .establishment-cons {
+    margin-bottom: 1rem;
+  }
+
+  .establishment-pros h4, .establishment-cons h4 {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .establishment-pros h4 {
+    color: #059669;
+  }
+
+  .establishment-cons h4 {
+    color: #dc2626;
+  }
+
+  .establishment-pros ul, .establishment-cons ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  .establishment-info {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-item {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .info-label {
+    flex-shrink: 0;
+    width: 6rem;
+  }
+
+  .establishment-tip {
+    padding: 0.75rem 1rem;
+    background: #fef3c7;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: #92400e;
+  }
+
+  .cta-box {
+    background: #f0f9ff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .cta-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-box p {
+    margin-bottom: 1.25rem;
+    color: #4b5563;
+  }
+</style>

@@ -1,0 +1,122 @@
+---
+/**
+ * Composant SEO complet pour vivre-a-tours.fr
+ * Gere meta tags, Open Graph, Twitter Cards et Schema.org
+ */
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  image?: string;
+  imageAlt?: string;
+  type?: 'website' | 'article';
+  publishedDate?: string;
+  modifiedDate?: string;
+  author?: string;
+  schema?: object | object[];
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical = Astro.url.href,
+  image = '/images/og-default.jpg',
+  imageAlt = 'Vivre a Tours - Guide local',
+  type = 'website',
+  publishedDate,
+  modifiedDate,
+  author = 'Vivre a Tours',
+  schema,
+  noindex = false,
+} = Astro.props;
+
+const siteName = 'Vivre a Tours';
+const siteUrl = 'https://vivre-a-tours.fr';
+
+// Title avec marque (max 60 caracteres)
+const fullTitle = title.includes('Vivre') ? title : `${title} | ${siteName}`;
+
+// URL complete de l'image
+const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
+
+// Schema de base pour le site
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": siteName,
+  "url": siteUrl,
+  "description": "Le guide local pour vivre a Tours : quartiers, sorties, services, bons plans par un Tourangeau.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": `${siteUrl}/recherche?q={search_term_string}`,
+    "query-input": "required name=search_term_string"
+  }
+};
+
+// Combine les schemas
+const allSchemas = schema
+  ? Array.isArray(schema)
+    ? [websiteSchema, ...schema]
+    : [websiteSchema, schema]
+  : [websiteSchema];
+---
+
+<!-- Primary Meta Tags -->
+<title>{fullTitle}</title>
+<meta name="title" content={fullTitle} />
+<meta name="description" content={description} />
+<meta name="author" content={author} />
+<link rel="canonical" href={canonical} />
+
+<!-- Robots -->
+{noindex ? (
+  <meta name="robots" content="noindex, nofollow" />
+) : (
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+)}
+
+<!-- Geo Tags pour SEO local -->
+<meta name="geo.region" content="FR-CVL" />
+<meta name="geo.placename" content="Tours" />
+<meta name="geo.position" content="47.394144;0.68484" />
+<meta name="ICBM" content="47.394144, 0.68484" />
+
+<!-- Language -->
+<link rel="alternate" hreflang="fr" href={canonical} />
+<meta property="og:locale" content="fr_FR" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={imageAlt} />
+<meta property="og:site_name" content={siteName} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonical} />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
+<meta name="twitter:image:alt" content={imageAlt} />
+
+<!-- Article specific -->
+{type === 'article' && publishedDate && (
+  <meta property="article:published_time" content={publishedDate} />
+)}
+{type === 'article' && modifiedDate && (
+  <meta property="article:modified_time" content={modifiedDate} />
+)}
+{type === 'article' && (
+  <meta property="article:author" content={author} />
+)}
+
+<!-- Schema.org JSON-LD -->
+{allSchemas.map((s) => (
+  <script type="application/ld+json" set:html={JSON.stringify(s)} />
+))}

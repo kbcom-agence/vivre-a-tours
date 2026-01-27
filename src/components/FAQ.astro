@@ -1,0 +1,143 @@
+---
+/**
+ * Composant FAQ avec schema FAQPage
+ * Accordeon accessible avec animations
+ */
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  items: FAQItem[];
+  title?: string;
+}
+
+const { items, title = 'Questions frequentes' } = Astro.props;
+
+// Schema FAQPage
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": items.map((item) => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+};
+---
+
+<section class="faq-section" aria-labelledby="faq-title">
+  <h2 id="faq-title" class="faq-title">{title}</h2>
+
+  <div class="faq-list">
+    {items.map((item, index) => (
+      <details class="faq-item" name="faq">
+        <summary class="faq-question">
+          <span class="faq-question-text">{item.question}</span>
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          <p set:html={item.answer} />
+        </div>
+      </details>
+    ))}
+  </div>
+</section>
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+<style>
+  .faq-section {
+    margin: 3rem 0;
+  }
+
+  .faq-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .faq-item {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .faq-item[open] {
+    border-color: #2563eb;
+  }
+
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #111827;
+    list-style: none;
+    transition: background 0.2s;
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question:hover {
+    background: #f9fafb;
+  }
+
+  .faq-question-text {
+    flex: 1;
+    padding-right: 1rem;
+  }
+
+  .faq-icon {
+    flex-shrink: 0;
+    color: #6b7280;
+    transition: transform 0.2s;
+  }
+
+  .faq-item[open] .faq-icon {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    padding: 0 1.25rem 1.25rem;
+    color: #4b5563;
+    line-height: 1.7;
+  }
+
+  .faq-answer p {
+    margin: 0;
+  }
+
+  /* Animation d'ouverture */
+  .faq-item[open] .faq-answer {
+    animation: fadeIn 0.2s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-0.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

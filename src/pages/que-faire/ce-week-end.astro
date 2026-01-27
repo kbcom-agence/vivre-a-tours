@@ -1,0 +1,472 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const today = new Date();
+const nextSaturday = new Date(today);
+nextSaturday.setDate(today.getDate() + ((6 - today.getDay() + 7) % 7 || 7));
+const nextSunday = new Date(nextSaturday);
+nextSunday.setDate(nextSaturday.getDate() + 1);
+
+const formatDate = (date: Date) => date.toLocaleDateString('fr-FR', {
+  day: 'numeric',
+  month: 'long'
+});
+
+const modifiedDate = today.toISOString().split('T')[0];
+
+const faqItems = [
+  {
+    question: "Ou sortir a Tours le samedi soir ?",
+    answer: "Le samedi soir, direction Place Plumereau (\"Plum'\") pour l'ambiance bars et terrasses. Pour danser, essayez l'Excalibur ou le 3B. Pour une soiree plus calme, les bars a vin du vieux Tours comme le Bistrot des Belles Caves sont parfaits."
+  },
+  {
+    question: "Quels sont les meilleurs marches de Tours ?",
+    answer: "Le marche de Velpeau le samedi matin est une institution - ambiance village garantie. Les Halles de Tours sont ouvertes tous les jours pour des produits frais. Le dimanche matin, les puces de Saint-Pierre-des-Corps attirent les chineurs."
+  },
+  {
+    question: "Que faire a Tours quand il pleut ?",
+    answer: "En cas de pluie : le musee des Beaux-Arts (gratuit le 1er dimanche), le cinema CGR aux Deux-Lions, les escape games (Escape Yourself, The Game), ou un apres-midi au spa. Les Halles de Tours sont aussi un bon plan pour flaner au sec."
+  },
+  {
+    question: "Y a-t-il des evenements gratuits a Tours ?",
+    answer: "Oui ! Le premier dimanche du mois, plusieurs musees sont gratuits. En ete, les guinguettes proposent souvent des concerts gratuits. La mediatheque organise regulierement des expos et evenements gratuits. Consultez le site de la mairie pour l'agenda."
+  },
+  {
+    question: "Ou emmener des enfants a Tours ce week-end ?",
+    answer: "Le parc de la Gloriette avec ses animaux, le lac de la Bergeonnerie pour se balader, l'Aquarium de Touraine a Lussault-sur-Loire (15 min), ou le Grand Aquarium pour les tout petits. Le jardin botanique est aussi tres agreable en famille."
+  },
+  {
+    question: "Comment connaitre les evenements a Tours ?",
+    answer: "Suivez l'agenda de Tours Evenements, la page Facebook \"Sortir a Tours\", ou abonnez-vous a la newsletter de la mairie. Les affiches dans les bars et les Halles annoncent aussi les concerts et evenements locaux."
+  }
+];
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Que faire a Tours ce week-end : Sorties et evenements",
+  "description": "Selection des meilleures sorties a Tours ce week-end : concerts, expos, marches et evenements. Mis a jour chaque semaine par un Tourangeau.",
+  "dateModified": modifiedDate,
+  "author": {
+    "@type": "Person",
+    "name": "Vivre a Tours"
+  }
+};
+---
+
+<ArticleLayout
+  title="Que faire a Tours ce week-end : Sorties et evenements"
+  description="Selection des meilleures sorties a Tours ce week-end : concerts, expos, marches et evenements. Mis a jour chaque semaine par un Tourangeau."
+  category="Que faire"
+  categoryHref="/que-faire/"
+  modifiedDate={modifiedDate}
+  schema={articleSchema}
+>
+  <div class="update-notice">
+    <span class="update-icon">🔄</span>
+    <span>Mis a jour pour le week-end du {formatDate(nextSaturday)} - {formatDate(nextSunday)}</span>
+  </div>
+
+  <p class="intro">
+    Chaque semaine, je selectionne les meilleures sorties a Tours pour vous aider a profiter de votre week-end.
+    Concerts, expos, marches, evenements insolites... Voici ma selection de Tourangeau pour ce week-end.
+    <strong>Marquez cette page en favori, je la mets a jour chaque jeudi !</strong>
+  </p>
+
+  <h2>Les temps forts de ce week-end a Tours</h2>
+
+  <p>
+    Ce week-end a Tours s'annonce riche en evenements. Entre les marches du samedi matin, les expos en cours
+    et les sorties du soir, vous n'aurez que l'embarras du choix. Voici les rendez-vous a ne pas manquer.
+  </p>
+
+  <div class="event-highlight">
+    <h3>🎵 Cote concerts et spectacles</h3>
+    <p>
+      Consultez la programmation du Vinci, du Temps Machine, et des bars comme le Pale ou le 3B
+      pour les concerts du week-end. La scene tourangelle est vivante, et il y a souvent des surprises.
+      Pour les amateurs de theatre, le Theatre Olympia et le CDN Tours proposent regulierement des pieces.
+    </p>
+    <p>
+      <strong>Mon conseil :</strong> Suivez les pages Facebook des lieux - c'est la qu'on trouve les concerts
+      de derniere minute et les soirees speciales.
+    </p>
+  </div>
+
+  <h2>Samedi a Tours : Programme complet</h2>
+
+  <h3>Le matin : Les marches de Tours</h3>
+
+  <p>
+    Le samedi matin a Tours, c'est sacre : on va au marche. Et pas n'importe lequel.
+    Le <strong>marche de Velpeau</strong> est une veritable institution. Ambiance village,
+    producteurs locaux, fromagers passionnes, marachers qui vous conseillent... C'est mon rituel du samedi.
+  </p>
+
+  <p>
+    Si vous preferez rester au centre, les <strong>Halles de Tours</strong> sont ouvertes des 8h.
+    C'est l'endroit ideal pour faire vos courses et enchainer avec un petit-dejeuner sur place.
+    Le stand de fromages est exceptionnel, et les huitres les jours de marche sont une tuerie.
+  </p>
+
+  <div class="tip-box">
+    <h4>💡 Astuce locale</h4>
+    <p>
+      Arrivez tot au marche de Velpeau (avant 10h) pour eviter la foule et avoir le meilleur choix.
+      Apres 11h30, les meilleurs produits sont partis et la circulation devient compliquee.
+      Parking gratuit sur les rues adjacentes, mais c'est la guerre le samedi !
+    </p>
+  </div>
+
+  <h3>L'apres-midi : Culture et balades</h3>
+
+  <p>
+    L'apres-midi, plusieurs options s'offrent a vous selon vos envies :
+  </p>
+
+  <ul>
+    <li>
+      <strong>Balade dans le vieux Tours</strong> : Perdez-vous dans les ruelles autour de la
+      Place Plumereau. L'architecture a colombages est magnifique, et vous decouvrirez des
+      boutiques et cafes caches.
+    </li>
+    <li>
+      <strong>Le musee des Beaux-Arts</strong> : Dans l'ancien archeveche pres de la cathedrale.
+      Collections impressionnantes et jardin agreable. Gratuit le premier dimanche du mois.
+    </li>
+    <li>
+      <strong>Le jardin des Prebendes</strong> : Le plus beau parc de Tours pour une balade.
+      Arbres centenaires, kiosque a musique, ambiance paisible. Parfait apres le dejeuner.
+    </li>
+    <li>
+      <strong>Shopping rue Nationale</strong> : La grande artere commercante de Tours.
+      Enseignes classiques et quelques boutiques independantes. Les Galeries Lafayette
+      pour le shopping, puis pause cafe rue Colbert.
+    </li>
+  </ul>
+
+  <h3>Le soir : Sortir a Tours</h3>
+
+  <p>
+    Le samedi soir, Tours s'anime. Voici mes spots preferes selon l'ambiance recherchee :
+  </p>
+
+  <div class="spot-card">
+    <h4>Pour un apero entre amis</h4>
+    <p>
+      <strong>Place Plumereau</strong> reste incontournable. Les terrasses se remplissent des 18h
+      quand il fait beau. Pour quelque chose de plus calme, essayez les bars a vin du quartier
+      Colbert, comme <strong>Le Bistrot des Belles Caves</strong> ou <strong>Les Freres Berthom</strong>
+      pour les amateurs de bieres.
+    </p>
+  </div>
+
+  <div class="spot-card">
+    <h4>Pour danser</h4>
+    <p>
+      <strong>L'Excalibur</strong> reste la reference pour les soirees dansantes a Tours.
+      <strong>Le 3B</strong> (anciennement le Break) propose une programmation variee.
+      Pour les amateurs d'electro, surveillez les soirees au <strong>Temps Machine</strong>.
+    </p>
+  </div>
+
+  <div class="spot-card">
+    <h4>Pour un diner romantique</h4>
+    <p>
+      Reservez au <strong>Bardet</strong> pour une experience gastronomique, ou optez
+      pour <strong>L'Odeon</strong> face au theatre pour un cadre elegant mais accessible.
+      Cote budget plus serré, <strong>Le Zinc</strong> rue Colbert offre une cuisine
+      bistrot de qualite dans une ambiance chaleureuse.
+    </p>
+  </div>
+
+  <h2>Dimanche a Tours : La journee detente</h2>
+
+  <h3>Le matin : Brunch ou marche</h3>
+
+  <p>
+    Le dimanche matin a Tours, deux ecoles s'affrontent : le brunch ou le marche.
+  </p>
+
+  <p>
+    Pour le <strong>brunch</strong>, plusieurs adresses valent le detour :
+    <strong>Chez Mamie</strong> rue du Commerce pour un brunch fait maison copieux,
+    <strong>Le Pan de Mur</strong> pour une version plus tendance, ou directement
+    aux <strong>Halles de Tours</strong> pour un brunch improvise entre les stands.
+  </p>
+
+  <p>
+    Pour le <strong>marche</strong>, direction les <strong>puces de Saint-Pierre-des-Corps</strong>.
+    Tous les dimanches matin, chineurs et curieux se retrouvent pour denicher la perle rare.
+    Mobilier, vinyles, fripes, bibelots... L'ambiance est conviviale et les prix negociables.
+  </p>
+
+  <h3>L'apres-midi : Nature et detente</h3>
+
+  <p>
+    Le dimanche apres-midi, j'aime me mettre au vert. Voici mes spots preferes :
+  </p>
+
+  <ul>
+    <li>
+      <strong>Le lac de la Bergeonnerie</strong> : Balade facile autour du lac, aires de jeux
+      pour les enfants, et location de pedalo en ete. A 10 minutes du centre en voiture.
+    </li>
+    <li>
+      <strong>L'ile Simon</strong> : Accessible a pied depuis le centre, cette ile sur la Loire
+      offre un cadre bucolique pour une balade. Parfait au coucher du soleil.
+    </li>
+    <li>
+      <strong>Le parc de la Gloriette</strong> : Parc animalier gratuit avec daims, canards,
+      et espaces verts. Les enfants adorent, et les parents apprecient le calme.
+    </li>
+    <li>
+      <strong>Les bords de Loire a velo</strong> : La Loire a Velo passe par Tours. Louez un Velociti
+      et longez le fleuve jusqu'a Rochecorbon ou Vouvray. Paysages magnifiques garantis.
+    </li>
+  </ul>
+
+  <div class="tip-box">
+    <h4>💡 Bon plan dimanche</h4>
+    <p>
+      Si vous etes amateur de vin, poussez jusqu'a Vouvray (15 min en voiture) pour une degustation
+      dans les caves. Beaucoup sont ouvertes le dimanche, et la route des vins est magnifique.
+      Prevoyez un conducteur sobre !
+    </p>
+  </div>
+
+  <h2>Evenements recurrents a ne pas manquer</h2>
+
+  <p>
+    Certains evenements reviennent chaque semaine ou chaque mois a Tours. Les voici :
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Quand</th>
+        <th>Quoi</th>
+        <th>Ou</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Samedi matin</td>
+        <td>Marche de Velpeau</td>
+        <td>Place Velpeau</td>
+      </tr>
+      <tr>
+        <td>Dimanche matin</td>
+        <td>Puces de Saint-Pierre</td>
+        <td>Saint-Pierre-des-Corps</td>
+      </tr>
+      <tr>
+        <td>1er dimanche du mois</td>
+        <td>Musees gratuits</td>
+        <td>Beaux-Arts, Hotel Gouin...</td>
+      </tr>
+      <tr>
+        <td>Mercredi soir</td>
+        <td>Soirees quiz</td>
+        <td>Plusieurs bars (Pale, Oxford...)</td>
+      </tr>
+      <tr>
+        <td>Ete (juin-sept)</td>
+        <td>Guinguettes</td>
+        <td>Bords de Loire</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Ou trouver l'agenda complet des evenements ?</h2>
+
+  <p>
+    Pour ne rien rater des evenements a Tours, voici mes sources privilegiees :
+  </p>
+
+  <ul>
+    <li><strong>Tours Evenements</strong> : Le site officiel de la ville avec tous les evenements municipaux</li>
+    <li><strong>La Nouvelle Republique</strong> : Le quotidien local annonce les sorties chaque semaine</li>
+    <li><strong>Facebook "Sortir a Tours"</strong> : Groupe actif avec les bons plans partages par les Tourangeaux</li>
+    <li><strong>Les affiches dans les bars</strong> : Le Pale, l'Oxford, le 3B... Ils affichent les concerts a venir</li>
+    <li><strong>Office de Tourisme</strong> : Rue Bernard Palissy, ils ont tous les flyers et infos</li>
+  </ul>
+
+  <h2>Mon avis : Le week-end ideal a Tours</h2>
+
+  <p>
+    Apres des annees a Tours, voici mon week-end type quand j'ai envie de profiter de la ville :
+  </p>
+
+  <p>
+    <strong>Samedi :</strong> Reveil tranquille, marche de Velpeau vers 9h30, dejeuner aux Halles,
+    balade digestive dans le vieux Tours, pause cafe rue Colbert, puis apero Place Plum' si le temps
+    le permet. Diner dans un bon resto du centre (Le Zinc, L'Odeon, ou une pizza chez Nonno)
+    et on voit ou la soiree nous mene.
+  </p>
+
+  <p>
+    <strong>Dimanche :</strong> Grasse matinee, brunch tardif chez Mamie ou aux Halles,
+    puis balade au bord de la Loire si il fait beau. Retour tranquille pour preparer la semaine.
+    Simple mais efficace.
+  </p>
+
+  <p>
+    Bien sur, ce programme s'adapte selon les evenements du moment. Quand il y a un bon concert
+    au Temps Machine ou une expo interessante, je modifie mes plans. C'est ca l'avantage de Tours :
+    la ville est a taille humaine, tout est accessible, et il y a toujours quelque chose a faire.
+  </p>
+
+  <div class="cta-box">
+    <h3>Vous connaissez un bon plan ?</h3>
+    <p>
+      Si vous avez un evenement a partager ou une adresse a recommander, n'hesitez pas a me contacter.
+      Ce guide vit grace aux retours des Tourangeaux !
+    </p>
+    <a href="/contact/" class="btn btn-primary">Me contacter</a>
+  </div>
+
+  <h2>A decouvrir aussi</h2>
+
+  <ul>
+    <li><a href="/quartiers/velpeau/">Le quartier Velpeau</a> - Le village dans la ville</li>
+    <li><a href="/manger/restaurant-vegetarien-tours/">Restaurants vegetariens a Tours</a> - Mes adresses testees</li>
+    <li><a href="/bien-etre/pilates-tours/">Pilates a Tours</a> - Les meilleurs studios</li>
+  </ul>
+
+  <FAQ items={faqItems} title="Questions frequentes sur les sorties a Tours" />
+
+</ArticleLayout>
+
+<style>
+  .update-notice {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: #fef3c7;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #92400e;
+  }
+
+  .update-icon {
+    font-size: 1rem;
+  }
+
+  .intro {
+    font-size: 1.125rem;
+    color: #374151;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .event-highlight {
+    background: #f0f9ff;
+    border-left: 4px solid #2563eb;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .event-highlight h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .event-highlight p {
+    margin-bottom: 0.75rem;
+  }
+
+  .event-highlight p:last-child {
+    margin-bottom: 0;
+  }
+
+  .tip-box {
+    background: #fefce8;
+    border: 1px solid #fde047;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 0.5rem;
+  }
+
+  .tip-box h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #854d0e;
+  }
+
+  .tip-box p {
+    margin: 0;
+    color: #713f12;
+    font-size: 0.9375rem;
+  }
+
+  .spot-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    padding: 1.25rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+  }
+
+  .spot-card h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #1e40af;
+  }
+
+  .spot-card p {
+    margin: 0;
+    font-size: 0.9375rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9375rem;
+  }
+
+  th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  th {
+    background: #f9fafb;
+    font-weight: 600;
+  }
+
+  .cta-box {
+    background: #f0f9ff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .cta-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-box p {
+    margin-bottom: 1.25rem;
+    color: #4b5563;
+  }
+
+  ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+</style>

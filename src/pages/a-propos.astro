@@ -1,0 +1,296 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { label: 'Accueil', href: '/' },
+  { label: 'A propos' },
+];
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Vivre a Tours",
+  "description": "Createur du guide local vivre-a-tours.fr, Tourangeau depuis plus de 10 ans.",
+  "url": "https://vivre-a-tours.fr/a-propos/",
+  "sameAs": []
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Vivre a Tours",
+  "url": "https://vivre-a-tours.fr",
+  "description": "Le guide local pour vivre a Tours : quartiers, sorties, services, bons plans par un Tourangeau.",
+  "author": {
+    "@type": "Person",
+    "name": "Vivre a Tours"
+  }
+};
+---
+
+<BaseLayout
+  title="A propos de Vivre a Tours : Qui suis-je ?"
+  description="Decouvrez qui se cache derriere vivre-a-tours.fr. Un Tourangeau passionne qui partage ses bonnes adresses et conseils pour vivre a Tours."
+  schema={[personSchema, websiteSchema]}
+>
+  <div class="container">
+    <Breadcrumb items={breadcrumbItems} />
+
+    <article class="about-page">
+      <header class="about-header">
+        <h1>A propos de Vivre a Tours</h1>
+        <p class="about-tagline">
+          Un guide local, par un local, pour les locaux (et les futurs Tourangeaux)
+        </p>
+      </header>
+
+      <div class="about-content">
+        <section class="about-section">
+          <h2>Qui suis-je ?</h2>
+
+          <p>
+            Salut ! Je suis un Tourangeau d'adoption. Arrive a Tours il y a plus de 10 ans
+            pour mes etudes, je ne suis jamais reparti. Cette ville m'a adopte, et je l'ai
+            adoptee en retour.
+          </p>
+
+          <p>
+            Pendant toutes ces annees, j'ai explore Tours dans ses moindres recoins.
+            J'ai demenage plusieurs fois (Velpeau, centre-ville, les Prebendes...),
+            teste des dizaines de restaurants, de praticiens bien-etre, de bars.
+            J'ai vecu les hauts et les bas de la vie tourangelle.
+          </p>
+
+          <p>
+            Et a force de donner des conseils a mes amis qui s'installaient a Tours,
+            je me suis dit : pourquoi ne pas partager tout ca plus largement ?
+          </p>
+        </section>
+
+        <section class="about-section">
+          <h2>Pourquoi ce site ?</h2>
+
+          <p>
+            Quand on cherche des infos sur Tours, on tombe souvent sur :
+          </p>
+
+          <ul>
+            <li>Des annuaires froids qui listent sans donner d'avis</li>
+            <li>Des articles de sites nationaux ecrits par des gens qui n'ont jamais mis les pieds ici</li>
+            <li>Des contenus sponsorises ou l'on vante tout sans nuance</li>
+            <li>Des infos perimees depuis 3 ans</li>
+          </ul>
+
+          <p>
+            J'ai voulu creer autre chose : <strong>un guide honnete, personnel et a jour</strong>.
+            Je ne suis pas journaliste, je ne suis pas paye par les etablissements que je cite.
+            Je suis juste un habitant qui partage ses decouvertes, ses coups de coeur et
+            parfois ses deceptions.
+          </p>
+        </section>
+
+        <section class="about-section">
+          <h2>Ma philosophie</h2>
+
+          <div class="philosophy-grid">
+            <div class="philosophy-card">
+              <h3>Honnetete</h3>
+              <p>
+                Je dis ce que je pense. Si un endroit est decevant, je le dis.
+                Si j'adore, je le dis aussi. Pas de langue de bois.
+              </p>
+            </div>
+
+            <div class="philosophy-card">
+              <h3>Experience personnelle</h3>
+              <p>
+                Je ne parle que de ce que j'ai teste moi-meme ou de ce que
+                des proches de confiance m'ont recommande.
+              </p>
+            </div>
+
+            <div class="philosophy-card">
+              <h3>Mises a jour</h3>
+              <p>
+                Les infos bougent vite. Je m'efforce de garder ce site a jour
+                et de corriger les erreurs quand on me les signale.
+              </p>
+            </div>
+
+            <div class="philosophy-card">
+              <h3>Independance</h3>
+              <p>
+                Ce site n'est pas sponsorise. Les avis sont les miens, pas ceux
+                d'annonceurs. Ca me permet de rester libre de dire ce que je veux.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-section">
+          <h2>Ce que vous trouverez ici</h2>
+
+          <ul>
+            <li>
+              <strong><a href="/quartiers/">Guides des quartiers</a></strong> :
+              Pour savoir ou s'installer selon votre profil et votre budget
+            </li>
+            <li>
+              <strong><a href="/que-faire/">Que faire a Tours</a></strong> :
+              Sorties, evenements, activites... De quoi occuper vos week-ends
+            </li>
+            <li>
+              <strong><a href="/bien-etre/">Bien-etre</a></strong> :
+              Mes adresses testees pour prendre soin de vous
+            </li>
+            <li>
+              <strong><a href="/manger/">Ou manger</a></strong> :
+              Mes restaurants preferes, classes par envie ou budget
+            </li>
+          </ul>
+
+          <p>
+            Et ce n'est que le debut. J'ajoute regulierement de nouvelles pages
+            et mets a jour les existantes.
+          </p>
+        </section>
+
+        <section class="about-section">
+          <h2>Vous pouvez m'aider</h2>
+
+          <p>
+            Ce site vit grace aux retours des lecteurs. Si vous avez :
+          </p>
+
+          <ul>
+            <li>Une adresse a me recommander (ou a deconseiller)</li>
+            <li>Une erreur a signaler</li>
+            <li>Une suggestion d'article</li>
+            <li>Juste envie de dire bonjour</li>
+          </ul>
+
+          <p>
+            N'hesitez pas a <a href="/contact/">me contacter</a>. Je lis tous les messages
+            et je reponds quand je peux.
+          </p>
+        </section>
+
+        <section class="about-section cta-section">
+          <h2>Merci d'etre la !</h2>
+
+          <p>
+            Que vous soyez Tourangeau de toujours, nouvel arrivant ou simple visiteur,
+            merci de passer par ici. J'espere que ce site vous sera utile.
+          </p>
+
+          <p>
+            A bientot dans les rues de Tours !
+          </p>
+
+          <div class="cta-buttons">
+            <a href="/que-faire/ce-week-end/" class="btn btn-primary">
+              Voir les sorties du week-end
+            </a>
+            <a href="/contact/" class="btn btn-secondary">
+              Me contacter
+            </a>
+          </div>
+        </section>
+      </div>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 0 4rem;
+  }
+
+  .about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .about-tagline {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-top: 1rem;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .about-section h2 {
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e0e7ff;
+  }
+
+  .about-section p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #374151;
+  }
+
+  .about-section ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .about-section li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+
+  .philosophy-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: 1.5rem;
+  }
+
+  .philosophy-card {
+    padding: 1.5rem;
+    background: #f9fafb;
+    border-radius: 0.75rem;
+  }
+
+  .philosophy-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: #1e40af;
+  }
+
+  .philosophy-card p {
+    font-size: 0.9375rem;
+    margin: 0;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 2rem;
+    background: #f0f9ff;
+    border-radius: 1rem;
+  }
+
+  .cta-section h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+</style>

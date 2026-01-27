@@ -1,0 +1,365 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { label: 'Accueil', href: '/' },
+  { label: 'Manger a Tours' },
+];
+
+const categories = [
+  {
+    name: 'Restaurants vegetariens',
+    slug: 'restaurant-vegetarien-tours',
+    description: 'Veggie, vegan, flexitarien... Les meilleures adresses sans viande.',
+    icon: '🥗',
+    available: true,
+  },
+  {
+    name: 'Brunch',
+    slug: 'brunch-tours',
+    description: 'Les meilleurs brunchs de Tours pour le week-end.',
+    icon: '🥞',
+    available: false,
+  },
+  {
+    name: 'Restaurant romantique',
+    slug: 'restaurant-romantique-tours',
+    description: 'Tete-a-tete, anniversaire, demande en mariage...',
+    icon: '💕',
+    available: false,
+  },
+  {
+    name: 'Terrasses',
+    slug: 'terrasse-tours',
+    description: 'Les plus belles terrasses pour profiter du soleil.',
+    icon: '☀️',
+    available: false,
+  },
+  {
+    name: 'Pas cher',
+    slug: 'restaurant-pas-cher-tours',
+    description: 'Bien manger sans se ruiner. Budget serre bienvenu.',
+    icon: '💰',
+    available: false,
+  },
+  {
+    name: 'Gastronomique',
+    slug: 'restaurant-gastronomique-tours',
+    description: 'Les grandes tables de Tours pour les occasions speciales.',
+    icon: '⭐',
+    available: false,
+  },
+];
+---
+
+<BaseLayout
+  title="Ou manger a Tours : Restaurants et bonnes adresses"
+  description="Les meilleurs restaurants de Tours : vegetarien, brunch, romantique, terrasse. Selection testee et approuvee par un Tourangeau gourmand."
+>
+  <div class="container">
+    <Breadcrumb items={breadcrumbItems} />
+
+    <header class="page-header">
+      <h1>Ou manger a Tours ?</h1>
+      <p class="page-intro">
+        Tours est une ville ou l'on mange bien. Entre les restaurants traditionnels,
+        les bistrots de chef, les adresses veggie et les terrasses animees, le choix
+        ne manque pas. Voici mes recommandations de gourmand tourangeau.
+      </p>
+    </header>
+
+    <section class="categories-section">
+      <div class="categories-grid">
+        {categories.map((cat) => (
+          <div class={`category-card ${!cat.available ? 'coming-soon' : ''}`}>
+            {cat.available ? (
+              <a href={`/manger/${cat.slug}/`} class="category-link">
+                <span class="category-icon">{cat.icon}</span>
+                <h2>{cat.name}</h2>
+                <p>{cat.description}</p>
+                <span class="category-cta">Voir les adresses →</span>
+              </a>
+            ) : (
+              <div class="category-link disabled">
+                <span class="category-icon">{cat.icon}</span>
+                <h2>{cat.name}</h2>
+                <p>{cat.description}</p>
+                <span class="category-cta coming">Bientot disponible</span>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="favorites-section">
+      <h2>Mes adresses coup de coeur</h2>
+
+      <p>
+        En attendant les guides complets, voici quelques adresses que je recommande
+        les yeux fermes :
+      </p>
+
+      <div class="favorites-grid">
+        <div class="favorite-card">
+          <h3>Le Zinc</h3>
+          <p class="favorite-type">Bistrot</p>
+          <p>Cuisine bistrot de qualite, ambiance conviviale, prix honnetes. Mon choix par defaut quand je ne sais pas ou aller.</p>
+          <span class="favorite-location">📍 Rue Colbert</span>
+        </div>
+
+        <div class="favorite-card">
+          <h3>Les Halles de Tours</h3>
+          <p class="favorite-type">Marche couvert</p>
+          <p>Pour un dejeuner sur le pouce : huitres, fromages, charcuterie, plats a emporter. Une institution.</p>
+          <span class="favorite-location">📍 Place Gaston Pailhou</span>
+        </div>
+
+        <div class="favorite-card">
+          <h3>L'Odeon</h3>
+          <p class="favorite-type">Gastronomique accessible</p>
+          <p>Face au theatre, une cuisine soignee dans un cadre elegant. Parfait pour une occasion speciale sans casser la tirelire.</p>
+          <span class="favorite-location">📍 Place Francois Truffaut</span>
+        </div>
+
+        <div class="favorite-card">
+          <h3>Chez Mamie</h3>
+          <p class="favorite-type">Brunch / Salon de the</p>
+          <p>Brunch copieux le dimanche, patisseries maison, ambiance cosy. File d'attente le week-end (ca vaut le coup).</p>
+          <span class="favorite-location">📍 Rue du Commerce</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="tips-section">
+      <h2>Mes conseils pour bien manger a Tours</h2>
+
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h3>Reservez</h3>
+          <p>
+            Les bonnes adresses affichent souvent complet le week-end.
+            Reservez, surtout le samedi soir. Un appel la veille suffit generalement.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <h3>Explorez les rues secondaires</h3>
+          <p>
+            Les restaurants Place Plumereau sont sympas pour l'ambiance mais pas
+            les meilleurs. Les vraies pepites sont dans les rues adjacentes.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <h3>Testez les formules midi</h3>
+          <p>
+            Beaucoup de restaurants proposent des menus dejeuner a prix doux.
+            C'est souvent le meilleur rapport qualite-prix.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <h3>Suivez les saisons</h3>
+          <p>
+            La Touraine est un jardin de la France. Les bons restos changent leur
+            carte selon les saisons. Privilegiez les produits du moment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <h2>Vous cherchez une adresse precise ?</h2>
+      <p>
+        Je n'ai pas encore tout liste. Si vous cherchez un type de restaurant
+        particulier ou une recommandation pour une occasion speciale, contactez-moi.
+      </p>
+      <a href="/contact/" class="btn btn-primary">Me contacter</a>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .page-intro {
+    font-size: 1.125rem;
+    color: #4b5563;
+    max-width: 700px;
+    line-height: 1.7;
+  }
+
+  .categories-section {
+    margin-bottom: 4rem;
+  }
+
+  .categories-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .category-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+
+  .category-card:hover:not(.coming-soon) {
+    border-color: #2563eb;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transform: translateY(-2px);
+  }
+
+  .category-card.coming-soon {
+    opacity: 0.7;
+  }
+
+  .category-link {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    text-decoration: none;
+    height: 100%;
+  }
+
+  .category-link.disabled {
+    cursor: default;
+  }
+
+  .category-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .category-card h2 {
+    font-size: 1.125rem;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+
+  .category-card p {
+    color: #6b7280;
+    font-size: 0.9375rem;
+    flex: 1;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .category-cta {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #2563eb;
+  }
+
+  .category-cta.coming {
+    color: #9ca3af;
+  }
+
+  .favorites-section {
+    margin-bottom: 4rem;
+  }
+
+  .favorites-section > p {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+  }
+
+  .favorites-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .favorite-card {
+    padding: 1.5rem;
+    background: #fefce8;
+    border-radius: 0.75rem;
+  }
+
+  .favorite-card h3 {
+    margin-bottom: 0.25rem;
+    font-size: 1.125rem;
+  }
+
+  .favorite-type {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ca8a04;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+  }
+
+  .favorite-card > p:not(.favorite-type) {
+    font-size: 0.9375rem;
+    color: #4b5563;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+
+  .favorite-location {
+    font-size: 0.8125rem;
+    color: #6b7280;
+  }
+
+  .tips-section {
+    margin-bottom: 4rem;
+  }
+
+  .tips-section h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .tips-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .tip-card {
+    padding: 1.5rem;
+    background: #f9fafb;
+    border-radius: 0.75rem;
+  }
+
+  .tip-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: #1e40af;
+  }
+
+  .tip-card p {
+    font-size: 0.875rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 3rem;
+    background: #f0f9ff;
+    border-radius: 1rem;
+  }
+
+  .cta-section h2 {
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>

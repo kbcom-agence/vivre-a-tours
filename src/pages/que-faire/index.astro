@@ -1,0 +1,372 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { label: 'Accueil', href: '/' },
+  { label: 'Que faire a Tours' },
+];
+---
+
+<BaseLayout
+  title="Que faire a Tours : Sorties, activites et evenements"
+  description="Decouvrez toutes les activites a Tours : sorties du week-end, bars, restaurants, evenements culturels. Guide complet par un Tourangeau."
+>
+  <div class="container">
+    <Breadcrumb items={breadcrumbItems} />
+
+    <header class="page-header">
+      <h1>Que faire a Tours ?</h1>
+      <p class="page-intro">
+        Tours regorge d'activites pour tous les gouts. Que vous cherchiez une sortie pour ce week-end,
+        un bar sympa pour retrouver des amis, ou une activite insolite, vous etes au bon endroit.
+        Voici mes recommandations de Tourangeau.
+      </p>
+    </header>
+
+    <section class="categories-section">
+      <div class="category-grid">
+        <a href="/que-faire/ce-week-end/" class="category-card featured">
+          <span class="category-badge">Populaire</span>
+          <span class="category-icon">📅</span>
+          <h2>Ce week-end a Tours</h2>
+          <p>Concerts, expos, marches, sorties... Tout ce qui se passe ce week-end a Tours. Mis a jour chaque semaine.</p>
+          <span class="category-link">Voir les sorties →</span>
+        </a>
+
+        <a href="/que-faire/bars-tours/" class="category-card">
+          <span class="category-icon">🍺</span>
+          <h2>Bars et vie nocturne</h2>
+          <p>Les meilleurs bars de Tours : ambiance, cocktails, bieres artisanales, rooftops.</p>
+          <span class="category-link">Decouvrir →</span>
+        </a>
+
+        <a href="/que-faire/activites-insolites-tours/" class="category-card">
+          <span class="category-icon">🎯</span>
+          <h2>Activites insolites</h2>
+          <p>Escape games, realite virtuelle, laser game, bowling... Les activites fun a Tours.</p>
+          <span class="category-link">Decouvrir →</span>
+        </a>
+
+        <a href="/que-faire/sorties-culturelles-tours/" class="category-card">
+          <span class="category-icon">🎭</span>
+          <h2>Culture et spectacles</h2>
+          <p>Theatres, concerts, musees, expos... La scene culturelle tourangelle.</p>
+          <span class="category-link">Decouvrir →</span>
+        </a>
+
+        <a href="/que-faire/en-famille/" class="category-card">
+          <span class="category-icon">👨‍👩‍👧‍👦</span>
+          <h2>Sorties en famille</h2>
+          <p>Parcs, activites enfants, sorties nature... Occuper les kids a Tours.</p>
+          <span class="category-link">Decouvrir →</span>
+        </a>
+
+        <a href="/manger/" class="category-card">
+          <span class="category-icon">🍽️</span>
+          <h2>Restaurants</h2>
+          <p>Ou bien manger a Tours ? Mes adresses testees et approuvees.</p>
+          <span class="category-link">Voir les restos →</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="highlights-section">
+      <h2>Les incontournables de Tours</h2>
+
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <h3>Place Plumereau</h3>
+          <p>
+            Le coeur battant de la vie nocturne tourangelle. "Plum'" comme on l'appelle ici,
+            c'est des terrasses animees, des bars a perte de vue et une ambiance unique
+            dans le vieux Tours. Ideal pour un apero entre amis.
+          </p>
+        </div>
+
+        <div class="highlight-card">
+          <h3>Les bords de Loire</h3>
+          <p>
+            En ete, les guinguettes prennent vie sur les bords de Loire. Musique live,
+            cuisine simple et bonne humeur. Mon spot prefere pour les longues soirees d'ete.
+            La Guinguette de Tours est une institution.
+          </p>
+        </div>
+
+        <div class="highlight-card">
+          <h3>Le Vinci</h3>
+          <p>
+            Le centre de congres accueille regulierement des concerts et spectacles.
+            De la variete francaise aux humoristes, en passant par les grands shows.
+            Consultez la programmation !
+          </p>
+        </div>
+
+        <div class="highlight-card">
+          <h3>Les Halles de Tours</h3>
+          <p>
+            Marche couvert tous les jours. Produits frais, fromagers, bouchers, poissonniers...
+            Et plusieurs stands pour manger sur place. Parfait pour un brunch du dimanche.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="events-section">
+      <h2>Les grands evenements de Tours</h2>
+
+      <div class="events-list">
+        <div class="event-item">
+          <span class="event-month">Mai</span>
+          <div class="event-content">
+            <h3>Vitiloire</h3>
+            <p>La fete du vin de Loire. Degustations, concerts, ambiance festive sur les quais.</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <span class="event-month">Juin</span>
+          <div class="event-content">
+            <h3>Aucard de Tours</h3>
+            <p>Festival de musiques actuelles. Rock, electro, hip-hop... Ambiance alternative garantie.</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <span class="event-month">Juillet</span>
+          <div class="event-content">
+            <h3>American Tours Festival</h3>
+            <p>Le plus grand festival de blues et country d'Europe. Ambiance USA au coeur de la Touraine.</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <span class="event-month">Sept</span>
+          <div class="event-content">
+            <h3>Foire de Tours</h3>
+            <p>La grande foire annuelle. Maneges, barbe a papa et souvenirs d'enfance.</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <span class="event-month">Dec</span>
+          <div class="event-content">
+            <h3>Marche de Noel</h3>
+            <p>Chalets, vin chaud et illuminations sur la place Jean Jaures.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <h2>Vous ne savez pas quoi faire ce week-end ?</h2>
+      <p>
+        Je mets a jour chaque semaine ma selection des meilleures sorties a Tours.
+        Concerts, expos, marches, evenements... Tout pour passer un bon week-end.
+      </p>
+      <a href="/que-faire/ce-week-end/" class="btn btn-primary">
+        Voir les sorties de ce week-end
+      </a>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .page-intro {
+    font-size: 1.125rem;
+    color: #4b5563;
+    max-width: 700px;
+    line-height: 1.7;
+  }
+
+  .categories-section {
+    margin-bottom: 4rem;
+  }
+
+  .category-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .category-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  .category-card:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  .category-card.featured {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color: white;
+    grid-column: span 2;
+  }
+
+  @media (max-width: 640px) {
+    .category-card.featured {
+      grid-column: span 1;
+    }
+  }
+
+  .category-card.featured h2,
+  .category-card.featured p {
+    color: white;
+  }
+
+  .category-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #fbbf24;
+    color: #78350f;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+  }
+
+  .category-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .category-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #111827;
+  }
+
+  .category-card p {
+    color: #6b7280;
+    font-size: 0.875rem;
+    flex: 1;
+    margin-bottom: 1rem;
+  }
+
+  .category-link {
+    font-weight: 500;
+    color: #2563eb;
+    font-size: 0.875rem;
+  }
+
+  .category-card.featured .category-link {
+    color: white;
+  }
+
+  .highlights-section {
+    margin-bottom: 4rem;
+  }
+
+  .highlights-section h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .highlights-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .highlight-card {
+    padding: 1.5rem;
+    background: #f9fafb;
+    border-radius: 0.75rem;
+  }
+
+  .highlight-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    color: #1e40af;
+  }
+
+  .highlight-card p {
+    font-size: 0.875rem;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+
+  .events-section {
+    margin-bottom: 4rem;
+  }
+
+  .events-section h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .event-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+  }
+
+  .event-month {
+    flex-shrink: 0;
+    width: 4rem;
+    padding: 0.5rem;
+    background: #1e40af;
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-align: center;
+    border-radius: 0.375rem;
+  }
+
+  .event-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .event-content p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 3rem;
+    background: #f0f9ff;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-section h2 {
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
