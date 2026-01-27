@@ -85,32 +85,39 @@
 
 ---
 
-## 🔧 PHASE 2 : Optimisations (En cours)
+## 🔧 PHASE 2 : Optimisations ✅ TERMINÉ
 
 ### Déploiement ✅
 - [x] Déployer sur Vercel
 - [x] Push GitHub
 
-### SEO Technique (En attente domaine)
-- [ ] Configurer domaine personnalisé sur Vercel
-- [ ] Configurer Google Search Console
-- [ ] Configurer Google Analytics 4
-- [ ] Soumettre sitemap.xml
+### SEO Technique ✅
+- [x] Corriger tous les accents français (19 fichiers)
+- [x] Meta descriptions avec accents
+- [x] Schema markup avec accents
+- [x] noindex activé temporairement (jusqu'à mise en ligne domaine)
+- [ ] Configurer domaine personnalisé sur Vercel (EN ATTENTE)
+- [ ] Configurer Google Search Console (EN ATTENTE domaine)
+- [ ] Configurer Google Analytics 4 (EN ATTENTE domaine)
+- [ ] Soumettre sitemap.xml (EN ATTENTE domaine)
 - [ ] Tester toutes les pages sur PageSpeed Insights
 - [ ] Valider tous les schemas sur Rich Results Test
 
-### Performance
+### Performance ✅
 - [x] Compression HTML/CSS/JS active (astro-compress)
 - [x] Lazy loading images
 - [ ] Convertir OG image en PNG
 - [ ] Tester Core Web Vitals
 - [ ] Ajouter vraies photos locales
 
-### Design
-- [ ] Améliorer l'esthétique globale
-- [ ] Revoir typographie et espacements
-- [ ] Améliorer les cartes et composants
-- [ ] Ajouter animations subtiles
+### Design ✅
+- [x] Améliorer l'esthétique globale (global.css refait)
+- [x] Revoir typographie et espacements
+- [x] Header moderne avec glassmorphism + logo SVG
+- [x] Footer élégant avec wave SVG + animations
+- [x] Hero section redesignée (stats, badges, CTA)
+- [x] Animations subtiles (fade-in, pulse, hover effects)
+- [x] Corriger alignement hero (responsive)
 
 ---
 
@@ -152,21 +159,49 @@
 | **Données réelles** | 27 Jan 2025 | Hypnothérapeutes, pilates, restaurants, chiropracteurs, love rooms |
 | **Déploiement Vercel** | 27 Jan 2025 | Site en ligne |
 | **Image OG** | 27 Jan 2025 | SVG créé |
+| **Design refait** | 27 Jan 2025 | Header, Footer, Hero, global.css modernisés |
+| **Accents corrigés** | 27 Jan 2025 | 19 fichiers, audit SEO passé |
+| **noindex activé** | 27 Jan 2025 | Temporaire jusqu'à lancement domaine |
+| **PHASE 2 complète** | 27 Jan 2025 | Design + SEO optimisés |
 
 ---
 
-## 🚫 BLOQUÉ / EN ATTENTE
+## 🚫 BLOQUÉ / EN ATTENTE DOMAINE
 
 | Tâche | Raison du blocage | Action requise |
 |-------|-------------------|----------------|
-| Google Analytics 4 | Domaine pas encore configuré | Configurer domaine sur Vercel |
-| Search Console | Domaine pas encore configuré | Configurer domaine sur Vercel |
+| Domaine vivre-a-tours.fr | Pas encore acheté/configuré | Acheter domaine + configurer DNS Vercel |
+| Google Analytics 4 | Domaine pas encore configuré | Après configuration domaine |
+| Search Console | Domaine pas encore configuré | Après configuration domaine |
+| Passer en index | noindex activé temporairement | Changer `noindex = false` dans SEO.astro |
+| Soumettre sitemap | Domaine pas encore configuré | Après configuration domaine |
 
 ---
 
 ## 📋 NOTES DE SESSION
 
-### Session du 27 Janvier 2025 (Suite)
+### Session du 27 Janvier 2025 (Fin de journée)
+
+**Design refait :**
+- `global.css` : Design system moderne (couleurs, ombres, transitions, animations)
+- `Header.astro` : Glassmorphism, logo SVG, scroll effect, liens animés
+- `Footer.astro` : Wave SVG, gradient, cœur animé
+- `index.astro` : Hero pleine hauteur, stats, cartes catégories, CTA
+
+**SEO corrigé :**
+- Tous les accents français corrigés (19 fichiers)
+- "Vivre a Tours" → "Vivre à Tours" partout
+- "Bien-etre" → "Bien-être", "Hebergement" → "Hébergement"
+- Meta descriptions et schemas avec accents
+- noindex=true activé (temporaire)
+
+**Hero corrigé :**
+- Alignement fixé avec max-width
+- Tailles responsives (2.5rem → 3rem → 4rem)
+
+---
+
+### Session du 27 Janvier 2025 (Matin)
 
 **Tâches réalisées :**
 - Pages bonus créées : prebendes, tours-centre, chiropracteur-tours, hebergement (pilier + love-room)
