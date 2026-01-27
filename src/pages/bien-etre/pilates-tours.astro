@@ -6,36 +6,36 @@ const modifiedDate = new Date().toISOString().split('T')[0];
 
 const faqItems = [
   {
-    question: "Combien coute un cours de Pilates a Tours ?",
-    answer: "Un cours collectif coute entre 15 et 25 euros. Les cours particuliers vont de 50 a 80 euros. La plupart des studios proposent des forfaits (10 cours, abonnement mensuel) plus avantageux. Comptez 120-180 euros pour un forfait 10 cours et 50-100 euros/mois pour un abonnement."
+    question: "Combien coûte un cours de Pilates à Tours ?",
+    answer: "Un cours collectif coûte entre 15 et 25 euros. Les cours particuliers vont de 50 à 80 euros. La plupart des studios proposent des forfaits (10 cours, abonnement mensuel) plus avantageux. Comptez 120-180 euros pour un forfait 10 cours et 50-100 euros/mois pour un abonnement."
   },
   {
     question: "Pilates mat ou Pilates reformer : que choisir ?",
-    answer: "Le Pilates mat (au sol) est ideal pour debuter et moins cher. Le Pilates reformer (machine) permet un travail plus profond et plus guide, parfait si vous avez des problemes de dos. Commencez par le mat pour apprendre les bases, puis passez au reformer si vous voulez aller plus loin."
+    answer: "Le Pilates mat (au sol) est idéal pour débuter et moins cher. Le Pilates reformer (machine) permet un travail plus profond et plus guidé, parfait si vous avez des problèmes de dos. Commencez par le mat pour apprendre les bases, puis passez au reformer si vous voulez aller plus loin."
   },
   {
     question: "Le Pilates est-il efficace pour le mal de dos ?",
-    answer: "Oui, le Pilates est tres efficace pour le mal de dos. Il renforce les muscles profonds qui stabilisent la colonne vertebrale. De nombreux kines recommandent le Pilates en complement de leurs soins. Prevoyez quelques cours particuliers au debut pour apprendre les bonnes postures."
+    answer: "Oui, le Pilates est très efficace pour le mal de dos. Il renforce les muscles profonds qui stabilisent la colonne vertébrale. De nombreux kinés recommandent le Pilates en complément de leurs soins. Prévoyez quelques cours particuliers au début pour apprendre les bonnes postures."
   },
   {
     question: "Peut-on faire du Pilates enceinte ?",
-    answer: "Oui, le Pilates prenatal est excellent pendant la grossesse. Il renforce le perinee, soulage le dos et prepare a l'accouchement. Choisissez un cours specifique 'prenatal' avec un instructeur forme. Evitez le Pilates classique apres le premier trimestre."
+    answer: "Oui, le Pilates prénatal est excellent pendant la grossesse. Il renforce le périnée, soulage le dos et prépare à l'accouchement. Choisissez un cours spécifique 'prénatal' avec un instructeur formé. Évitez le Pilates classique après le premier trimestre."
   },
   {
     question: "Combien de cours de Pilates par semaine ?",
-    answer: "Pour des resultats visibles, prevoyez 2 a 3 cours par semaine. Un cours hebdomadaire permet d'entretenir mais pas de progresser significativement. Au debut, commencez par un cours pour maitriser les mouvements avant d'augmenter la frequence."
+    answer: "Pour des résultats visibles, prévoyez 2 à 3 cours par semaine. Un cours hebdomadaire permet d'entretenir mais pas de progresser significativement. Au début, commencez par un cours pour maîtriser les mouvements avant d'augmenter la fréquence."
   },
   {
-    question: "Faut-il etre souple pour faire du Pilates ?",
-    answer: "Non, pas du tout ! Le Pilates est justement excellent pour gagner en souplesse progressivement. Les exercices sont adaptables a tous les niveaux. Precisez a l'instructeur que vous debutez, il adaptera les mouvements."
+    question: "Faut-il être souple pour faire du Pilates ?",
+    answer: "Non, pas du tout ! Le Pilates est justement excellent pour gagner en souplesse progressivement. Les exercices sont adaptables à tous les niveaux. Précisez à l'instructeur que vous débutez, il adaptera les mouvements."
   }
 ];
 
 const itemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Les meilleurs studios de Pilates a Tours",
-  "description": "Selection des studios de Pilates recommandes a Tours avec avis, tarifs et types de cours.",
+  "name": "Les meilleurs studios de Pilates à Tours",
+  "description": "Sélection des studios de Pilates recommandés à Tours avec avis, tarifs et types de cours.",
   "numberOfItems": 5,
   "itemListElement": [
     {
@@ -48,7 +48,7 @@ const itemListSchema = {
       "@type": "ListItem",
       "position": 2,
       "name": "LF'Pilates Center Tours",
-      "description": "Studio specialise Pilates avec materiel"
+      "description": "Studio spécialisé Pilates avec matériel"
     },
     {
       "@type": "ListItem",
@@ -60,7 +60,7 @@ const itemListSchema = {
       "@type": "ListItem",
       "position": 4,
       "name": "Burpees Studio Tours 2 Lions",
-      "description": "Salle de fitness complete avec cours de Pilates"
+      "description": "Salle de fitness complète avec cours de Pilates"
     },
     {
       "@type": "ListItem",
@@ -73,9 +73,9 @@ const itemListSchema = {
 ---
 
 <ListLayout
-  title="Pilates a Tours : Les meilleurs studios et cours"
-  description="Decouvrez les meilleurs studios de Pilates a Tours : mat, reformer, prenatal. Comparatif des cours, tarifs et avis par un Tourangeau."
-  category="Bien-etre"
+  title="Pilates à Tours : Les meilleurs studios et cours"
+  description="Découvrez les meilleurs studios de Pilates à Tours : mat, reformer, prénatal. Comparatif des cours, tarifs et avis par un Tourangeau."
+  category="Bien-être"
   categoryHref="/bien-etre/"
   modifiedDate={modifiedDate}
   itemCount={5}
@@ -83,10 +83,10 @@ const itemListSchema = {
 >
   <div class="prose intro-section">
     <p class="intro">
-      Le Pilates a envahi Tours ces dernieres annees, et tant mieux ! Apres avoir teste
-      plusieurs studios de la ville (mon dos me remercie), je vous livre ma selection
+      Le Pilates a envahi Tours ces dernières années, et tant mieux ! Après avoir testé
+      plusieurs studios de la ville (mon dos me remercie), je vous livre ma sélection
       des meilleurs endroits pour pratiquer. Que vous cherchiez du mat, du reformer
-      ou du prenatal, vous trouverez votre bonheur.
+      ou du prénatal, vous trouverez votre bonheur.
     </p>
 
     <div class="types-box">
@@ -94,21 +94,21 @@ const itemListSchema = {
       <div class="types-grid">
         <div class="type-card">
           <h3>Mat (au sol)</h3>
-          <p>Sur tapis, avec petit materiel. Ideal pour debuter. Le plus accessible.</p>
+          <p>Sur tapis, avec petit matériel. Idéal pour débuter. Le plus accessible.</p>
         </div>
         <div class="type-card">
           <h3>Reformer (machine)</h3>
-          <p>Sur appareil avec ressorts. Plus technique, plus profond. Resultats rapides.</p>
+          <p>Sur appareil avec ressorts. Plus technique, plus profond. Résultats rapides.</p>
         </div>
         <div class="type-card">
           <h3>Aquapilates</h3>
-          <p>Dans l'eau, ideal pour les articulations sensibles et la reeducation.</p>
+          <p>Dans l'eau, idéal pour les articulations sensibles et la rééducation.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <h2>Les 5 meilleurs studios de Pilates a Tours</h2>
+  <h2>Les 5 meilleurs studios de Pilates à Tours</h2>
 
   <div class="establishment-list">
     <!-- Studio 1 - Inspire Tours -->
@@ -122,9 +122,9 @@ const itemListSchema = {
       </div>
 
       <p class="establishment-description">
-        C'est le studio que je frequente le plus regulierement. Cours en petits groupes
-        de 6 personnes maximum, ce qui permet une vraie attention personnalisee.
-        L'ambiance est cosy, les instructrices competentes et bienveillantes. Ils proposent
+        C'est le studio que je fréquente le plus régulièrement. Cours en petits groupes
+        de 6 personnes maximum, ce qui permet une vraie attention personnalisée.
+        L'ambiance est cosy, les instructrices compétentes et bienveillantes. Ils proposent
         aussi du yoga si vous voulez varier.
       </p>
 
@@ -137,9 +137,9 @@ const itemListSchema = {
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
-          <li>Groupes de 6 personnes max, attention personnalisee</li>
-          <li>Tarifs degressifs avec les packs</li>
-          <li>Offre Bienvenue a 60€ pour decouvrir</li>
+          <li>Groupes de 6 personnes max, attention personnalisée</li>
+          <li>Tarifs dégressifs avec les packs</li>
+          <li>Offre Bienvenue à 60€ pour découvrir</li>
         </ul>
       </div>
 
@@ -157,7 +157,7 @@ const itemListSchema = {
         </div>
         <div class="info-item">
           <span class="info-label">💰 Tarifs</span>
-          <span class="info-value">20€/seance | Pack 10 cours 159€ | Abo 1x/sem 59€/mois</span>
+          <span class="info-value">20€/séance | Pack 10 cours 159€ | Abo 1x/sem 59€/mois</span>
         </div>
         <div class="info-item">
           <span class="info-label">📞 Contact</span>
@@ -170,8 +170,8 @@ const itemListSchema = {
       </div>
 
       <div class="establishment-tip">
-        <strong>💡 Astuce :</strong> Profitez de l'Offre Bienvenue a 60€ (au lieu de 80€)
-        pour tester 4 seances avant de vous engager.
+        <strong>💡 Astuce :</strong> Profitez de l'Offre Bienvenue à 60€ (au lieu de 80€)
+        pour tester 4 séances avant de vous engager.
       </div>
     </article>
 
@@ -186,31 +186,31 @@ const itemListSchema = {
       </div>
 
       <p class="establishment-description">
-        Un studio dedie exclusivement au Pilates, avec du materiel de qualite (ballons,
-        cercle, Gravity). L'equipe - Laure, Celine et Marie - est super competente et
-        propose du coaching personnalise. Ideal si vous voulez vraiment progresser
+        Un studio dédié exclusivement au Pilates, avec du matériel de qualité (ballons,
+        cercle, Gravity). L'équipe - Laure, Céline et Marie - est super compétente et
+        propose du coaching personnalisé. Idéal si vous voulez vraiment progresser
         en Pilates et pas juste faire du fitness.
       </p>
 
       <div class="establishment-tags">
         <span class="tag">Mat</span>
-        <span class="tag">Avec materiel</span>
+        <span class="tag">Avec matériel</span>
         <span class="tag">Coaching perso</span>
       </div>
 
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
-          <li>Studio 100% dedie au Pilates</li>
-          <li>Materiel varie (ballons, cercle, Gravity)</li>
-          <li>Seance d'essai gratuite</li>
+          <li>Studio 100% dédié au Pilates</li>
+          <li>Matériel varié (ballons, cercle, Gravity)</li>
+          <li>Séance d'essai gratuite</li>
         </ul>
       </div>
 
       <div class="establishment-cons">
         <h4>Ce que j'aime moins :</h4>
         <ul>
-          <li>Systeme de cartes a points un peu complexe</li>
+          <li>Système de cartes à points un peu complexe</li>
         </ul>
       </div>
 
@@ -221,7 +221,7 @@ const itemListSchema = {
         </div>
         <div class="info-item">
           <span class="info-label">💰 Tarifs</span>
-          <span class="info-value">Systeme de cartes a points - contacter le studio</span>
+          <span class="info-value">Système de cartes à points - contacter le studio</span>
         </div>
         <div class="info-item">
           <span class="info-label">📞 Contact</span>
@@ -249,9 +249,9 @@ const itemListSchema = {
       </div>
 
       <p class="establishment-description">
-        Si vous voulez essayer le Pilates Reformer, c'est LA adresse a Tours. Un studio
-        de 95m2 equipe de machines Reformer derniere generation. Les cours sont en groupe
-        de 12 personnes max. Tous niveaux acceptes, meme debutants complets. L'emplacement
+        Si vous voulez essayer le Pilates Reformer, c'est LA adresse à Tours. Un studio
+        de 95m2 équipé de machines Reformer dernière génération. Les cours sont en groupe
+        de 12 personnes max. Tous niveaux acceptés, même débutants complets. L'emplacement
         en plein centre (Passage du Palais) est super pratique.
       </p>
 
@@ -264,9 +264,9 @@ const itemListSchema = {
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
-          <li>Seul studio avec de vrais Reformers a Tours</li>
-          <li>Machines derniere generation</li>
-          <li>Emplacement central (Place Jean Jaures)</li>
+          <li>Seul studio avec de vrais Reformers à Tours</li>
+          <li>Machines dernière génération</li>
+          <li>Emplacement central (Place Jean Jaurès)</li>
         </ul>
       </div>
 
@@ -280,11 +280,11 @@ const itemListSchema = {
       <div class="establishment-info">
         <div class="info-item">
           <span class="info-label">📍 Adresse</span>
-          <span class="info-value">19 Place Jean Jaures, Centre Commercial Passage du Palais, 37000 Tours</span>
+          <span class="info-value">19 Place Jean Jaurès, Centre Commercial Passage du Palais, 37000 Tours</span>
         </div>
         <div class="info-item">
-          <span class="info-label">🚃 Acces</span>
-          <span class="info-value">Tram arret Jean Jaures</span>
+          <span class="info-label">🚃 Accès</span>
+          <span class="info-value">Tram arrêt Jean Jaurès</span>
         </div>
         <div class="info-item">
           <span class="info-label">⏰ Horaires</span>
@@ -312,28 +312,28 @@ const itemListSchema = {
         <div class="establishment-rank">4</div>
         <div class="establishment-title">
           <h3>Burpees Studio - Tours 2 Lions</h3>
-          <p class="establishment-tagline">Le meilleur rapport qualite-prix</p>
+          <p class="establishment-tagline">Le meilleur rapport qualité-prix</p>
         </div>
       </div>
 
       <p class="establishment-description">
-        Une salle de fitness complete qui propose 5 cours de Pilates par semaine parmi
-        50+ cours collectifs. L'abonnement donne acces a tout : Pilates, yoga, CAF,
-        Bodyshape, stretching... Ideal si vous voulez varier les plaisirs sans vous ruiner.
-        Quartier Deux-Lions, pratique pour les etudiants et les actifs du sud de Tours.
+        Une salle de fitness complète qui propose 5 cours de Pilates par semaine parmi
+        50+ cours collectifs. L'abonnement donne accès à tout : Pilates, yoga, CAF,
+        Bodyshape, stretching... Idéal si vous voulez varier les plaisirs sans vous ruiner.
+        Quartier Deux-Lions, pratique pour les étudiants et les actifs du sud de Tours.
       </p>
 
       <div class="establishment-tags">
         <span class="tag">Mat</span>
-        <span class="tag">Multi-activites</span>
-        <span class="tag">Tarif etudiant</span>
+        <span class="tag">Multi-activités</span>
+        <span class="tag">Tarif étudiant</span>
       </div>
 
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
           <li>Abonnement tout compris (50+ cours/semaine)</li>
-          <li>Tarif reduit etudiants, militaires (43-48€)</li>
+          <li>Tarif réduit étudiants, militaires (43-48€)</li>
           <li>5 cours de Pilates par semaine</li>
         </ul>
       </div>
@@ -341,7 +341,7 @@ const itemListSchema = {
       <div class="establishment-cons">
         <h4>Ce que j'aime moins :</h4>
         <ul>
-          <li>Pas un studio dedie Pilates, ambiance plus "salle de sport"</li>
+          <li>Pas un studio dédié Pilates, ambiance plus "salle de sport"</li>
         </ul>
       </div>
 
@@ -351,12 +351,12 @@ const itemListSchema = {
           <span class="info-value">36 Avenue Marcel Dassault, 37200 Tours (L'Heure Tranquille)</span>
         </div>
         <div class="info-item">
-          <span class="info-label">🚃 Acces</span>
+          <span class="info-label">🚃 Accès</span>
           <span class="info-value">Tram arret L'Heure Tranquille</span>
         </div>
         <div class="info-item">
           <span class="info-label">💰 Tarifs</span>
-          <span class="info-value">49€/mois (annuel) | 55€/mois (sans engagement) | Etudiants 43€</span>
+          <span class="info-value">49€/mois (annuel) | 55€/mois (sans engagement) | Étudiants 43€</span>
         </div>
         <div class="info-item">
           <span class="info-label">📞 Contact</span>
@@ -381,9 +381,9 @@ const itemListSchema = {
 
       <p class="establishment-description">
         Une grande salle de sport avec piscine qui propose du Pilates classique ET de
-        l'Aquapilates (Pilates dans l'eau). Si vous avez des problemes articulaires ou
-        que vous cherchez quelque chose de doux, l'Aquapilates est genial. L'abonnement
-        donne aussi acces a la piscine, au spa... C'est un vrai centre de bien-etre.
+        l'Aquapilates (Pilates dans l'eau). Si vous avez des problèmes articulaires ou
+        que vous cherchez quelque chose de doux, l'Aquapilates est génial. L'abonnement
+        donne aussi accès à la piscine, au spa... C'est un vrai centre de bien-être.
       </p>
 
       <div class="establishment-tags">
@@ -395,9 +395,9 @@ const itemListSchema = {
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
-          <li>Aquapilates unique a Tours (ideal pour les articulations)</li>
-          <li>Acces piscine et spa inclus</li>
-          <li>Proche tram Liberte</li>
+          <li>Aquapilates unique à Tours (idéal pour les articulations)</li>
+          <li>Accès piscine et spa inclus</li>
+          <li>Proche tram Liberté</li>
         </ul>
       </div>
 
@@ -411,15 +411,15 @@ const itemListSchema = {
       <div class="establishment-info">
         <div class="info-item">
           <span class="info-label">📍 Adresse</span>
-          <span class="info-value">33 Rue Febvotte, 37000 Tours (proche Place de la Liberte)</span>
+          <span class="info-value">33 Rue Febvotte, 37000 Tours (proche Place de la Liberté)</span>
         </div>
         <div class="info-item">
-          <span class="info-label">🚃 Acces</span>
-          <span class="info-value">Tram arret Liberte</span>
+          <span class="info-label">🚃 Accès</span>
+          <span class="info-value">Tram arrêt Liberté</span>
         </div>
         <div class="info-item">
           <span class="info-label">💰 Tarifs</span>
-          <span class="info-value">Sur devis - seance d'essai gratuite</span>
+          <span class="info-value">Sur devis - séance d'essai gratuite</span>
         </div>
         <div class="info-item">
           <span class="info-label">📞 Contact</span>
@@ -432,8 +432,8 @@ const itemListSchema = {
       </div>
 
       <div class="establishment-tip">
-        <strong>💡 Info :</strong> Les seances de Pilates durent 45 min. Ils proposent
-        aussi du Yoga, Gym dos, Stretching dans le meme abonnement.
+        <strong>💡 Info :</strong> Les séances de Pilates durent 45 min. Ils proposent
+        aussi du Yoga, Gym dos, Stretching dans le même abonnement.
       </div>
     </article>
   </div>
@@ -443,15 +443,15 @@ const itemListSchema = {
 
     <p>
       Si vous n'avez jamais fait de Pilates, voici mon conseil : commencez par 2-3 cours
-      particuliers ou un cours debutant. Oui, ca coute plus cher, mais ca vous evitera
-      de prendre de mauvaises habitudes. Le Pilates, c'est de la precision. Mal execute,
-      ca ne sert a rien (voire ca peut faire mal).
+      particuliers ou un cours débutant. Oui, ça coûte plus cher, mais ça vous évitera
+      de prendre de mauvaises habitudes. Le Pilates, c'est de la précision. Mal exécuté,
+      ça ne sert à rien (voire ça peut faire mal).
     </p>
 
     <p>
       Une fois les bases acquises, passez en cours collectif. Vous progresserez plus vite
-      et ca reviendra moins cher. Et surtout, ecoutez votre corps. Si un exercice vous
-      fait mal, arretez et demandez a l'instructeur.
+      et ça reviendra moins cher. Et surtout, écoutez votre corps. Si un exercice vous
+      fait mal, arrêtez et demandez à l'instructeur.
     </p>
 
     <h2>Comparatif des tarifs</h2>
@@ -460,7 +460,7 @@ const itemListSchema = {
       <thead>
         <tr>
           <th>Studio</th>
-          <th>Seance</th>
+          <th>Séance</th>
           <th>Forfait 10</th>
           <th>Mensuel</th>
         </tr>
@@ -503,22 +503,22 @@ const itemListSchema = {
     <div class="cta-box">
       <h3>Une question sur ces studios ?</h3>
       <p>
-        Si vous hesitez ou voulez plus de details sur un studio en particulier,
-        n'hesitez pas a me contacter.
+        Si vous hésitez ou voulez plus de détails sur un studio en particulier,
+        n'hésitez pas à me contacter.
       </p>
       <a href="/contact/" class="btn btn-primary">Me contacter</a>
     </div>
 
-    <h2>A lire aussi</h2>
+    <h2>À lire aussi</h2>
 
     <ul>
-      <li><a href="/bien-etre/hypnotherapeute-tours/">Hypnotherapeutes a Tours</a></li>
-      <li><a href="/bien-etre/chiropracteur-tours/">Chiropracteurs a Tours</a></li>
-      <li><a href="/bien-etre/">Tous les services bien-etre</a></li>
+      <li><a href="/bien-etre/hypnotherapeute-tours/">Hypnothérapeutes à Tours</a></li>
+      <li><a href="/bien-etre/chiropracteur-tours/">Chiropracteurs à Tours</a></li>
+      <li><a href="/bien-etre/">Tous les services bien-être</a></li>
     </ul>
   </div>
 
-  <FAQ items={faqItems} title="Questions frequentes sur le Pilates a Tours" />
+  <FAQ items={faqItems} title="Questions fréquentes sur le Pilates à Tours" />
 
 </ListLayout>
 

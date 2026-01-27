@@ -11,46 +11,46 @@ const quartiers = [
   {
     name: 'Velpeau / La Fuye',
     slug: 'velpeau',
-    description: 'Le village dans la ville. Marche du samedi, vie de quartier authentique.',
+    description: 'Le village dans la ville. Marché du samedi, vie de quartier authentique.',
     price: '€€',
     vibe: 'Familial, authentique',
-    highlight: 'Le marche du samedi',
+    highlight: 'Le marché du samedi',
     available: true,
   },
   {
-    name: 'Centre / Cathedrale',
+    name: 'Centre / Cathédrale',
     slug: 'tours-centre',
-    description: 'Coeur historique, Place Plumereau, vie nocturne animee.',
+    description: 'Coeur historique, Place Plumereau, vie nocturne animée.',
     price: '€€€',
-    vibe: 'Anime, historique',
+    vibe: 'Animé, historique',
     highlight: 'Place Plumereau',
     available: false,
   },
   {
-    name: 'Grammont-Prebendes',
+    name: 'Grammont-Prébendes',
     slug: 'prebendes',
-    description: 'Quartier bourgeois, belles demeures, jardin des Prebendes.',
+    description: 'Quartier bourgeois, belles demeures, jardin des Prébendes.',
     price: '€€€€',
     vibe: 'Chic, calme',
-    highlight: 'Jardin des Prebendes',
+    highlight: 'Jardin des Prébendes',
     available: false,
   },
   {
     name: 'Deux-Lions',
     slug: 'deux-lions',
-    description: 'Quartier moderne, universite, jeune et dynamique.',
+    description: 'Quartier moderne, université, jeune et dynamique.',
     price: '€€',
-    vibe: 'Etudiant, moderne',
+    vibe: 'Étudiant, moderne',
     highlight: 'Campus universitaire',
     available: false,
   },
   {
     name: 'Tours Nord',
     slug: 'tours-nord',
-    description: 'Residentiel, familial, proche Loire.',
+    description: 'Résidentiel, familial, proche Loire.',
     price: '€€',
     vibe: 'Familial, calme',
-    highlight: 'Proximite Loire',
+    highlight: 'Proximité Loire',
     available: false,
   },
   {
@@ -67,17 +67,17 @@ const quartiers = [
 
 <BaseLayout
   title="Quartiers de Tours : Guide pour s'installer"
-  description="Decouvrez tous les quartiers de Tours : ambiance, prix, transports, avis. Guide complet pour choisir ou habiter a Tours par un Tourangeau."
+  description="Découvrez tous les quartiers de Tours : ambiance, prix, transports, avis. Guide complet pour choisir où habiter à Tours par un Tourangeau."
 >
   <div class="container">
     <Breadcrumb items={breadcrumbItems} />
 
     <header class="page-header">
-      <h1>Les quartiers de Tours : Ou s'installer ?</h1>
+      <h1>Les quartiers de Tours : Où s'installer ?</h1>
       <p class="page-intro">
-        Vous cherchez ou habiter a Tours ? Chaque quartier a sa personnalite.
-        Du centre anime aux quartiers residentiels, je vous aide a trouver celui qui vous correspond.
-        Voici mon guide de Tourangeau, avec les vrais avantages et inconvenients de chaque quartier.
+        Vous cherchez où habiter à Tours ? Chaque quartier a sa personnalité.
+        Du centre animé aux quartiers résidentiels, je vous aide à trouver celui qui vous correspond.
+        Voici mon guide de Tourangeau, avec les vrais avantages et inconvénients de chaque quartier.
       </p>
     </header>
 
@@ -85,8 +85,8 @@ const quartiers = [
       <a href="/quartiers/a-eviter/" class="alert-card">
         <span class="alert-icon">⚠️</span>
         <div class="alert-content">
-          <h2>Quartiers de Tours a eviter ?</h2>
-          <p>Un sujet delicat traite avec honnetete. Mon avis nuance sur les zones qui posent question.</p>
+          <h2>Quartiers de Tours à éviter ?</h2>
+          <p>Un sujet délicat traité avec honnêteté. Mon avis nuancé sur les zones qui posent question.</p>
         </div>
         <span class="alert-link">Lire l'article →</span>
       </a>
@@ -109,7 +109,7 @@ const quartiers = [
                   <span class="quartier-vibe">{q.vibe}</span>
                   <span class="quartier-highlight">✨ {q.highlight}</span>
                 </div>
-                <span class="quartier-cta">Decouvrir le quartier →</span>
+                <span class="quartier-cta">Découvrir le quartier →</span>
               </a>
             ) : (
               <div class="quartier-link disabled">
@@ -122,7 +122,7 @@ const quartiers = [
                   <span class="quartier-vibe">{q.vibe}</span>
                   <span class="quartier-highlight">✨ {q.highlight}</span>
                 </div>
-                <span class="quartier-cta coming">Bientot disponible</span>
+                <span class="quartier-cta coming">Bientôt disponible</span>
               </div>
             )}
           </div>
@@ -146,18 +146,18 @@ const quartiers = [
           </thead>
           <tbody>
             <tr>
-              <td><strong>Centre / Cathedrale</strong></td>
+              <td><strong>Centre / Cathédrale</strong></td>
               <td>3 400-3 800€</td>
               <td>⭐⭐⭐⭐⭐</td>
-              <td>Anime</td>
-              <td>Jeunes actifs, etudiants</td>
+              <td>Animé</td>
+              <td>Jeunes actifs, étudiants</td>
             </tr>
             <tr>
-              <td><strong>Grammont-Prebendes</strong></td>
+              <td><strong>Grammont-Prébendes</strong></td>
               <td>3 500-4 500€</td>
               <td>⭐⭐⭐⭐</td>
               <td>Chic</td>
-              <td>Familles aisees, cadres</td>
+              <td>Familles aisées, cadres</td>
             </tr>
             <tr>
               <td><strong>Velpeau</strong></td>
@@ -171,13 +171,13 @@ const quartiers = [
               <td>2 800-3 200€</td>
               <td>⭐⭐⭐⭐</td>
               <td>Moderne</td>
-              <td>Etudiants, jeunes actifs</td>
+              <td>Étudiants, jeunes actifs</td>
             </tr>
             <tr>
               <td><strong>Tours Nord</strong></td>
               <td>2 500-3 000€</td>
               <td>⭐⭐⭐⭐</td>
-              <td>Residentiel</td>
+              <td>Résidentiel</td>
               <td>Familles</td>
             </tr>
             <tr>
@@ -185,7 +185,7 @@ const quartiers = [
               <td>2 000-2 500€</td>
               <td>⭐⭐⭐⭐</td>
               <td>Populaire</td>
-              <td>Budgets serres</td>
+              <td>Budgets serrés</td>
             </tr>
           </tbody>
         </table>
@@ -197,45 +197,45 @@ const quartiers = [
 
       <div class="tips-grid">
         <div class="tip-card">
-          <h3>🚃 Privilegiez le tram</h3>
+          <h3>🚃 Privilégiez le tram</h3>
           <p>
-            La ligne A du tram traverse Tours du nord au sud. Habiter pres d'un arret,
-            c'est se faciliter la vie au quotidien. Les bus Fil Bleu completent le reseau.
+            La ligne A du tram traverse Tours du nord au sud. Habiter près d'un arrêt,
+            c'est se faciliter la vie au quotidien. Les bus Fil Bleu complètent le réseau.
           </p>
         </div>
 
         <div class="tip-card">
-          <h3>🛒 Verifiez les commerces</h3>
+          <h3>🛒 Vérifiez les commerces</h3>
           <p>
-            Avant de signer, faites un tour du quartier. Boulangerie, superette, pharmacie...
-            Les commerces de proximite font la difference au quotidien.
+            Avant de signer, faites un tour du quartier. Boulangerie, supérette, pharmacie...
+            Les commerces de proximité font la différence au quotidien.
           </p>
         </div>
 
         <div class="tip-card">
-          <h3>🏫 Pensez aux ecoles</h3>
+          <h3>🏫 Pensez aux écoles</h3>
           <p>
-            Si vous avez des enfants, renseignez-vous sur les ecoles du secteur.
-            La carte scolaire peut vous orienter vers un quartier plutot qu'un autre.
+            Si vous avez des enfants, renseignez-vous sur les écoles du secteur.
+            La carte scolaire peut vous orienter vers un quartier plutôt qu'un autre.
           </p>
         </div>
 
         <div class="tip-card">
           <h3>🚗 Le stationnement</h3>
           <p>
-            En centre-ville, se garer releve du parcours du combattant. Si vous avez une voiture,
-            verifiez qu'il y a un parking ou une place de stationnement incluse.
+            En centre-ville, se garer relève du parcours du combattant. Si vous avez une voiture,
+            vérifiez qu'il y a un parking ou une place de stationnement incluse.
           </p>
         </div>
       </div>
     </section>
 
     <section class="cta-section">
-      <h2>Besoin d'un conseil personnalise ?</h2>
+      <h2>Besoin d'un conseil personnalisé ?</h2>
       <p>
-        Chaque situation est unique. Si vous hesitez entre plusieurs quartiers,
-        n'hesitez pas a me contacter. Je serai ravi de vous aider a trouver
-        le quartier qui correspond a vos besoins.
+        Chaque situation est unique. Si vous hésitez entre plusieurs quartiers,
+        n'hésitez pas à me contacter. Je serai ravi de vous aider à trouver
+        le quartier qui correspond à vos besoins.
       </p>
       <a href="/contact/" class="btn btn-primary">Me contacter</a>
     </section>

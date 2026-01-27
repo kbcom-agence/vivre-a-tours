@@ -6,76 +6,76 @@ const modifiedDate = new Date().toISOString().split('T')[0];
 
 const faqItems = [
   {
-    question: "Combien coute une seance d'hypnose a Tours ?",
-    answer: "Une seance d'hypnotherapie a Tours coute entre 60 et 90 euros en moyenne. La premiere seance (bilan + seance) est souvent plus longue et peut aller jusqu'a 100-120 euros. Certains praticiens proposent des forfaits pour les accompagnements en plusieurs seances (arret tabac, perte de poids)."
+    question: "Combien coûte une séance d'hypnose à Tours ?",
+    answer: "Une séance d'hypnothérapie à Tours coûte entre 60 et 90 euros en moyenne. La première séance (bilan + séance) est souvent plus longue et peut aller jusqu'à 100-120 euros. Certains praticiens proposent des forfaits pour les accompagnements en plusieurs séances (arrêt tabac, perte de poids)."
   },
   {
-    question: "L'hypnose est-elle remboursee par la Securite sociale ?",
-    answer: "Non, l'hypnotherapie n'est pas remboursee par la Securite sociale. En revanche, de nombreuses mutuelles proposent un forfait 'medecines douces' qui peut couvrir une partie des seances (souvent 3 a 5 seances par an). Verifiez votre contrat ou contactez votre mutuelle."
+    question: "L'hypnose est-elle remboursée par la Sécurité sociale ?",
+    answer: "Non, l'hypnothérapie n'est pas remboursée par la Sécurité sociale. En revanche, de nombreuses mutuelles proposent un forfait 'médecines douces' qui peut couvrir une partie des séances (souvent 3 à 5 séances par an). Vérifiez votre contrat ou contactez votre mutuelle."
   },
   {
-    question: "Combien de seances faut-il pour arreter de fumer ?",
-    answer: "Pour l'arret du tabac, comptez generalement 1 a 3 seances. Certains praticiens proposent un protocole en une seule seance intensive (2-3h), d'autres preferent 2-3 seances espacees. Le taux de reussite est bon (60-70% environ), mais depend beaucoup de votre motivation personnelle."
+    question: "Combien de séances faut-il pour arrêter de fumer ?",
+    answer: "Pour l'arrêt du tabac, comptez généralement 1 à 3 séances. Certains praticiens proposent un protocole en une seule séance intensive (2-3h), d'autres préfèrent 2-3 séances espacées. Le taux de réussite est bon (60-70% environ), mais dépend beaucoup de votre motivation personnelle."
   },
   {
-    question: "Comment choisir un bon hypnotherapeute a Tours ?",
-    answer: "Verifiez sa formation (ARCHE, IFH, formations universitaires...), son experience, et les avis clients. Un bon praticien prend le temps d'expliquer sa methode, ne promet pas de miracles, et propose un premier echange telephonique gratuit. Faites confiance a votre ressenti lors du premier contact."
+    question: "Comment choisir un bon hypnothérapeute à Tours ?",
+    answer: "Vérifiez sa formation (ARCHE, IFH, formations universitaires...), son expérience, et les avis clients. Un bon praticien prend le temps d'expliquer sa méthode, ne promet pas de miracles, et propose un premier échange téléphonique gratuit. Faites confiance à votre ressenti lors du premier contact."
   },
   {
     question: "L'hypnose fonctionne-t-elle sur tout le monde ?",
-    answer: "Oui, tout le monde est receptif a l'hypnose, mais a des degres differents. Environ 10% des personnes sont tres receptives, 10% peu receptives, et 80% ont une receptivite moyenne suffisante pour un travail therapeutique. Ce qui compte le plus : votre motivation et la relation de confiance avec le praticien."
+    answer: "Oui, tout le monde est réceptif à l'hypnose, mais à des degrés différents. Environ 10% des personnes sont très réceptives, 10% peu réceptives, et 80% ont une réceptivité moyenne suffisante pour un travail thérapeutique. Ce qui compte le plus : votre motivation et la relation de confiance avec le praticien."
   },
   {
-    question: "Pour quels problemes consulter un hypnotherapeute ?",
-    answer: "L'hypnose est efficace pour : l'arret du tabac, la gestion du stress et de l'anxiete, les phobies, les troubles du sommeil, la confiance en soi, la perte de poids, la preparation aux examens, les douleurs chroniques. Elle ne remplace pas un suivi medical pour les pathologies serieuses."
+    question: "Pour quels problèmes consulter un hypnothérapeute ?",
+    answer: "L'hypnose est efficace pour : l'arrêt du tabac, la gestion du stress et de l'anxiété, les phobies, les troubles du sommeil, la confiance en soi, la perte de poids, la préparation aux examens, les douleurs chroniques. Elle ne remplace pas un suivi médical pour les pathologies sérieuses."
   }
 ];
 
 const itemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Les meilleurs hypnotherapeutes a Tours",
-  "description": "Selection des hypnotherapeutes recommandes a Tours avec avis, tarifs et specialites.",
+  "name": "Les meilleurs hypnothérapeutes à Tours",
+  "description": "Sélection des hypnothérapeutes recommandés à Tours avec avis, tarifs et spécialités.",
   "numberOfItems": 5,
   "itemListElement": [
     {
       "@type": "ListItem",
       "position": 1,
       "name": "Rebecca Le Calvez - Hypnose EMDR 37",
-      "description": "Hypnotherapeute specialisee hypnose ericksonienne et EMDR a Tours Velpeau"
+      "description": "Hypnothérapeute spécialisée hypnose ericksonienne et EMDR à Tours Velpeau"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Adrien Le Pogam - Hypnose Coaching Tours",
-      "description": "Hypnotherapeute et coach, specialiste arret tabac et PNL"
+      "description": "Hypnothérapeute et coach, spécialiste arrêt tabac et PNL"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Mari Nambu - Hypnose Tours",
-      "description": "Hypnotherapeute pluridisciplinaire pres des Halles de Tours"
+      "description": "Hypnothérapeute pluridisciplinaire près des Halles de Tours"
     },
     {
       "@type": "ListItem",
       "position": 4,
       "name": "Valerie Mirabel",
-      "description": "Infirmiere et hypnotherapeute specialisee EMDR aux Deux-Lions"
+      "description": "Infirmière et hypnothérapeute spécialisée EMDR aux Deux-Lions"
     },
     {
       "@type": "ListItem",
       "position": 5,
       "name": "Michael Bernard - Horatiole",
-      "description": "Hypnotherapeute et praticien EMDR en centre-ville de Tours"
+      "description": "Hypnothérapeute et praticien EMDR en centre-ville de Tours"
     }
   ]
 };
 ---
 
 <ListLayout
-  title="Hypnotherapeute a Tours : Les 5 meilleurs praticiens"
-  description="Decouvrez les meilleurs hypnotherapeutes a Tours : avis, tarifs, specialites. Selection testee et approuvee par un Tourangeau."
-  category="Bien-etre"
+  title="Hypnothérapeute à Tours : Les 5 meilleurs praticiens"
+  description="Découvrez les meilleurs hypnothérapeutes à Tours : avis, tarifs, spécialités. Sélection testée et approuvée par un Tourangeau."
+  category="Bien-être"
   categoryHref="/bien-etre/"
   modifiedDate={modifiedDate}
   itemCount={5}
@@ -83,25 +83,25 @@ const itemListSchema = {
 >
   <div class="prose intro-section">
     <p class="intro">
-      Trouver un bon hypnotherapeute a Tours n'est pas simple. Entre les praticiens formes
-      serieusement et ceux qui ont suivi une formation express, il y a un monde.
-      J'ai pris le temps de rencontrer plusieurs hypnotherapeutes de la ville pour vous
-      proposer cette selection de confiance.
+      Trouver un bon hypnothérapeute à Tours n'est pas simple. Entre les praticiens formés
+      sérieusement et ceux qui ont suivi une formation express, il y a un monde.
+      J'ai pris le temps de rencontrer plusieurs hypnothérapeutes de la ville pour vous
+      proposer cette sélection de confiance.
     </p>
 
     <div class="info-box">
-      <h2>Ce que j'ai evalue</h2>
+      <h2>Ce que j'ai évalué</h2>
       <ul>
-        <li><strong>Formation</strong> : ecoles reconnues (ARCHE, IFH, DU...)</li>
-        <li><strong>Experience</strong> : annees de pratique, nombre de seances</li>
-        <li><strong>Avis clients</strong> : temoignages et resultats</li>
-        <li><strong>Approche</strong> : ecoute, professionnalisme, transparence</li>
-        <li><strong>Rapport qualite-prix</strong> : tarifs coherents avec le marche</li>
+        <li><strong>Formation</strong> : écoles reconnues (ARCHE, IFH, DU...)</li>
+        <li><strong>Expérience</strong> : années de pratique, nombre de séances</li>
+        <li><strong>Avis clients</strong> : témoignages et résultats</li>
+        <li><strong>Approche</strong> : écoute, professionnalisme, transparence</li>
+        <li><strong>Rapport qualité-prix</strong> : tarifs cohérents avec le marché</li>
       </ul>
     </div>
   </div>
 
-  <h2>Les 5 hypnotherapeutes que je recommande a Tours</h2>
+  <h2>Les 5 hypnothérapeutes que je recommande à Tours</h2>
 
   <div class="establishment-list">
     <!-- Praticien 1 - Rebecca Le Calvez -->
@@ -110,23 +110,23 @@ const itemListSchema = {
         <div class="establishment-rank">1</div>
         <div class="establishment-title">
           <h3>Rebecca Le Calvez - Hypnose EMDR 37</h3>
-          <p class="establishment-tagline">Mon choix pour l'anxiete et les traumatismes</p>
+          <p class="establishment-tagline">Mon choix pour l'anxiété et les traumatismes</p>
         </div>
       </div>
 
       <p class="establishment-description">
-        Rebecca est ma recommandation numero 1 pour les problematiques liees au stress,
-        a l'anxiete ou aux traumatismes. Master Practitioner en hypnose ericksonienne
-        et certifiee EMDR, elle combine plusieurs approches pour un accompagnement complet.
-        Son cabinet a Velpeau est agreable et son approche tres professionnelle.
+        Rebecca est ma recommandation numéro 1 pour les problématiques liées au stress,
+        à l'anxiété ou aux traumatismes. Master Practitioner en hypnose ericksonienne
+        et certifiée EMDR, elle combine plusieurs approches pour un accompagnement complet.
+        Son cabinet à Velpeau est agréable et son approche très professionnelle.
       </p>
 
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
-          <li>Double competence hypnose + EMDR</li>
-          <li>Horaires larges (jusqu'a 19h30 en semaine)</li>
-          <li>Consultations en cabinet ou a distance possibles</li>
+          <li>Double compétence hypnose + EMDR</li>
+          <li>Horaires larges (jusqu'à 19h30 en semaine)</li>
+          <li>Consultations en cabinet ou à distance possibles</li>
         </ul>
       </div>
 
@@ -143,12 +143,12 @@ const itemListSchema = {
           <span class="info-value">120 rue Marcel Tribut, 37000 Tours (Quartier Velpeau)</span>
         </div>
         <div class="info-item">
-          <span class="info-label">🚃 Acces</span>
+          <span class="info-label">🚃 Accès</span>
           <span class="info-value">Quartier Velpeau, bus ligne 15</span>
         </div>
         <div class="info-item">
           <span class="info-label">💰 Tarifs</span>
-          <span class="info-value">Sur demande (tarifs classiques du marche)</span>
+          <span class="info-value">Sur demande (tarifs classiques du marché)</span>
         </div>
         <div class="info-item">
           <span class="info-label">📞 Contact</span>
@@ -172,23 +172,23 @@ const itemListSchema = {
         <div class="establishment-rank">2</div>
         <div class="establishment-title">
           <h3>Adrien Le Pogam - Hypnose Coaching Tours</h3>
-          <p class="establishment-tagline">Ideal pour l'arret du tabac</p>
+          <p class="establishment-tagline">Idéal pour l'arrêt du tabac</p>
         </div>
       </div>
 
       <p class="establishment-description">
         Adrien a un profil atypique : docteur en sciences de la vie reconverti en
-        hypnotherapeute. Forme a l'ARCHE par Kevin Finel et en PNL par Richard Bandler
-        lui-meme a Londres, il a une approche rigoureuse et structuree. Ideal si vous
-        cherchez quelqu'un de cartesien pour vous accompagner.
+        hypnothérapeute. Formé à l'ARCHE par Kevin Finel et en PNL par Richard Bandler
+        lui-même à Londres, il a une approche rigoureuse et structurée. Idéal si vous
+        cherchez quelqu'un de cartésien pour vous accompagner.
       </p>
 
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
           <li>Formation solide (ARCHE + PNL avec Bandler)</li>
-          <li>Approche scientifique et structuree</li>
-          <li>Seances longues (1h30) pour un travail en profondeur</li>
+          <li>Approche scientifique et structurée</li>
+          <li>Séances longues (1h30) pour un travail en profondeur</li>
         </ul>
       </div>
 
@@ -205,12 +205,12 @@ const itemListSchema = {
           <span class="info-value">86 avenue de Grammont, 37000 Tours</span>
         </div>
         <div class="info-item">
-          <span class="info-label">🚃 Acces</span>
-          <span class="info-value">Tram arret Palais des Sports ou Verdun</span>
+          <span class="info-label">🚃 Accès</span>
+          <span class="info-value">Tram arrêt Palais des Sports ou Verdun</span>
         </div>
         <div class="info-item">
           <span class="info-label">💰 Tarifs</span>
-          <span class="info-value">80€ (domicile) | 70€ (visio) - Seance 1h30</span>
+          <span class="info-value">80€ (domicile) | 70€ (visio) - Séance 1h30</span>
         </div>
         <div class="info-item">
           <span class="info-label">📞 Contact</span>
@@ -223,8 +223,8 @@ const itemListSchema = {
       </div>
 
       <div class="establishment-tip">
-        <strong>💡 Astuce :</strong> Il propose aussi de l'EFT (technique de liberation
-        emotionnelle) si l'hypnose seule ne suffit pas.
+        <strong>💡 Astuce :</strong> Il propose aussi de l'EFT (technique de libération
+        émotionnelle) si l'hypnose seule ne suffit pas.
       </div>
     </article>
 
@@ -239,25 +239,25 @@ const itemListSchema = {
       </div>
 
       <p class="establishment-description">
-        Mari a une approche tres complete : hypnose ericksonienne, hypnose non-verbale,
-        PNL, magnetisme... Elle adapte ses outils a chaque patient. Son cabinet est
-        idealement situe rue des Halles, en plein centre. Elle propose une pre-consultation
+        Mari a une approche très complète : hypnose ericksonienne, hypnose non-verbale,
+        PNL, magnétisme... Elle adapte ses outils à chaque patient. Son cabinet est
+        idéalement situé rue des Halles, en plein centre. Elle propose une pré-consultation
         gratuite de 10-15 min en ligne pour faire connaissance.
       </p>
 
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
-          <li>Pre-consultation gratuite pour faire connaissance</li>
-          <li>Multiples techniques (hypnose, PNL, RITMO, magnetisme)</li>
-          <li>Emplacement central, facile d'acces</li>
+          <li>Pré-consultation gratuite pour faire connaissance</li>
+          <li>Multiples techniques (hypnose, PNL, RITMO, magnétisme)</li>
+          <li>Emplacement central, facile d'accès</li>
         </ul>
       </div>
 
       <div class="establishment-cons">
         <h4>Ce que j'aime moins :</h4>
         <ul>
-          <li>L'approche "pluridisciplinaire" peut derouter les cartesiens</li>
+          <li>L'approche "pluridisciplinaire" peut dérouter les cartésiens</li>
         </ul>
       </div>
 
@@ -267,8 +267,8 @@ const itemListSchema = {
           <span class="info-value">75 rue des Halles, 37000 Tours</span>
         </div>
         <div class="info-item">
-          <span class="info-label">🚃 Acces</span>
-          <span class="info-value">Tram arret Place Jean Jaures, 5 min a pied des Halles</span>
+          <span class="info-label">🚃 Accès</span>
+          <span class="info-value">Tram arrêt Place Jean Jaurès, 5 min à pied des Halles</span>
         </div>
         <div class="info-item">
           <span class="info-label">💰 Tarifs</span>
@@ -291,22 +291,22 @@ const itemListSchema = {
         <div class="establishment-rank">4</div>
         <div class="establishment-title">
           <h3>Valerie Mirabel</h3>
-          <p class="establishment-tagline">Background medical (infirmiere)</p>
+          <p class="establishment-tagline">Background médical (infirmière)</p>
         </div>
       </div>
 
       <p class="establishment-description">
-        Valerie est infirmiere diplomee d'Etat avant d'etre hypnotherapeute. Cette double
-        casquette est un vrai plus si vous avez des problematiques de sante (douleurs,
-        accompagnement maladie, post-traumatisme). Elle est formee au College d'Hypnose
+        Valérie est infirmière diplômée d'État avant d'être hypnothérapeute. Cette double
+        casquette est un vrai plus si vous avez des problématiques de santé (douleurs,
+        accompagnement maladie, post-traumatisme). Elle est formée au Collège d'Hypnose
         de Paris et pratique aussi l'EMDR-IMO.
       </p>
 
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
-          <li>Background medical (comprehension des pathologies)</li>
-          <li>Specialisee gestion des traumatismes</li>
+          <li>Background médical (compréhension des pathologies)</li>
+          <li>Spécialisée gestion des traumatismes</li>
           <li>Quartier Deux-Lions, proche tram</li>
         </ul>
       </div>
@@ -314,7 +314,7 @@ const itemListSchema = {
       <div class="establishment-cons">
         <h4>Ce que j'aime moins :</h4>
         <ul>
-          <li>Excentre si vous etes du centre-ville</li>
+          <li>Excentré si vous êtes du centre-ville</li>
         </ul>
       </div>
 
@@ -324,7 +324,7 @@ const itemListSchema = {
           <span class="info-value">21 rue Germaine Tailleferre, 37200 Tours (Deux-Lions)</span>
         </div>
         <div class="info-item">
-          <span class="info-label">🚃 Acces</span>
+          <span class="info-label">🚃 Accès</span>
           <span class="info-value">Tram arret L'Heure Tranquille</span>
         </div>
         <div class="info-item">
@@ -348,15 +348,15 @@ const itemListSchema = {
         <div class="establishment-rank">5</div>
         <div class="establishment-title">
           <h3>Michael Bernard - Horatiole</h3>
-          <p class="establishment-tagline">Bon rapport qualite-prix</p>
+          <p class="establishment-tagline">Bon rapport qualité-prix</p>
         </div>
       </div>
 
       <p class="establishment-description">
         Michael exerce depuis 2022 et propose des tarifs parmi les plus accessibles de
-        Tours (60-80€). Membre du Syndicat National des Hypnotherapeutes (SNH), il a
-        une approche ethique et transparente. Son cabinet est en plein centre-ville,
-        rue du Plat d'Etain. Il consulte aussi les enfants et adolescents.
+        Tours (60-80€). Membre du Syndicat National des Hypnothérapeutes (SNH), il a
+        une approche éthique et transparente. Son cabinet est en plein centre-ville,
+        rue du Plat d'Étain. Il consulte aussi les enfants et adolescents.
       </p>
 
       <div class="establishment-pros">
@@ -371,22 +371,22 @@ const itemListSchema = {
       <div class="establishment-cons">
         <h4>Ce que j'aime moins :</h4>
         <ul>
-          <li>Moins d'experience que les autres (debut 2022)</li>
+          <li>Moins d'expérience que les autres (début 2022)</li>
         </ul>
       </div>
 
       <div class="establishment-info">
         <div class="info-item">
           <span class="info-label">📍 Adresse</span>
-          <span class="info-value">2 rue du Plat d'Etain, 4e etage, bureau 11, 37000 Tours</span>
+          <span class="info-value">2 rue du Plat d'Étain, 4e étage, bureau 11, 37000 Tours</span>
         </div>
         <div class="info-item">
-          <span class="info-label">🚃 Acces</span>
-          <span class="info-value">Tram arret Place Jean Jaures</span>
+          <span class="info-label">🚃 Accès</span>
+          <span class="info-value">Tram arrêt Place Jean Jaurès</span>
         </div>
         <div class="info-item">
           <span class="info-label">💰 Tarifs</span>
-          <span class="info-value">60-80€ la seance</span>
+          <span class="info-value">60-80€ la séance</span>
         </div>
         <div class="info-item">
           <span class="info-label">📞 Contact</span>
@@ -399,54 +399,54 @@ const itemListSchema = {
       </div>
 
       <div class="establishment-tip">
-        <strong>💡 Astuce :</strong> Il consulte a Tours les lundis et mardis uniquement.
-        Prenez RDV a l'avance car les creneaux partent vite.
+        <strong>💡 Astuce :</strong> Il consulte à Tours les lundis et mardis uniquement.
+        Prenez RDV à l'avance car les créneaux partent vite.
       </div>
     </article>
   </div>
 
   <div class="prose">
-    <h2>Comment choisir son hypnotherapeute ?</h2>
+    <h2>Comment choisir son hypnothérapeute ?</h2>
 
     <p>
-      Choisir un hypnotherapeute est une demarche personnelle. Voici les criteres que
+      Choisir un hypnothérapeute est une démarche personnelle. Voici les critères que
       je vous conseille de regarder :
     </p>
 
     <h3>1. La formation</h3>
     <p>
-      L'hypnotherapie n'est pas un titre protege. N'importe qui peut s'installer.
-      Privilegiez les praticiens formes dans des ecoles reconnues :
+      L'hypnothérapie n'est pas un titre protégé. N'importe qui peut s'installer.
+      Privilégiez les praticiens formés dans des écoles reconnues :
     </p>
     <ul>
-      <li><strong>ARCHE</strong> (Academie de Recherche et Connaissance en Hypnose Ericksonienne)</li>
-      <li><strong>IFH</strong> (Institut Francais d'Hypnose)</li>
+      <li><strong>ARCHE</strong> (Académie de Recherche et Connaissance en Hypnose Ericksonienne)</li>
+      <li><strong>IFH</strong> (Institut Français d'Hypnose)</li>
       <li><strong>Ecole Centrale d'Hypnose</strong> de Paris</li>
-      <li><strong>DU d'hypnose medicale</strong> (formation universitaire)</li>
+      <li><strong>DU d'hypnose médicale</strong> (formation universitaire)</li>
     </ul>
 
-    <h3>2. L'experience</h3>
+    <h3>2. L'expérience</h3>
     <p>
-      Un praticien qui exerce depuis plusieurs annees a generalement affine sa pratique.
-      N'hesitez pas a demander depuis combien de temps il exerce et combien de patients
-      il a accompagnes.
+      Un praticien qui exerce depuis plusieurs années a généralement affiné sa pratique.
+      N'hésitez pas à demander depuis combien de temps il exerce et combien de patients
+      il a accompagnés.
     </p>
 
-    <h3>3. La specialisation</h3>
+    <h3>3. La spécialisation</h3>
     <p>
-      Certains hypnotherapeutes sont generalistes, d'autres specialises. Pour un probleme
-      specifique (tabac, phobies, douleurs...), un specialiste aura souvent de meilleurs
-      resultats.
+      Certains hypnothérapeutes sont généralistes, d'autres spécialisés. Pour un problème
+      spécifique (tabac, phobies, douleurs...), un spécialiste aura souvent de meilleurs
+      résultats.
     </p>
 
     <h3>4. Le feeling</h3>
     <p>
-      La relation therapeutique est primordiale en hypnose. Si vous ne vous sentez pas
-      en confiance, ca ne fonctionnera pas. La plupart des praticiens proposent un
-      premier echange telephonique gratuit. Profitez-en pour vous faire une idee.
+      La relation thérapeutique est primordiale en hypnose. Si vous ne vous sentez pas
+      en confiance, ça ne fonctionnera pas. La plupart des praticiens proposent un
+      premier échange téléphonique gratuit. Profitez-en pour vous faire une idée.
     </p>
 
-    <h2>Tarifs moyens de l'hypnose a Tours</h2>
+    <h2>Tarifs moyens de l'hypnose à Tours</h2>
 
     <table>
       <thead>
@@ -457,19 +457,19 @@ const itemListSchema = {
       </thead>
       <tbody>
         <tr>
-          <td>Premiere seance (bilan + seance)</td>
+          <td>Première séance (bilan + séance)</td>
           <td>80-120€</td>
         </tr>
         <tr>
-          <td>Seance de suivi (1h)</td>
+          <td>Séance de suivi (1h)</td>
           <td>60-85€</td>
         </tr>
         <tr>
-          <td>Forfait arret tabac (2-3 seances)</td>
+          <td>Forfait arrêt tabac (2-3 séances)</td>
           <td>150-250€</td>
         </tr>
         <tr>
-          <td>Forfait perte de poids (4-6 seances)</td>
+          <td>Forfait perte de poids (4-6 séances)</td>
           <td>250-400€</td>
         </tr>
       </tbody>
@@ -479,35 +479,35 @@ const itemListSchema = {
 
     <p>
       L'hypnose n'est pas de la magie. C'est un outil puissant qui fonctionne si vous
-      etes pret a vous investir. Ne vous attendez pas a des miracles en une seance
-      (meme si ca arrive parfois pour l'arret du tabac).
+      êtes prêt à vous investir. Ne vous attendez pas à des miracles en une séance
+      (même si ça arrive parfois pour l'arrêt du tabac).
     </p>
 
     <p>
       Prenez le temps de choisir votre praticien, faites confiance au processus,
-      et gardez l'esprit ouvert. L'hypnose a change beaucoup de choses dans ma vie,
-      j'espere qu'elle pourra vous aider aussi.
+      et gardez l'esprit ouvert. L'hypnose a changé beaucoup de choses dans ma vie,
+      j'espère qu'elle pourra vous aider aussi.
     </p>
 
     <div class="cta-box">
       <h3>Une question sur ces praticiens ?</h3>
       <p>
-        Si vous avez des questions ou si vous voulez un avis plus precis selon
-        votre situation, n'hesitez pas a me contacter.
+        Si vous avez des questions ou si vous voulez un avis plus précis selon
+        votre situation, n'hésitez pas à me contacter.
       </p>
       <a href="/contact/" class="btn btn-primary">Me contacter</a>
     </div>
 
-    <h2>A lire aussi</h2>
+    <h2>À lire aussi</h2>
 
     <ul>
-      <li><a href="/bien-etre/pilates-tours/">Pilates a Tours : Les meilleurs studios</a></li>
-      <li><a href="/bien-etre/chiropracteur-tours/">Chiropracteur a Tours : Les 5 meilleurs</a></li>
-      <li><a href="/bien-etre/">Tous les services bien-etre a Tours</a></li>
+      <li><a href="/bien-etre/pilates-tours/">Pilates à Tours : Les meilleurs studios</a></li>
+      <li><a href="/bien-etre/chiropracteur-tours/">Chiropracteur à Tours : Les 5 meilleurs</a></li>
+      <li><a href="/bien-etre/">Tous les services bien-être à Tours</a></li>
     </ul>
   </div>
 
-  <FAQ items={faqItems} title="Questions frequentes sur l'hypnose a Tours" />
+  <FAQ items={faqItems} title="Questions fréquentes sur l'hypnose à Tours" />
 
 </ListLayout>
 

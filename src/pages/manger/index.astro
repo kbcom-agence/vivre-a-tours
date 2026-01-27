@@ -4,12 +4,12 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 
 const breadcrumbItems = [
   { label: 'Accueil', href: '/' },
-  { label: 'Manger a Tours' },
+  { label: 'Manger à Tours' },
 ];
 
 const categories = [
   {
-    name: 'Restaurants vegetariens',
+    name: 'Restaurants végétariens',
     slug: 'restaurant-vegetarien-tours',
     description: 'Veggie, vegan, flexitarien... Les meilleures adresses sans viande.',
     icon: '🥗',
@@ -25,7 +25,7 @@ const categories = [
   {
     name: 'Restaurant romantique',
     slug: 'restaurant-romantique-tours',
-    description: 'Tete-a-tete, anniversaire, demande en mariage...',
+    description: 'Tête-à-tête, anniversaire, demande en mariage...',
     icon: '💕',
     available: false,
   },
@@ -39,14 +39,14 @@ const categories = [
   {
     name: 'Pas cher',
     slug: 'restaurant-pas-cher-tours',
-    description: 'Bien manger sans se ruiner. Budget serre bienvenu.',
+    description: 'Bien manger sans se ruiner. Budget serré bienvenu.',
     icon: '💰',
     available: false,
   },
   {
     name: 'Gastronomique',
     slug: 'restaurant-gastronomique-tours',
-    description: 'Les grandes tables de Tours pour les occasions speciales.',
+    description: 'Les grandes tables de Tours pour les occasions spéciales.',
     icon: '⭐',
     available: false,
   },
@@ -54,17 +54,17 @@ const categories = [
 ---
 
 <BaseLayout
-  title="Ou manger a Tours : Restaurants et bonnes adresses"
-  description="Les meilleurs restaurants de Tours : vegetarien, brunch, romantique, terrasse. Selection testee et approuvee par un Tourangeau gourmand."
+  title="Où manger à Tours : Restaurants et bonnes adresses"
+  description="Les meilleurs restaurants de Tours : végétarien, brunch, romantique, terrasse. Sélection testée et approuvée par un Tourangeau gourmand."
 >
   <div class="container">
     <Breadcrumb items={breadcrumbItems} />
 
     <header class="page-header">
-      <h1>Ou manger a Tours ?</h1>
+      <h1>Où manger à Tours ?</h1>
       <p class="page-intro">
-        Tours est une ville ou l'on mange bien. Entre les restaurants traditionnels,
-        les bistrots de chef, les adresses veggie et les terrasses animees, le choix
+        Tours est une ville où l'on mange bien. Entre les restaurants traditionnels,
+        les bistrots de chef, les adresses veggie et les terrasses animées, le choix
         ne manque pas. Voici mes recommandations de gourmand tourangeau.
       </p>
     </header>
@@ -85,7 +85,7 @@ const categories = [
                 <span class="category-icon">{cat.icon}</span>
                 <h2>{cat.name}</h2>
                 <p>{cat.description}</p>
-                <span class="category-cta coming">Bientot disponible</span>
+                <span class="category-cta coming">Bientôt disponible</span>
               </div>
             )}
           </div>
@@ -94,53 +94,53 @@ const categories = [
     </section>
 
     <section class="favorites-section">
-      <h2>Mes adresses coup de coeur</h2>
+      <h2>Mes adresses coup de cœur</h2>
 
       <p>
         En attendant les guides complets, voici quelques adresses que je recommande
-        les yeux fermes :
+        les yeux fermés :
       </p>
 
       <div class="favorites-grid">
         <div class="favorite-card">
           <h3>Le Zinc</h3>
           <p class="favorite-type">Bistrot</p>
-          <p>Cuisine bistrot de qualite, ambiance conviviale, prix honnetes. Mon choix par defaut quand je ne sais pas ou aller.</p>
+          <p>Cuisine bistrot de qualité, ambiance conviviale, prix honnêtes. Mon choix par défaut quand je ne sais pas où aller.</p>
           <span class="favorite-location">📍 Rue Colbert</span>
         </div>
 
         <div class="favorite-card">
           <h3>Les Halles de Tours</h3>
-          <p class="favorite-type">Marche couvert</p>
-          <p>Pour un dejeuner sur le pouce : huitres, fromages, charcuterie, plats a emporter. Une institution.</p>
+          <p class="favorite-type">Marché couvert</p>
+          <p>Pour un déjeuner sur le pouce : huîtres, fromages, charcuterie, plats à emporter. Une institution.</p>
           <span class="favorite-location">📍 Place Gaston Pailhou</span>
         </div>
 
         <div class="favorite-card">
           <h3>L'Odeon</h3>
           <p class="favorite-type">Gastronomique accessible</p>
-          <p>Face au theatre, une cuisine soignee dans un cadre elegant. Parfait pour une occasion speciale sans casser la tirelire.</p>
-          <span class="favorite-location">📍 Place Francois Truffaut</span>
+          <p>Face au théâtre, une cuisine soignée dans un cadre élégant. Parfait pour une occasion spéciale sans casser la tirelire.</p>
+          <span class="favorite-location">📍 Place François Truffaut</span>
         </div>
 
         <div class="favorite-card">
           <h3>Chez Mamie</h3>
-          <p class="favorite-type">Brunch / Salon de the</p>
-          <p>Brunch copieux le dimanche, patisseries maison, ambiance cosy. File d'attente le week-end (ca vaut le coup).</p>
+          <p class="favorite-type">Brunch / Salon de thé</p>
+          <p>Brunch copieux le dimanche, pâtisseries maison, ambiance cosy. File d'attente le week-end (ça vaut le coup).</p>
           <span class="favorite-location">📍 Rue du Commerce</span>
         </div>
       </div>
     </section>
 
     <section class="tips-section">
-      <h2>Mes conseils pour bien manger a Tours</h2>
+      <h2>Mes conseils pour bien manger à Tours</h2>
 
       <div class="tips-grid">
         <div class="tip-card">
-          <h3>Reservez</h3>
+          <h3>Réservez</h3>
           <p>
             Les bonnes adresses affichent souvent complet le week-end.
-            Reservez, surtout le samedi soir. Un appel la veille suffit generalement.
+            Réservez, surtout le samedi soir. Un appel la veille suffit généralement.
           </p>
         </div>
 
@@ -148,15 +148,15 @@ const categories = [
           <h3>Explorez les rues secondaires</h3>
           <p>
             Les restaurants Place Plumereau sont sympas pour l'ambiance mais pas
-            les meilleurs. Les vraies pepites sont dans les rues adjacentes.
+            les meilleurs. Les vraies pépites sont dans les rues adjacentes.
           </p>
         </div>
 
         <div class="tip-card">
           <h3>Testez les formules midi</h3>
           <p>
-            Beaucoup de restaurants proposent des menus dejeuner a prix doux.
-            C'est souvent le meilleur rapport qualite-prix.
+            Beaucoup de restaurants proposent des menus déjeuner à prix doux.
+            C'est souvent le meilleur rapport qualité-prix.
           </p>
         </div>
 
@@ -164,17 +164,17 @@ const categories = [
           <h3>Suivez les saisons</h3>
           <p>
             La Touraine est un jardin de la France. Les bons restos changent leur
-            carte selon les saisons. Privilegiez les produits du moment.
+            carte selon les saisons. Privilégiez les produits du moment.
           </p>
         </div>
       </div>
     </section>
 
     <section class="cta-section">
-      <h2>Vous cherchez une adresse precise ?</h2>
+      <h2>Vous cherchez une adresse précise ?</h2>
       <p>
-        Je n'ai pas encore tout liste. Si vous cherchez un type de restaurant
-        particulier ou une recommandation pour une occasion speciale, contactez-moi.
+        Je n'ai pas encore tout listé. Si vous cherchez un type de restaurant
+        particulier ou une recommandation pour une occasion spéciale, contactez-moi.
       </p>
       <a href="/contact/" class="btn btn-primary">Me contacter</a>
     </section>

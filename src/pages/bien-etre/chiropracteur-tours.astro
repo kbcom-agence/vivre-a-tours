@@ -6,49 +6,49 @@ const modifiedDate = new Date().toISOString().split('T')[0];
 
 const faqItems = [
   {
-    question: "Combien coute une consultation chez un chiropracteur a Tours ?",
-    answer: "Une consultation coute entre 45 et 70 euros en moyenne. La premiere seance (bilan complet) est souvent plus longue et peut couter jusqu'a 80 euros. Le chiropracteur determine ensuite le nombre de seances necessaires selon votre probleme."
+    question: "Combien coûte une consultation chez un chiropracteur à Tours ?",
+    answer: "Une consultation coûte entre 45 et 70 euros en moyenne. La première séance (bilan complet) est souvent plus longue et peut coûter jusqu'à 80 euros. Le chiropracteur détermine ensuite le nombre de séances nécessaires selon votre problème."
   },
   {
-    question: "Le chiropracteur est-il rembourse par la Securite sociale ?",
-    answer: "Non, la chiropractie n'est pas remboursee par la Securite sociale. En revanche, de nombreuses mutuelles proposent un forfait 'medecines douces' qui peut rembourser 3 a 5 seances par an. Verifiez votre contrat."
+    question: "Le chiropracteur est-il remboursé par la Sécurité sociale ?",
+    answer: "Non, la chiropractie n'est pas remboursée par la Sécurité sociale. En revanche, de nombreuses mutuelles proposent un forfait 'médecines douces' qui peut rembourser 3 à 5 séances par an. Vérifiez votre contrat."
   },
   {
-    question: "Quelle est la difference entre chiropracteur et osteopathe ?",
-    answer: "Les deux travaillent sur le systeme musculo-squelettique, mais le chiropracteur se concentre davantage sur la colonne vertebrale et utilise des ajustements specifiques (craquements). L'osteopathe a une approche plus globale. Les deux sont complementaires."
+    question: "Quelle est la différence entre chiropracteur et ostéopathe ?",
+    answer: "Les deux travaillent sur le système musculo-squelettique, mais le chiropracteur se concentre davantage sur la colonne vertébrale et utilise des ajustements spécifiques (craquements). L'ostéopathe a une approche plus globale. Les deux sont complémentaires."
   },
   {
     question: "Le chiropracteur fait-il craquer le dos ?",
-    answer: "Oui, les ajustements chiropratiques produisent souvent un 'crac'. C'est le bruit des bulles de gaz dans l'articulation, pas les os ! C'est indolore dans la grande majorite des cas. Si vous apprehendez, prevenez le praticien."
+    answer: "Oui, les ajustements chiropratiques produisent souvent un 'crac'. C'est le bruit des bulles de gaz dans l'articulation, pas les os ! C'est indolore dans la grande majorité des cas. Si vous appréhendez, prévenez le praticien."
   },
   {
-    question: "Combien de seances de chiropractie faut-il ?",
-    answer: "Ca depend du probleme. Pour une douleur aigue, 2-4 seances peuvent suffire. Pour un probleme chronique, prevoyez 6-10 seances puis un suivi regulier. Le chiropracteur etablit un plan de traitement des la premiere visite."
+    question: "Combien de séances de chiropractie faut-il ?",
+    answer: "Ça dépend du problème. Pour une douleur aiguë, 2-4 séances peuvent suffire. Pour un problème chronique, prévoyez 6-10 séances puis un suivi régulier. Le chiropracteur établit un plan de traitement dès la première visite."
   },
   {
     question: "Peut-on consulter un chiropracteur sans ordonnance ?",
-    answer: "Oui, le chiropracteur est un praticien de premiere intention. Vous pouvez consulter directement sans ordonnance. Cependant, si vous avez des examens recents (radio, IRM), apportez-les pour aider le diagnostic."
+    answer: "Oui, le chiropracteur est un praticien de première intention. Vous pouvez consulter directement sans ordonnance. Cependant, si vous avez des examens récents (radio, IRM), apportez-les pour aider le diagnostic."
   }
 ];
 
 const itemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Les meilleurs chiropracteurs a Tours",
-  "description": "Selection des chiropracteurs recommandes a Tours avec avis, tarifs et specialites.",
+  "name": "Les meilleurs chiropracteurs à Tours",
+  "description": "Sélection des chiropracteurs recommandés à Tours avec avis, tarifs et spécialités.",
   "numberOfItems": 5,
   "itemListElement": [
     {
       "@type": "ListItem",
       "position": 1,
       "name": "Richard Arme, D.C.",
-      "description": "Chiropracteur experimente sur l'avenue de Grammont"
+      "description": "Chiropracteur expérimenté sur l'avenue de Grammont"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Carole Lambert",
-      "description": "Chiropractrice specialisee en pediatrie"
+      "description": "Chiropractrice spécialisée en pédiatrie"
     },
     {
       "@type": "ListItem",
@@ -60,7 +60,7 @@ const itemListSchema = {
       "@type": "ListItem",
       "position": 4,
       "name": "Hortense Sicard, D.C.",
-      "description": "Chiropractrice avec techniques variees"
+      "description": "Chiropractrice avec techniques variées"
     },
     {
       "@type": "ListItem",
@@ -73,9 +73,9 @@ const itemListSchema = {
 ---
 
 <ListLayout
-  title="Chiropracteur a Tours : Les 5 meilleurs praticiens"
-  description="Decouvrez les meilleurs chiropracteurs a Tours : avis, tarifs, specialites. Selection testee par un Tourangeau pour votre dos et vos articulations."
-  category="Bien-etre"
+  title="Chiropracteur à Tours : Les 5 meilleurs praticiens"
+  description="Découvrez les meilleurs chiropracteurs à Tours : avis, tarifs, spécialités. Sélection testée par un Tourangeau pour votre dos et vos articulations."
+  category="Bien-être"
   categoryHref="/bien-etre/"
   modifiedDate={modifiedDate}
   itemCount={5}
@@ -83,24 +83,24 @@ const itemListSchema = {
 >
   <div class="prose intro-section">
     <p class="intro">
-      Mal de dos, douleurs cervicales, sciatique... J'ai moi-meme eu besoin d'un chiropracteur
-      il y a quelques annees. Apres avoir teste plusieurs praticiens a Tours, je vous partage
-      ma selection des meilleurs chiropracteurs de la ville. Tous sont membres de l'Association
-      Francaise de Chiropraxie (AFC), gage de serieux.
+      Mal de dos, douleurs cervicales, sciatique... J'ai moi-même eu besoin d'un chiropracteur
+      il y a quelques années. Après avoir testé plusieurs praticiens à Tours, je vous partage
+      ma sélection des meilleurs chiropracteurs de la ville. Tous sont membres de l'Association
+      Française de Chiropraxie (AFC), gage de sérieux.
     </p>
 
     <div class="info-box">
       <h2>Qu'est-ce que la chiropractie ?</h2>
       <p>
-        La chiropractie est une medecine manuelle qui traite les troubles de l'appareil
-        locomoteur (dos, cou, articulations) par des ajustements vertebraux. Elle est
-        particulierement efficace pour les douleurs dorsales, cervicales, les migraines
+        La chiropractie est une médecine manuelle qui traite les troubles de l'appareil
+        locomoteur (dos, cou, articulations) par des ajustements vertébraux. Elle est
+        particulièrement efficace pour les douleurs dorsales, cervicales, les migraines
         d'origine cervicale et les sciatiques.
       </p>
     </div>
   </div>
 
-  <h2>Les 5 chiropracteurs que je recommande a Tours</h2>
+  <h2>Les 5 chiropracteurs que je recommande à Tours</h2>
 
   <div class="establishment-list">
     <!-- Praticien 1 - Richard Arme -->
@@ -109,21 +109,21 @@ const itemListSchema = {
         <div class="establishment-rank">1</div>
         <div class="establishment-title">
           <h3>Richard Arme, D.C.</h3>
-          <p class="establishment-tagline">Le plus experimente</p>
+          <p class="establishment-tagline">Le plus expérimenté</p>
         </div>
       </div>
 
       <p class="establishment-description">
-        Richard Arme est probablement le chiropracteur le plus etabli de Tours. Membre
+        Richard Arme est probablement le chiropracteur le plus établi de Tours. Membre
         de l'AFC et de l'American Chiropractic Association, il a une approche rigoureuse
-        et professionnelle. Son cabinet sur l'avenue de Grammont est moderne, climatise
-        et accessible aux personnes a mobilite reduite. Il parle anglais, pratique si besoin.
+        et professionnelle. Son cabinet sur l'avenue de Grammont est moderne, climatisé
+        et accessible aux personnes à mobilité réduite. Il parle anglais, pratique si besoin.
       </p>
 
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
-          <li>Grande experience et formation solide</li>
+          <li>Grande expérience et formation solide</li>
           <li>Cabinet moderne et accessible PMR</li>
           <li>RDV d'urgence possibles</li>
         </ul>
@@ -132,7 +132,7 @@ const itemListSchema = {
       <div class="establishment-cons">
         <h4>Ce que j'aime moins :</h4>
         <ul>
-          <li>Delai de RDV parfois un peu long</li>
+          <li>Délai de RDV parfois un peu long</li>
         </ul>
       </div>
 
@@ -142,8 +142,8 @@ const itemListSchema = {
           <span class="info-value">247 Avenue de Grammont, Residence du Lac, 37000 Tours</span>
         </div>
         <div class="info-item">
-          <span class="info-label">🚃 Acces</span>
-          <span class="info-value">Tram arret Verdun, bus a proximite</span>
+          <span class="info-label">🚃 Accès</span>
+          <span class="info-value">Tram arrêt Verdun, bus à proximité</span>
         </div>
         <div class="info-item">
           <span class="info-label">⏰ Horaires</span>
@@ -160,8 +160,8 @@ const itemListSchema = {
       </div>
 
       <div class="establishment-tip">
-        <strong>💡 Astuce :</strong> Il propose aussi du KinesioTaping (bandes adhesives
-        therapeutiques) pour prolonger l'effet des ajustements.
+        <strong>💡 Astuce :</strong> Il propose aussi du KinesioTaping (bandes adhésives
+        thérapeutiques) pour prolonger l'effet des ajustements.
       </div>
     </article>
 
@@ -171,41 +171,41 @@ const itemListSchema = {
         <div class="establishment-rank">2</div>
         <div class="establishment-title">
           <h3>Carole Lambert</h3>
-          <p class="establishment-tagline">Specialiste pediatrie et neuro-developpement</p>
+          <p class="establishment-tagline">Spécialiste pédiatrie et neuro-développement</p>
         </div>
       </div>
 
       <p class="establishment-description">
-        Carole a une specialisation rare : la pediatrie et les troubles du developpement
+        Carole a une spécialisation rare : la pédiatrie et les troubles du développement
         neurologique (dyslexie, TDAH, autisme). Si vous cherchez un chiropracteur pour
-        votre enfant, c'est LA reference a Tours. Elle travaille aussi sur les reflexes
+        votre enfant, c'est LA référence à Tours. Elle travaille aussi sur les réflexes
         primitifs retenus. Pour les adultes, elle utilise la technique Sacro-Occipitale (SOT).
       </p>
 
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
-          <li>Specialisee enfants et troubles neuro-developpementaux</li>
-          <li>Techniques douces (SOT, kinesiologie appliquee)</li>
-          <li>Parking gratuit a proximite</li>
+          <li>Spécialisée enfants et troubles neuro-développementaux</li>
+          <li>Techniques douces (SOT, kinésiologie appliquée)</li>
+          <li>Parking gratuit à proximité</li>
         </ul>
       </div>
 
       <div class="establishment-cons">
         <h4>Ce que j'aime moins :</h4>
         <ul>
-          <li>Horaires limites (pas le mercredi ni le week-end)</li>
+          <li>Horaires limités (pas le mercredi ni le week-end)</li>
         </ul>
       </div>
 
       <div class="establishment-info">
         <div class="info-item">
           <span class="info-label">📍 Adresse</span>
-          <span class="info-value">2 rue du Plat d'Etain, Bureau 306, 37000 Tours</span>
+          <span class="info-value">2 rue du Plat d'Étain, Bureau 306, 37000 Tours</span>
         </div>
         <div class="info-item">
-          <span class="info-label">🚃 Acces</span>
-          <span class="info-value">Tram arret Jean Jaures, accessible PMR</span>
+          <span class="info-label">🚃 Accès</span>
+          <span class="info-value">Tram arrêt Jean Jaurès, accessible PMR</span>
         </div>
         <div class="info-item">
           <span class="info-label">⏰ Horaires</span>
@@ -233,10 +233,10 @@ const itemListSchema = {
       </div>
 
       <p class="establishment-description">
-        Claude Lucon exerce depuis 1976 ! Diplome de l'Anglo-European College of Chiropractic,
-        il a une experience incomparable. Les avis patients sont unanimes : "magicien des
-        problemes vertebraux". Si vous avez un probleme de dos chronique ou complexe, son
-        experience peut faire la difference. Rendez-vous via Doctolib.
+        Claude Lucon exerce depuis 1976 ! Diplômé de l'Anglo-European College of Chiropractic,
+        il a une expérience incomparable. Les avis patients sont unanimes : "magicien des
+        problèmes vertébraux". Si vous avez un problème de dos chronique ou complexe, son
+        expérience peut faire la différence. Rendez-vous via Doctolib.
       </p>
 
       <div class="establishment-pros">
@@ -261,7 +261,7 @@ const itemListSchema = {
           <span class="info-value">24 rue Michelet, 37000 Tours</span>
         </div>
         <div class="info-item">
-          <span class="info-label">🚃 Acces</span>
+          <span class="info-label">🚃 Accès</span>
           <span class="info-value">Centre-ville, proche Place Jean Jaures</span>
         </div>
         <div class="info-item">
@@ -286,36 +286,36 @@ const itemListSchema = {
       </div>
 
       <p class="establishment-description">
-        Hortense maitrise plusieurs techniques chiropratiques : Activator (methode
+        Hortense maîtrise plusieurs techniques chiropratiques : Activator (méthode
         instrumentale douce), Diversified, Gonstead, Thomson/Drop, SOT. Cette polyvalence
-        lui permet d'adapter son approche a chaque patient. Elle utilise aussi des
-        techniques de tissus mous (ART, Graston, KinesioTaping). Cabinet a Tours Nord.
+        lui permet d'adapter son approche à chaque patient. Elle utilise aussi des
+        techniques de tissus mous (ART, Graston, KinesioTaping). Cabinet à Tours Nord.
       </p>
 
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
-          <li>Grande variete de techniques</li>
-          <li>Methode Activator pour ceux qui craignent les "cracs"</li>
-          <li>Exerce aussi a Bourges (pratique si vous bougez)</li>
+          <li>Grande variété de techniques</li>
+          <li>Méthode Activator pour ceux qui craignent les "cracs"</li>
+          <li>Exerce aussi à Bourges (pratique si vous bougez)</li>
         </ul>
       </div>
 
       <div class="establishment-cons">
         <h4>Ce que j'aime moins :</h4>
         <ul>
-          <li>Excentre (Tours Nord, Place de la Tranchee)</li>
+          <li>Excentré (Tours Nord, Place de la Tranchée)</li>
         </ul>
       </div>
 
       <div class="establishment-info">
         <div class="info-item">
           <span class="info-label">📍 Adresse</span>
-          <span class="info-value">3 Place de la Tranchee, 37100 Tours</span>
+          <span class="info-value">3 Place de la Tranchée, 37100 Tours</span>
         </div>
         <div class="info-item">
-          <span class="info-label">🚃 Acces</span>
-          <span class="info-value">Tram arret Tranchee</span>
+          <span class="info-label">🚃 Accès</span>
+          <span class="info-value">Tram arrêt Tranchée</span>
         </div>
         <div class="info-item">
           <span class="info-label">📞 Contact</span>
@@ -339,17 +339,17 @@ const itemListSchema = {
       </div>
 
       <p class="establishment-description">
-        Alexandra est diplomee de l'IFEC en 2021. Malgre son jeune age, elle a d'excellents
-        avis (5/5 sur Pages Jaunes). Elle prend en charge tous les publics : bebes, enfants,
-        adultes, sportifs, seniors, femmes enceintes. Son cabinet est tres bien situe,
-        boulevard Beranger pres des Halles. Elle parle aussi anglais.
+        Alexandra est diplômée de l'IFEC en 2021. Malgré son jeune âge, elle a d'excellents
+        avis (5/5 sur Pages Jaunes). Elle prend en charge tous les publics : bébés, enfants,
+        adultes, sportifs, seniors, femmes enceintes. Son cabinet est très bien situé,
+        boulevard Béranger près des Halles. Elle parle aussi anglais.
       </p>
 
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
           <li>Excellents avis patients</li>
-          <li>Prend tous les publics (bebes aux seniors)</li>
+          <li>Prend tous les publics (bébés aux seniors)</li>
           <li>Emplacement central, proche des Halles</li>
         </ul>
       </div>
@@ -357,17 +357,17 @@ const itemListSchema = {
       <div class="establishment-cons">
         <h4>Ce que j'aime moins :</h4>
         <ul>
-          <li>Moins d'experience (diplomee 2021)</li>
+          <li>Moins d'expérience (diplômée 2021)</li>
         </ul>
       </div>
 
       <div class="establishment-info">
         <div class="info-item">
           <span class="info-label">📍 Adresse</span>
-          <span class="info-value">6 Bis boulevard Beranger, 37000 Tours</span>
+          <span class="info-value">6 Bis boulevard Béranger, 37000 Tours</span>
         </div>
         <div class="info-item">
-          <span class="info-label">🚃 Acces</span>
+          <span class="info-label">🚃 Accès</span>
           <span class="info-value">Proche Halles, tram, bus, train</span>
         </div>
         <div class="info-item">
@@ -383,7 +383,7 @@ const itemListSchema = {
   </div>
 
   <div class="prose">
-    <h2>Tarifs des chiropracteurs a Tours</h2>
+    <h2>Tarifs des chiropracteurs à Tours</h2>
 
     <table>
       <thead>
@@ -394,7 +394,7 @@ const itemListSchema = {
       </thead>
       <tbody>
         <tr>
-          <td>Premiere consultation (bilan complet)</td>
+          <td>Première consultation (bilan complet)</td>
           <td>60-80€</td>
         </tr>
         <tr>
@@ -402,7 +402,7 @@ const itemListSchema = {
           <td>45-60€</td>
         </tr>
         <tr>
-          <td>Consultation enfant/bebe</td>
+          <td>Consultation enfant/bébé</td>
           <td>40-55€</td>
         </tr>
       </tbody>
@@ -415,8 +415,8 @@ const itemListSchema = {
     <ul>
       <li><strong>Douleurs dorsales</strong> : lombalgies, dorsalgies, cervicalgies</li>
       <li><strong>Sciatiques et cruralgies</strong></li>
-      <li><strong>Maux de tete</strong> d'origine cervicale</li>
-      <li><strong>Douleurs articulaires</strong> : epaule, coude, genou, cheville</li>
+      <li><strong>Maux de tête</strong> d'origine cervicale</li>
+      <li><strong>Douleurs articulaires</strong> : épaule, coude, genou, cheville</li>
       <li><strong>Torticolis</strong> et tensions musculaires</li>
       <li><strong>Entorses</strong> et troubles posturaux</li>
     </ul>
@@ -424,31 +424,31 @@ const itemListSchema = {
     <div class="warning-box">
       <h3>Important</h3>
       <p>
-        Consultez d'abord votre medecin si vous avez : fievre, perte de poids inexpliquee,
-        douleur nocturne intense, antecedents de cancer, ou symptomes neurologiques
-        (perte de sensibilite, faiblesse musculaire importante).
+        Consultez d'abord votre médecin si vous avez : fièvre, perte de poids inexpliquée,
+        douleur nocturne intense, antécédents de cancer, ou symptômes neurologiques
+        (perte de sensibilité, faiblesse musculaire importante).
       </p>
     </div>
 
     <div class="cta-box">
-      <h3>Besoin d'un conseil personnalise ?</h3>
+      <h3>Besoin d'un conseil personnalisé ?</h3>
       <p>
-        Si vous hesitez entre ces praticiens ou avez des questions specifiques,
-        n'hesitez pas a me contacter.
+        Si vous hésitez entre ces praticiens ou avez des questions spécifiques,
+        n'hésitez pas à me contacter.
       </p>
       <a href="/contact/" class="btn btn-primary">Me contacter</a>
     </div>
 
-    <h2>A lire aussi</h2>
+    <h2>À lire aussi</h2>
 
     <ul>
-      <li><a href="/bien-etre/hypnotherapeute-tours/">Hypnotherapeutes a Tours</a></li>
-      <li><a href="/bien-etre/pilates-tours/">Studios de Pilates a Tours</a></li>
-      <li><a href="/bien-etre/">Tous les services bien-etre</a></li>
+      <li><a href="/bien-etre/hypnotherapeute-tours/">Hypnothérapeutes à Tours</a></li>
+      <li><a href="/bien-etre/pilates-tours/">Studios de Pilates à Tours</a></li>
+      <li><a href="/bien-etre/">Tous les services bien-être</a></li>
     </ul>
   </div>
 
-  <FAQ items={faqItems} title="Questions frequentes sur la chiropractie a Tours" />
+  <FAQ items={faqItems} title="Questions fréquentes sur la chiropractie à Tours" />
 
 </ListLayout>
 

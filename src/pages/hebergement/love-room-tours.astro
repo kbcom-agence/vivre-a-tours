@@ -7,60 +7,60 @@ const modifiedDate = new Date().toISOString().split('T')[0];
 const faqItems = [
   {
     question: "Qu'est-ce qu'une love room ?",
-    answer: "Une love room est un hebergement romantique avec equipements dedies aux couples : jacuzzi privatif, sauna, ambiance tamisee, lit king-size, parfois accessoires coquins. L'objectif est de creer une bulle d'intimite pour raviver la flamme ou celebrer une occasion speciale."
+    answer: "Une love room est un hébergement romantique avec équipements dédiés aux couples : jacuzzi privatif, sauna, ambiance tamisée, lit king-size, parfois accessoires coquins. L'objectif est de créer une bulle d'intimité pour raviver la flamme ou célébrer une occasion spéciale."
   },
   {
-    question: "Combien coute une nuit en love room a Tours ?",
-    answer: "Comptez entre 125 et 250 euros la nuit selon les equipements. Les love rooms avec sauna + hammam + jacuzzi sont plus cheres que celles avec jacuzzi seul. Certaines incluent le champagne et le petit-dejeuner."
+    question: "Combien coûte une nuit en love room à Tours ?",
+    answer: "Comptez entre 125 et 250 euros la nuit selon les équipements. Les love rooms avec sauna + hammam + jacuzzi sont plus chères que celles avec jacuzzi seul. Certaines incluent le champagne et le petit-déjeuner."
   },
   {
-    question: "Les love rooms sont-elles discretes ?",
-    answer: "Oui, la discretion est une priorite. La plupart proposent une entree independante, un code d'acces sans contact avec le proprietaire, et un parking privatif. Vous ne croiserez personne."
+    question: "Les love rooms sont-elles discrètes ?",
+    answer: "Oui, la discrétion est une priorité. La plupart proposent une entrée indépendante, un code d'accès sans contact avec le propriétaire, et un parking privatif. Vous ne croiserez personne."
   },
   {
-    question: "Peut-on reserver une love room pour quelques heures ?",
-    answer: "La plupart proposent uniquement des nuits completes. Quelques adresses offrent des forfaits 'journee' ou 'apres-midi' (4-6h) moins chers que la nuit complete. Verifiez au moment de la reservation."
+    question: "Peut-on réserver une love room pour quelques heures ?",
+    answer: "La plupart proposent uniquement des nuits complètes. Quelques adresses offrent des forfaits 'journée' ou 'après-midi' (4-6h) moins chers que la nuit complète. Vérifiez au moment de la réservation."
   },
   {
     question: "Faut-il apporter quelque chose ?",
-    answer: "Non, tout est fourni : linge de maison, produits d'accueil, souvent cafe/the. Certaines incluent champagne et gourmandises. Apportez juste vos effets personnels et votre bonne humeur !"
+    answer: "Non, tout est fourni : linge de maison, produits d'accueil, souvent café/thé. Certaines incluent champagne et gourmandises. Apportez juste vos effets personnels et votre bonne humeur !"
   },
   {
-    question: "Les love rooms acceptent-elles les couples de meme sexe ?",
-    answer: "Oui, toutes les adresses de cette selection accueillent tous les couples sans distinction. L'amour n'a pas de genre !"
+    question: "Les love rooms acceptent-elles les couples de même sexe ?",
+    answer: "Oui, toutes les adresses de cette sélection accueillent tous les couples sans distinction. L'amour n'a pas de genre !"
   }
 ];
 
 const itemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Love Rooms et nuits romantiques a Tours",
-  "description": "Selection des meilleures love rooms avec jacuzzi et spa privatif a Tours et en Indre-et-Loire.",
+  "name": "Love Rooms et nuits romantiques à Tours",
+  "description": "Sélection des meilleures love rooms avec jacuzzi et spa privatif à Tours et en Indre-et-Loire.",
   "numberOfItems": 6,
   "itemListElement": [
     {
       "@type": "ListItem",
       "position": 1,
       "name": "OMIRA - Nuits d'exception & spa",
-      "description": "Suite troglodyte avec jacuzzi a Tours"
+      "description": "Suite troglodyte avec jacuzzi à Tours"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "L'Indiscrete - Love Room Tours",
-      "description": "Love room complete avec spa, sauna et hammam"
+      "description": "Love room complète avec spa, sauna et hammam"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Riad Les Portes de l'Orient",
-      "description": "Suite orientale avec jacuzzi a Tours centre"
+      "description": "Suite orientale avec jacuzzi à Tours centre"
     },
     {
       "@type": "ListItem",
       "position": 4,
       "name": "So Secret - So Lovely Spa",
-      "description": "Love room luxueuse avec piece secrete"
+      "description": "Love room luxueuse avec pièce secrète"
     }
   ]
 };
@@ -68,8 +68,8 @@ const itemListSchema = {
 
 <ListLayout
   title="Love Room Tours : Les meilleures nuits romantiques avec jacuzzi"
-  description="Decouvrez les meilleures love rooms a Tours et en Touraine : suites avec jacuzzi privatif, spa, sauna. Selection testee pour couples."
-  category="Hebergement"
+  description="Découvrez les meilleures love rooms à Tours et en Touraine : suites avec jacuzzi privatif, spa, sauna. Sélection testée pour couples."
+  category="Hébergement"
   categoryHref="/hebergement/"
   modifiedDate={modifiedDate}
   itemCount={6}
@@ -77,9 +77,9 @@ const itemListSchema = {
 >
   <div class="prose intro-section">
     <p class="intro">
-      Envie d'une parenthese romantique ? Tours et ses environs regorgent de love rooms
+      Envie d'une parenthèse romantique ? Tours et ses environs regorgent de love rooms
       et suites coquines pour couples. Jacuzzi privatif, sauna, hammam, ambiances
-      sensuelles... J'ai selectionne les meilleures adresses pour une nuit (ou plus)
+      sensuelles... J'ai sélectionné les meilleures adresses pour une nuit (ou plus)
       inoubliable.
     </p>
 
@@ -89,7 +89,7 @@ const itemListSchema = {
         <div class="type-card">
           <span class="type-icon">🛁</span>
           <h3>Jacuzzi privatif</h3>
-          <p>Toutes les adresses ont un spa privatif chauffe.</p>
+          <p>Toutes les adresses ont un spa privatif chauffé.</p>
         </div>
         <div class="type-card">
           <span class="type-icon">🔥</span>
@@ -98,14 +98,14 @@ const itemListSchema = {
         </div>
         <div class="type-card">
           <span class="type-icon">🤫</span>
-          <h3>Discretion totale</h3>
-          <p>Entree independante, arrivee autonome, intimite garantie.</p>
+          <h3>Discrétion totale</h3>
+          <p>Entrée indépendante, arrivée autonome, intimité garantie.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <h2>Les meilleures love rooms a Tours et environs</h2>
+  <h2>Les meilleures love rooms à Tours et environs</h2>
 
   <div class="establishment-list">
     <!-- Love Room 1 - OMIRA -->
@@ -114,17 +114,17 @@ const itemListSchema = {
         <div class="establishment-rank">1</div>
         <div class="establishment-title">
           <h3>OMIRA - Nuits d'exception & spa</h3>
-          <p class="establishment-tagline">L'experience la plus insolite</p>
+          <p class="establishment-tagline">L'expérience la plus insolite</p>
         </div>
-        <span class="label featured-label">Coup de coeur</span>
+        <span class="label featured-label">Coup de cœur</span>
       </div>
 
       <p class="establishment-description">
-        Une experience unique : une suite de plus de 100m2 creusee dans la roche,
-        en plein Tours ! Ambiance grotte de luxe avec jacuzzi privatif chauffe,
-        double douche XXL, lit king-size avec miroir au plafond, et meme deux
-        "espaces coquins" avec accessoires. Le tout avec Netflix, cuisine equipee
-        et parking gratuit. Arrivee 100% autonome par code.
+        Une expérience unique : une suite de plus de 100m2 creusée dans la roche,
+        en plein Tours ! Ambiance grotte de luxe avec jacuzzi privatif chauffé,
+        double douche XXL, lit king-size avec miroir au plafond, et même deux
+        "espaces coquins" avec accessoires. Le tout avec Netflix, cuisine équipée
+        et parking gratuit. Arrivée 100% autonome par code.
       </p>
 
       <div class="establishment-features">
@@ -139,7 +139,7 @@ const itemListSchema = {
         <h4>Ce que j'aime :</h4>
         <ul>
           <li>Cadre troglodyte unique et spectaculaire</li>
-          <li>100m2 d'espace, on n'est pas a l'etroit</li>
+          <li>100m2 d'espace, on n'est pas à l'étroit</li>
           <li>En plein Tours, pas besoin de voiture</li>
         </ul>
       </div>
@@ -147,7 +147,7 @@ const itemListSchema = {
       <div class="establishment-cons">
         <h4>Ce que j'aime moins :</h4>
         <ul>
-          <li>Tres demandee, reservez a l'avance</li>
+          <li>Très demandée, réservez à l'avance</li>
         </ul>
       </div>
 
@@ -158,7 +158,7 @@ const itemListSchema = {
         </div>
         <div class="info-item">
           <span class="info-label">💰 Tarif</span>
-          <span class="info-value">A partir de 150-180€/nuit</span>
+          <span class="info-value">À partir de 150-180€/nuit</span>
         </div>
         <div class="info-item">
           <span class="info-label">🌐 Site</span>
@@ -179,24 +179,24 @@ const itemListSchema = {
 
       <p class="establishment-description">
         Si vous voulez tout avoir : jacuzzi 2 places avec 40+ jets, sauna finlandais
-        en cedre, hammam avec aromatherapie, douche tropicale avec chromotherapie...
-        L'Indiscrete ne fait pas les choses a moitie. Lit king-size qualite hoteliere,
-        entree et parking privatifs. La totale pour 200€ la nuit.
+        en cèdre, hammam avec aromathérapie, douche tropicale avec chromothérapie...
+        L'Indiscrète ne fait pas les choses à moitié. Lit king-size qualité hôtelière,
+        entrée et parking privatifs. La totale pour 200€ la nuit.
       </p>
 
       <div class="establishment-features">
         <span class="feature">🛁 Jacuzzi 40+ jets</span>
         <span class="feature">🧖 Sauna finlandais</span>
-        <span class="feature">💨 Hammam aromatherapie</span>
-        <span class="feature">🚿 Douche chromotherapie</span>
+        <span class="feature">💨 Hammam aromathérapie</span>
+        <span class="feature">🚿 Douche chromothérapie</span>
         <span class="feature">🅿️ Parking privatif</span>
       </div>
 
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
-          <li>Equipement le plus complet de la selection</li>
-          <li>Discretion totale, entree independante</li>
+          <li>Équipement le plus complet de la sélection</li>
+          <li>Discrétion totale, entrée indépendante</li>
           <li>Proche Tours (Saint-Cyr-sur-Loire)</li>
         </ul>
       </div>
@@ -204,7 +204,7 @@ const itemListSchema = {
       <div class="establishment-cons">
         <h4>Ce que j'aime moins :</h4>
         <ul>
-          <li>Pas en centre-ville, voiture recommandee</li>
+          <li>Pas en centre-ville, voiture recommandée</li>
         </ul>
       </div>
 
@@ -230,20 +230,20 @@ const itemListSchema = {
         <div class="establishment-rank">3</div>
         <div class="establishment-title">
           <h3>Riad "Les Portes de l'Orient" - Suite Mille et une Nuits</h3>
-          <p class="establishment-tagline">L'evasion orientale</p>
+          <p class="establishment-tagline">L'évasion orientale</p>
         </div>
       </div>
 
       <p class="establishment-description">
-        Envie de depaysement ? Cette suite a theme oriental vous transporte au Maroc
-        le temps d'une nuit. Decoration raffinee, jacuzzi, hammam en acces partage,
-        balcon privatif. En plein centre de Tours ! Possibilite de traiteur oriental
-        et massages sur demande. Le plus abordable de la selection.
+        Envie de dépaysement ? Cette suite à thème oriental vous transporte au Maroc
+        le temps d'une nuit. Décoration raffinée, jacuzzi, hammam en accès partagé,
+        balcon privatif. En plein centre de Tours ! Possibilité de traiteur oriental
+        et massages sur demande. Le plus abordable de la sélection.
       </p>
 
       <div class="establishment-features">
         <span class="feature">🛁 Baignoire balneo</span>
-        <span class="feature">💨 Hammam (partage)</span>
+        <span class="feature">💨 Hammam (partagé)</span>
         <span class="feature">🏠 Balcon privatif</span>
         <span class="feature">📺 Netflix</span>
         <span class="feature">💆 Massages dispo</span>
@@ -254,14 +254,14 @@ const itemListSchema = {
         <ul>
           <li>Tarif le plus accessible (125€)</li>
           <li>En plein centre de Tours</li>
-          <li>Decoration depaysante</li>
+          <li>Décoration dépaysante</li>
         </ul>
       </div>
 
       <div class="establishment-cons">
         <h4>Ce que j'aime moins :</h4>
         <ul>
-          <li>Hammam en acces partage (pas privatif)</li>
+          <li>Hammam en accès partagé (pas privatif)</li>
         </ul>
       </div>
 
@@ -272,7 +272,7 @@ const itemListSchema = {
         </div>
         <div class="info-item">
           <span class="info-label">💰 Tarif</span>
-          <span class="info-value">A partir de 125€/nuit</span>
+          <span class="info-value">À partir de 125€/nuit</span>
         </div>
         <div class="info-item">
           <span class="info-label">🌐 Site</span>
@@ -292,40 +292,40 @@ const itemListSchema = {
       </div>
 
       <p class="establishment-description">
-        A 45 min de Tours, pres de Chinon, une love room de luxe : 80m2 + terrasse
-        privee de 100m2, jacuzzi 5 places, table de massage pro, cheminee. Et la
-        "piece secrete" avec fauteuil tantra (en option). Champagne et petit-dejeuner
+        À 45 min de Tours, près de Chinon, une love room de luxe : 80m2 + terrasse
+        privée de 100m2, jacuzzi 5 places, table de massage pro, cheminée. Et la
+        "pièce secrète" avec fauteuil tantra (en option). Champagne et petit-déjeuner
         inclus. Le cadre parfait pour une escapade chic.
       </p>
 
       <div class="establishment-features">
         <span class="feature">🛁 Jacuzzi 5 places</span>
         <span class="feature">💆 Table massage</span>
-        <span class="feature">🔥 Cheminee</span>
+        <span class="feature">🔥 Cheminée</span>
         <span class="feature">🍾 Champagne inclus</span>
-        <span class="feature">🤫 Piece secrete</span>
+        <span class="feature">🤫 Pièce secrète</span>
       </div>
 
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
           <li>Standing haut de gamme, finitions luxueuses</li>
-          <li>Grande terrasse privee</li>
-          <li>Champagne et petit-dejeuner inclus</li>
+          <li>Grande terrasse privée</li>
+          <li>Champagne et petit-déjeuner inclus</li>
         </ul>
       </div>
 
       <div class="establishment-cons">
         <h4>Ce que j'aime moins :</h4>
         <ul>
-          <li>A 45 min de Tours (Anche, pres de Chinon)</li>
+          <li>À 45 min de Tours (Anché, près de Chinon)</li>
         </ul>
       </div>
 
       <div class="establishment-info">
         <div class="info-item">
           <span class="info-label">📍 Adresse</span>
-          <span class="info-value">8 Rue du Vieux Bourg, 37500 Anche (pres de Chinon)</span>
+          <span class="info-value">8 Rue du Vieux Bourg, 37500 Anché (près de Chinon)</span>
         </div>
         <div class="info-item">
           <span class="info-label">💰 Tarif</span>
@@ -344,44 +344,44 @@ const itemListSchema = {
         <div class="establishment-rank">5</div>
         <div class="establishment-title">
           <h3>Suite Romantique - Bel Air Sud</h3>
-          <p class="establishment-tagline">Avec piscine chauffee</p>
+          <p class="establishment-tagline">Avec piscine chauffée</p>
         </div>
       </div>
 
       <p class="establishment-description">
-        La seule de la selection avec piscine chauffee (29°C en saison) en plus du
-        spa et du sauna. A 30 min de Tours, dans un cadre verdoyant. Lit 200cm,
-        cave a vins, baignoire et douche a l'italienne. Parfait pour un sejour
-        prolonge ou si vous voulez vraiment vous detendre.
+        La seule de la sélection avec piscine chauffée (29°C en saison) en plus du
+        spa et du sauna. À 30 min de Tours, dans un cadre verdoyant. Lit 200cm,
+        cave à vins, baignoire et douche à l'italienne. Parfait pour un séjour
+        prolongé ou si vous voulez vraiment vous détendre.
       </p>
 
       <div class="establishment-features">
-        <span class="feature">🏊 Piscine chauffee</span>
+        <span class="feature">🏊 Piscine chauffée</span>
         <span class="feature">🛁 Spa 5 places</span>
         <span class="feature">🧖 Sauna</span>
-        <span class="feature">🍷 Cave a vins</span>
+        <span class="feature">🍷 Cave à vins</span>
       </div>
 
       <div class="establishment-pros">
         <h4>Ce que j'aime :</h4>
         <ul>
-          <li>Seule option avec piscine chauffee</li>
+          <li>Seule option avec piscine chauffée</li>
           <li>Cadre nature et tranquille</li>
-          <li>Equipements tres complets</li>
+          <li>Équipements très complets</li>
         </ul>
       </div>
 
       <div class="establishment-cons">
         <h4>Ce que j'aime moins :</h4>
         <ul>
-          <li>La plus chere (250€) et excentree</li>
+          <li>La plus chère (250€) et excentrée</li>
         </ul>
       </div>
 
       <div class="establishment-info">
         <div class="info-item">
           <span class="info-label">📍 Adresse</span>
-          <span class="info-value">Clere-les-Pins (30 min de Tours)</span>
+          <span class="info-value">Cléré-les-Pins (30 min de Tours)</span>
         </div>
         <div class="info-item">
           <span class="info-label">💰 Tarif</span>
@@ -401,17 +401,17 @@ const itemListSchema = {
       </div>
 
       <p class="establishment-description">
-        Une particularite : ce logement peut accueillir jusqu'a 4 personnes. Ideal
-        pour les couples libertins ou une soiree entre amis tres proches. Spa,
-        sauna, hammam, douche tropicale. Meme gestion que L'Indiscrete, meme
-        niveau de qualite.
+        Une particularité : ce logement peut accueillir jusqu'à 4 personnes. Idéal
+        pour les couples libertins ou une soirée entre amis très proches. Spa,
+        sauna, hammam, douche tropicale. Même gestion que L'Indiscrète, même
+        niveau de qualité.
       </p>
 
       <div class="establishment-features">
         <span class="feature">🛁 Spa 2 places</span>
         <span class="feature">🧖 Sauna</span>
         <span class="feature">💨 Hammam</span>
-        <span class="feature">👥 Jusqu'a 4 pers.</span>
+        <span class="feature">👥 Jusqu'à 4 pers.</span>
       </div>
 
       <div class="establishment-pros">
@@ -425,7 +425,7 @@ const itemListSchema = {
       <div class="establishment-cons">
         <h4>Ce que j'aime moins :</h4>
         <ul>
-          <li>Moins intime si vous etes juste 2</li>
+          <li>Moins intime si vous êtes juste 2</li>
         </ul>
       </div>
 
@@ -504,27 +504,27 @@ const itemListSchema = {
         </tr>
       </tbody>
     </table>
-    <p><small>* Hammam partage</small></p>
+    <p><small>* Hammam partagé</small></p>
 
     <div class="cta-box">
       <h3>Besoin d'un conseil ?</h3>
       <p>
-        Vous hesitez entre ces adresses ? Dites-moi ce que vous recherchez
-        et je vous orienterai vers la love room ideale.
+        Vous hésitez entre ces adresses ? Dites-moi ce que vous recherchez
+        et je vous orienterai vers la love room idéale.
       </p>
       <a href="/contact/" class="btn btn-primary">Me contacter</a>
     </div>
 
-    <h2>A lire aussi</h2>
+    <h2>À lire aussi</h2>
 
     <ul>
-      <li><a href="/hebergement/">Tous les hebergements a Tours</a></li>
-      <li><a href="/que-faire/ce-week-end/">Que faire a Tours ce week-end</a></li>
-      <li><a href="/manger/restaurant-vegetarien-tours/">Restaurants vegetariens a Tours</a></li>
+      <li><a href="/hebergement/">Tous les hébergements à Tours</a></li>
+      <li><a href="/que-faire/ce-week-end/">Que faire à Tours ce week-end</a></li>
+      <li><a href="/manger/restaurant-vegetarien-tours/">Restaurants végétariens à Tours</a></li>
     </ul>
   </div>
 
-  <FAQ items={faqItems} title="Questions frequentes sur les love rooms" />
+  <FAQ items={faqItems} title="Questions fréquentes sur les love rooms" />
 
 </ListLayout>
 

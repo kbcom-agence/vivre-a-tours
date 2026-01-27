@@ -4,35 +4,35 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 
 const breadcrumbItems = [
   { label: 'Accueil', href: '/' },
-  { label: 'Bien-etre a Tours' },
+  { label: 'Bien-être à Tours' },
 ];
 
 const services = [
   {
-    name: 'Hypnotherapeute',
+    name: 'Hypnothérapeute',
     slug: 'hypnotherapeute-tours',
-    description: 'Arret tabac, gestion du stress, phobies... Les meilleurs praticiens de Tours.',
+    description: 'Arrêt tabac, gestion du stress, phobies... Les meilleurs praticiens de Tours.',
     icon: '🧠',
     available: true,
   },
   {
     name: 'Pilates',
     slug: 'pilates-tours',
-    description: 'Studios et cours de Pilates a Tours. Mat, reformer, prenatal...',
+    description: 'Studios et cours de Pilates à Tours. Mat, reformer, prénatal...',
     icon: '🧘',
     available: true,
   },
   {
     name: 'Spa et hammam',
     slug: 'spa-tours',
-    description: 'Detente et relaxation : les meilleurs spas de Tours.',
+    description: 'Détente et relaxation : les meilleurs spas de Tours.',
     icon: '💆',
     available: false,
   },
   {
-    name: 'Reflexologie',
+    name: 'Réflexologie',
     slug: 'reflexologie-tours',
-    description: 'Reflexologie plantaire et palmaire a Tours.',
+    description: 'Réflexologie plantaire et palmaire à Tours.',
     icon: '🦶',
     available: false,
   },
@@ -46,14 +46,14 @@ const services = [
   {
     name: 'Massage',
     slug: 'massage-tours',
-    description: 'Massages bien-etre, relaxants, sportifs a Tours.',
+    description: 'Massages bien-être, relaxants, sportifs à Tours.',
     icon: '✋',
     available: false,
   },
   {
-    name: 'Institut de beaute',
+    name: 'Institut de beauté',
     slug: 'institut-beaute-tours',
-    description: 'Soins visage, corps, epilation, manucure...',
+    description: 'Soins visage, corps, épilation, manucure...',
     icon: '💅',
     available: false,
   },
@@ -68,18 +68,18 @@ const services = [
 ---
 
 <BaseLayout
-  title="Bien-etre a Tours : Spa, soins et relaxation"
-  description="Trouvez les meilleurs praticiens bien-etre a Tours : hypnotherapeutes, spas, pilates, massage, reflexologie. Adresses testees par un Tourangeau."
+  title="Bien-être à Tours : Spa, soins et relaxation"
+  description="Trouvez les meilleurs praticiens bien-être à Tours : hypnothérapeutes, spas, pilates, massage, réflexologie. Adresses testées par un Tourangeau."
 >
   <div class="container">
     <Breadcrumb items={breadcrumbItems} />
 
     <header class="page-header">
-      <h1>Bien-etre a Tours : Prendre soin de soi</h1>
+      <h1>Bien-être à Tours : Prendre soin de soi</h1>
       <p class="page-intro">
-        Besoin de decompresser, de soigner un mal de dos, ou simplement de prendre du temps
-        pour vous ? Tours compte de nombreux praticiens et etablissements de qualite.
-        Voici mes adresses testees et recommandees.
+        Besoin de décompresser, de soigner un mal de dos, ou simplement de prendre du temps
+        pour vous ? Tours compte de nombreux praticiens et établissements de qualité.
+        Voici mes adresses testées et recommandées.
       </p>
     </header>
 
@@ -99,7 +99,7 @@ const services = [
                 <span class="service-icon">{service.icon}</span>
                 <h2>{service.name}</h2>
                 <p>{service.description}</p>
-                <span class="service-cta coming">Bientot disponible</span>
+                <span class="service-cta coming">Bientôt disponible</span>
               </div>
             )}
           </div>
@@ -112,19 +112,19 @@ const services = [
 
       <div class="tips-grid">
         <div class="tip-card">
-          <h3>Verifiez les qualifications</h3>
+          <h3>Vérifiez les qualifications</h3>
           <p>
-            Un bon praticien affiche ses diplomes et certifications. Pour l'hypnose,
-            privilegiez les formations reconnues (ARCHE, IFH...). Pour le Pilates,
-            les certifications Stott ou BASI sont des gages de qualite.
+            Un bon praticien affiche ses diplômes et certifications. Pour l'hypnose,
+            privilégiez les formations reconnues (ARCHE, IFH...). Pour le Pilates,
+            les certifications Stott ou BASI sont des gages de qualité.
           </p>
         </div>
 
         <div class="tip-card">
           <h3>Lisez les avis (avec recul)</h3>
           <p>
-            Les avis Google sont utiles mais pas suffisants. Mefiez-vous des profils
-            avec uniquement des 5 etoiles. Les avis detailles et nuances sont plus
+            Les avis Google sont utiles mais pas suffisants. Méfiez-vous des profils
+            avec uniquement des 5 étoiles. Les avis détaillés et nuancés sont plus
             fiables que les "super" sans explication.
           </p>
         </div>
@@ -133,7 +133,7 @@ const services = [
           <h3>Faites confiance au feeling</h3>
           <p>
             La relation avec un praticien est importante. Si vous ne vous sentez pas
-            a l'aise lors du premier RDV, n'hesitez pas a en consulter un autre.
+            à l'aise lors du premier RDV, n'hésitez pas à en consulter un autre.
             C'est normal de chercher la bonne personne.
           </p>
         </div>
@@ -142,7 +142,7 @@ const services = [
           <h3>Demandez les tarifs</h3>
           <p>
             Un bon praticien annonce ses tarifs clairement. Si les prix ne sont pas
-            affiches ou si on vous fait payer des "supplements", mefiance.
+            affichés ou si on vous fait payer des "suppléments", méfiance.
             Comparez toujours plusieurs adresses.
           </p>
         </div>
@@ -153,29 +153,29 @@ const services = [
       <h2>Pourquoi se faire accompagner ?</h2>
 
       <p>
-        Prendre soin de soi n'est pas un luxe, c'est une necessite. Que ce soit pour
-        gerer le stress du quotidien, soulager des douleurs chroniques, ou simplement
-        s'offrir un moment de detente, les praticiens du bien-etre peuvent vous aider.
+        Prendre soin de soi n'est pas un luxe, c'est une nécessité. Que ce soit pour
+        gérer le stress du quotidien, soulager des douleurs chroniques, ou simplement
+        s'offrir un moment de détente, les praticiens du bien-être peuvent vous aider.
       </p>
 
       <p>
-        A Tours, nous avons la chance d'avoir un large choix de professionnels qualifies,
-        dans toutes les disciplines. Des hypnotherapeutes reconnus aux studios de Pilates
-        en passant par les spas et les masseurs, vous trouverez forcement ce qui vous
+        À Tours, nous avons la chance d'avoir un large choix de professionnels qualifiés,
+        dans toutes les disciplines. Des hypnothérapeutes reconnus aux studios de Pilates
+        en passant par les spas et les masseurs, vous trouverez forcément ce qui vous
         convient.
       </p>
 
       <p>
-        Mon conseil : n'attendez pas d'etre au bout du rouleau pour consulter. La prevention
-        et l'entretien regulier sont les meilleurs allies de votre bien-etre.
+        Mon conseil : n'attendez pas d'être au bout du rouleau pour consulter. La prévention
+        et l'entretien régulier sont les meilleurs alliés de votre bien-être.
       </p>
     </section>
 
     <section class="cta-section">
-      <h2>Vous cherchez une adresse precise ?</h2>
+      <h2>Vous cherchez une adresse précise ?</h2>
       <p>
-        Je n'ai pas encore tout liste. Si vous cherchez un praticien dans une discipline
-        qui n'apparait pas ici, contactez-moi et je ferai de mon mieux pour vous aider.
+        Je n'ai pas encore tout listé. Si vous cherchez un praticien dans une discipline
+        qui n'apparaît pas ici, contactez-moi et je ferai de mon mieux pour vous aider.
       </p>
       <a href="/contact/" class="btn btn-primary">Me contacter</a>
     </section>

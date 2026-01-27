@@ -5,9 +5,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Vivre a Tours",
+  "name": "Vivre à Tours",
   "url": "https://vivre-a-tours.fr",
-  "description": "Le guide local pour vivre a Tours : quartiers, sorties, services, bons plans par un Tourangeau.",
+  "description": "Le guide local pour vivre à Tours : quartiers, sorties, services, bons plans par un Tourangeau.",
   "potentialAction": {
     "@type": "SearchAction",
     "target": "https://vivre-a-tours.fr/recherche?q={search_term_string}",
@@ -20,7 +20,7 @@ const categories = [
     label: 'Que faire',
     href: '/que-faire/',
     icon: '🎉',
-    description: 'Sorties, evenements et activites',
+    description: 'Sorties, événements et activités',
     color: 'from-orange-400 to-pink-500'
   },
   {
@@ -31,10 +31,10 @@ const categories = [
     color: 'from-emerald-400 to-teal-500'
   },
   {
-    label: 'Bien-etre',
+    label: 'Bien-être',
     href: '/bien-etre/',
     icon: '💆',
-    description: 'Spa, sport et sante',
+    description: 'Spa, sport et santé',
     color: 'from-violet-400 to-purple-500'
   },
   {
@@ -45,10 +45,10 @@ const categories = [
     color: 'from-amber-400 to-orange-500'
   },
   {
-    label: 'Hebergement',
+    label: 'Hébergement',
     href: '/hebergement/',
     icon: '🏨',
-    description: 'Hotels, gites et love rooms',
+    description: 'Hôtels, gîtes et love rooms',
     color: 'from-rose-400 to-red-500'
   },
   {
@@ -62,29 +62,29 @@ const categories = [
 
 const featuredArticles = [
   {
-    title: 'Que faire a Tours ce week-end',
-    description: 'Concerts, expos, marches et sorties selectionnees chaque semaine.',
+    title: 'Que faire à Tours ce week-end',
+    description: 'Concerts, expos, marchés et sorties sélectionnées chaque semaine.',
     href: '/que-faire/ce-week-end/',
     badge: 'Populaire'
   },
   {
     title: 'Quartier Velpeau',
-    description: 'Le quartier village prefere des Tourangeaux. Guide complet.',
+    description: 'Le quartier village préféré des Tourangeaux. Guide complet.',
     href: '/quartiers/velpeau/',
     badge: 'Guide'
   },
   {
-    title: 'Restaurants vegetariens',
-    description: '8 adresses testees pour manger veggie a Tours.',
+    title: 'Restaurants végétariens',
+    description: '8 adresses testées pour manger veggie à Tours.',
     href: '/manger/restaurant-vegetarien-tours/',
-    badge: 'Selection'
+    badge: 'Sélection'
   },
 ];
 ---
 
 <BaseLayout
-  title="Vivre a Tours : Le guide local par un Tourangeau"
-  description="Decouvrez Tours comme un local : quartiers, restaurants, sorties, services. Conseils authentiques pour vivre ou visiter Tours."
+  title="Vivre à Tours : Le guide local par un Tourangeau"
+  description="Découvrez Tours comme un local : quartiers, restaurants, sorties, services. Conseils authentiques pour vivre ou visiter Tours."
   schema={websiteSchema}
 >
   <!-- Hero Section -->
@@ -97,7 +97,7 @@ const featuredArticles = [
           Guide local depuis 2024
         </div>
         <h1 class="hero-title">
-          Decouvrez <span class="text-gradient">Tours</span><br/>
+          Découvrez <span class="text-gradient">Tours</span><br/>
           comme un vrai Tourangeau
         </h1>
         <p class="hero-subtitle">
@@ -203,12 +203,12 @@ const featuredArticles = [
           <h2>Pourquoi ce guide ?</h2>
           <div class="section-divider" style="margin-left: 0;"></div>
           <p>
-            Tourangeau depuis plus de 10 ans, j'ai cree ce site pour partager mes vraies bonnes adresses.
-            <strong>Pas de contenu sponsorise</strong>, pas de listes generiques copiees d'ailleurs.
+            Tourangeau depuis plus de 10 ans, j'ai créé ce site pour partager mes vraies bonnes adresses.
+            <strong>Pas de contenu sponsorisé</strong>, pas de listes génériques copiées d'ailleurs.
           </p>
           <p>
-            Juste mon experience de la ville, mes decouvertes, mes coups de coeur
-            (et parfois mes deceptions). Un guide honnete, par un local, pour les locaux
+            Juste mon expérience de la ville, mes découvertes, mes coups de cœur
+            (et parfois mes déceptions). Un guide honnête, par un local, pour les locaux
             et ceux qui veulent le devenir.
           </p>
           <a href="/a-propos/" class="btn btn-outline">
@@ -219,22 +219,22 @@ const featuredArticles = [
           <div class="feature">
             <div class="feature-icon">✓</div>
             <div class="feature-text">
-              <strong>Avis honnetes</strong>
+              <strong>Avis honnêtes</strong>
               <span>Les + et les - de chaque adresse</span>
             </div>
           </div>
           <div class="feature">
             <div class="feature-icon">✓</div>
             <div class="feature-text">
-              <strong>Teste localement</strong>
-              <span>Toutes les adresses sont verifiees</span>
+              <strong>Testé localement</strong>
+              <span>Toutes les adresses sont vérifiées</span>
             </div>
           </div>
           <div class="feature">
             <div class="feature-icon">✓</div>
             <div class="feature-text">
-              <strong>Mis a jour</strong>
-              <span>Contenu actualise regulierement</span>
+              <strong>Mis à jour</strong>
+              <span>Contenu actualisé régulièrement</span>
             </div>
           </div>
         </div>
@@ -248,8 +248,8 @@ const featuredArticles = [
       <div class="cta-content">
         <h2>Une question sur Tours ?</h2>
         <p>
-          Vous cherchez un quartier specifique, une adresse particuliere ?
-          N'hesitez pas a me contacter, je reponds a tout le monde.
+          Vous cherchez un quartier spécifique, une adresse particulière ?
+          N'hésitez pas à me contacter, je réponds à tout le monde.
         </p>
         <a href="/contact/" class="btn btn-primary btn-lg">
           Me contacter

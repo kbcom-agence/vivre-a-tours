@@ -11,9 +11,9 @@ const { currentPath = Astro.url.pathname } = Astro.props;
 const navItems = [
   { label: 'Que faire', href: '/que-faire/', icon: '🎉' },
   { label: 'Quartiers', href: '/quartiers/', icon: '🏘️' },
-  { label: 'Bien-etre', href: '/bien-etre/', icon: '💆' },
+  { label: 'Bien-être', href: '/bien-etre/', icon: '💆' },
   { label: 'Manger', href: '/manger/', icon: '🍽️' },
-  { label: 'Hebergement', href: '/hebergement/', icon: '🏨' },
+  { label: 'Hébergement', href: '/hebergement/', icon: '🏨' },
 ];
 
 function isActive(href: string): boolean {
@@ -28,7 +28,7 @@ function isActive(href: string): boolean {
   <div class="container">
     <nav class="nav" aria-label="Navigation principale">
       <!-- Logo -->
-      <a href="/" class="logo" aria-label="Vivre a Tours - Accueil">
+      <a href="/" class="logo" aria-label="Vivre à Tours - Accueil">
         <div class="logo-icon">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
@@ -43,7 +43,7 @@ function isActive(href: string): boolean {
           </svg>
         </div>
         <div class="logo-text-group">
-          <span class="logo-text">Vivre a Tours</span>
+          <span class="logo-text">Vivre à Tours</span>
           <span class="logo-tagline">Le guide local</span>
         </div>
       </a>

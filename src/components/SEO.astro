@@ -22,22 +22,22 @@ const {
   description,
   canonical = Astro.url.href,
   image = '/images/og-default.jpg',
-  imageAlt = 'Vivre a Tours - Guide local',
+  imageAlt = 'Vivre à Tours - Guide local',
   type = 'website',
   publishedDate,
   modifiedDate,
-  author = 'Vivre a Tours',
+  author = 'Vivre à Tours',
   schema,
   noindex = false,
 } = Astro.props;
 
-const siteName = 'Vivre a Tours';
+const siteName = 'Vivre à Tours';
 const siteUrl = 'https://vivre-a-tours.fr';
 
-// Title avec marque (max 60 caracteres)
+// Title avec marque (max 60 caractères)
 const fullTitle = title.includes('Vivre') ? title : `${title} | ${siteName}`;
 
-// URL complete de l'image
+// URL complète de l'image
 const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 
 // Schema de base pour le site
@@ -46,7 +46,7 @@ const websiteSchema = {
   "@type": "WebSite",
   "name": siteName,
   "url": siteUrl,
-  "description": "Le guide local pour vivre a Tours : quartiers, sorties, services, bons plans par un Tourangeau.",
+  "description": "Le guide local pour vivre à Tours : quartiers, sorties, services, bons plans par un Tourangeau.",
   "potentialAction": {
     "@type": "SearchAction",
     "target": `${siteUrl}/recherche?q={search_term_string}`,
