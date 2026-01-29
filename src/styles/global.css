@@ -378,6 +378,16 @@ a:hover {
   text-decoration-color: var(--color-primary-dark);
 }
 
+/* Boutons dans prose - ne pas appliquer les styles de lien */
+.prose a.btn {
+  color: inherit;
+  text-decoration: none;
+}
+
+.prose a.btn-primary {
+  color: white;
+}
+
 /* Tables dans prose */
 .prose table {
   width: 100%;
