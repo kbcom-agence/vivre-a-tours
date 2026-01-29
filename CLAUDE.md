@@ -893,7 +893,7 @@ GRAMMONT-PRÉBENDES
 - Code postal : 37000
 - Ambiance : Bourgeois, calme, résidentiel chic
 - Population : Familles aisées, retraités, cadres
-- Prix : €€€€ (le plus cher de Tours, 3 500-4 500€/m²)
+- Prix : €€€€ (le plus cher de Tours, 3 500-5 000€/m²)
 - Transport : Tram (arrêt Palais des Sports, Verdun)
 - Points clés : Jardin des Prébendes, Avenue de Grammont, commerces haut de gamme
 - Pour : Familles avec budget, recherche de standing
@@ -902,7 +902,7 @@ VELPEAU / LA FUYE
 - Code postal : 37000
 - Ambiance : Village dans la ville, populaire, authentique
 - Population : Mélangée (étudiants, familles, jeunes actifs)
-- Prix : €€ (2 600-3 200€/m²) - bon rapport qualité/prix
+- Prix : €€ (2 700-3 200€/m²) - bon rapport qualité/prix
 - Transport : Bus ligne 15 (arrêt Velpeau)
 - Points clés : Marché du samedi (institution !), commerces de proximité
 - Pour : Ceux qui cherchent l'authenticité et la vie de quartier
