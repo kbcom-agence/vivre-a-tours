@@ -2,6 +2,10 @@
 /**
  * Composant SEO complet pour vivre-a-tours.fr
  * Gere meta tags, Open Graph, Twitter Cards et Schema.org
+ *
+ * Indexation contrôlée par variable d'environnement:
+ * - PUBLIC_ENABLE_INDEXING=true → index, follow (production)
+ * - PUBLIC_ENABLE_INDEXING non défini → noindex (preview/Vercel)
  */
 interface Props {
   title: string;
@@ -17,6 +21,9 @@ interface Props {
   noindex?: boolean;
 }
 
+// Détermine si l'indexation est activée via variable d'environnement
+const enableIndexing = import.meta.env.PUBLIC_ENABLE_INDEXING === 'true';
+
 const {
   title,
   description,
@@ -28,8 +35,8 @@ const {
   modifiedDate,
   author = 'Vivre à Tours',
   schema,
-  // TEMPORAIRE: noindex par défaut jusqu'à la mise en ligne sur le vrai domaine
-  noindex = true,
+  // noindex par défaut sauf si PUBLIC_ENABLE_INDEXING=true
+  noindex = !enableIndexing,
 } = Astro.props;
 
 const siteName = 'Vivre à Tours';
