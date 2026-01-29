@@ -34,33 +34,33 @@ const breadcrumbItems = [
           <span class="category-link">Voir les sorties →</span>
         </a>
 
-        <a href="/que-faire/bars-tours/" class="category-card">
+        <div class="category-card coming-soon">
+          <span class="category-badge soon">Bientôt</span>
           <span class="category-icon">🍺</span>
           <h2>Bars et vie nocturne</h2>
           <p>Les meilleurs bars de Tours : ambiance, cocktails, bières artisanales, rooftops.</p>
-          <span class="category-link">Découvrir →</span>
-        </a>
+        </div>
 
-        <a href="/que-faire/activites-insolites-tours/" class="category-card">
+        <div class="category-card coming-soon">
+          <span class="category-badge soon">Bientôt</span>
           <span class="category-icon">🎯</span>
           <h2>Activités insolites</h2>
           <p>Escape games, réalité virtuelle, laser game, bowling... Les activités fun à Tours.</p>
-          <span class="category-link">Découvrir →</span>
-        </a>
+        </div>
 
-        <a href="/que-faire/sorties-culturelles-tours/" class="category-card">
+        <div class="category-card coming-soon">
+          <span class="category-badge soon">Bientôt</span>
           <span class="category-icon">🎭</span>
           <h2>Culture et spectacles</h2>
           <p>Théâtres, concerts, musées, expos... La scène culturelle tourangelle.</p>
-          <span class="category-link">Découvrir →</span>
-        </a>
+        </div>
 
-        <a href="/que-faire/en-famille/" class="category-card">
+        <div class="category-card coming-soon">
+          <span class="category-badge soon">Bientôt</span>
           <span class="category-icon">👨‍👩‍👧‍👦</span>
           <h2>Sorties en famille</h2>
           <p>Parcs, activités enfants, sorties nature... Occuper les kids à Tours.</p>
-          <span class="category-link">Découvrir →</span>
-        </a>
+        </div>
 
         <a href="/manger/" class="category-card">
           <span class="category-icon">🍽️</span>
@@ -241,6 +241,22 @@ const breadcrumbItems = [
     font-weight: 600;
     padding: 0.25rem 0.5rem;
     border-radius: 9999px;
+  }
+
+  .category-badge.soon {
+    background: #e5e7eb;
+    color: #6b7280;
+  }
+
+  .category-card.coming-soon {
+    opacity: 0.7;
+    cursor: default;
+  }
+
+  .category-card.coming-soon:hover {
+    border-color: #e5e7eb;
+    box-shadow: none;
+    transform: none;
   }
 
   .category-icon {
